@@ -1,0 +1,17 @@
+a{
+  @include transition(all .25s)
+}
+.content .entry-title{
+  font-size: $size-3;
+  text-align: center;
+  a{
+    color: $text;
+    &:hover{
+      color: $primary;
+    }
+  }
+}
+
+.entry-meta{
+  text-align: center;
+}

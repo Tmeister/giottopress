@@ -1,0 +1,104 @@
+/*!
+Theme Name: GiottoPress
+Theme URI: https://giottopress.io/
+Author: Enrique Chavez
+Author URI: https://enriquechavez.co
+Description: Giotto Description.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: giottopress
+Tags: one-column
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+GiottoPress is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+@import "variables";
+@import "mixins-master";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+//@import "normalize";
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+@import "../../bower_components/bulma/sass/utilities/all";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "accessibility";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "../../bower_components/bulma/sass/base/all";
+
+/*--------------------------------------------------------------
+# Grid
+--------------------------------------------------------------*/
+@import "../../bower_components/bulma/sass/grid/columns";
+
+/*--------------------------------------------------------------
+# Others
+--------------------------------------------------------------*/
+@import "../../bower_components/bulma/sass/elements/other";
+
+/*--------------------------------------------------------------
+# Navvar
+--------------------------------------------------------------*/
+@import "../../bower_components/bulma/sass/components/navbar";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "../../bower_components/bulma/sass/elements/content";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "alignments";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography";
+
+
+/*--------------------------------------------------------------
+# Posts/Pages
+--------------------------------------------------------------*/
+@import "posts";

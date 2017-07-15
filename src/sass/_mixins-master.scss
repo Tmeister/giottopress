@@ -1,0 +1,66 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+  clear: both;
+}
+
+@mixin transition($val...) {
+  -webkit-transition: ($val);
+  -o-transition: ($val);
+  transition: ($val);
+}
+
+@mixin translateX($val...) {
+  -webkit-transform: translateX($val);
+  -ms-transform: translateX($val);
+  -o-transform: translateX($val);
+  transform: translateX($val);
+}
+
+@mixin translateY($val...) {
+  -webkit-transform: translateY($val);
+  -ms-transform: translateY($val);
+  -o-transform: translateY($val);
+  transform: translateY($val);
+}
+
+@mixin translate3d($val,$val2,$val3) {
+  -webkit-transform: translate3d($val, $val2, $val3);
+  -ms-transform: translate3d($val, $val2, $val3);
+  -o-transform: translate3d($val, $val2, $val3);
+  transform: translate3d($val, $val2, $val3);
+}
+
+@mixin rotate($val) {
+  -webkit-transform: rotate($val);
+  -moz-transform: rotate($val);
+  -ms-transform: rotate($val);
+  -o-transform: rotate($val);
+  transform: rotate($val);
+}
+
+@mixin scale($val) {
+  -webkit-transform: scale($val);
+  -moz-transform: scale($val);
+  -ms-transform: scale($val);
+  transform: scale($val);
+}

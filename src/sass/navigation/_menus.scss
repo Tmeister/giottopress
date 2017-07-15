@@ -1,0 +1,26 @@
+header#masthead{
+  border-bottom-style: solid;
+}
+.header-minimal,
+.header-transparent {
+  #masthead {
+    .navbar {
+      background-color: transparent;
+      .menu-item {
+        &:visited {
+          color: $text;
+        }
+        &.is-active {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+#masthead .navbar-menu.is-active {
+  position: relative;
+  z-index: 99;
+  background-color: white;
+  padding-top: 0;
+}
