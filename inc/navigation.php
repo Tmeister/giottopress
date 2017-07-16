@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! function_exists( 'giotto_main_navigation_class' ) ):
 	function giotto_main_navigation_class() {
-		$default_classes = array( 'navbar' );
+		$default_classes = array( 'navbar is-marginless' );
 		$classes         = apply_filters( 'giotto/main_navigation_class', $default_classes );
 		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
 	}

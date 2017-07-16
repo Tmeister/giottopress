@@ -59,11 +59,13 @@ endif;
 if ( ! function_exists( 'giotto_post_class' ) ):
 	function giotto_post_class( $classes ) {
 		global $post;
+		$classes[]      = 'content';
 		$featured_image = get_the_post_thumbnail_url( $post->ID, 'full' );
 		$classes[]      = ( false != $featured_image ) ? 'has-featured-image' : 'has-not-featured-image';
 
 		return $classes;
 	}
+
 	add_filter( 'post_class', 'giotto_post_class' );
 endif;
 
@@ -114,11 +116,12 @@ if ( ! function_exists( 'giotto_page_class' ) ):
 	 * @since 1.0.0
 	 */
 	function giotto_page_class() {
-		$default_classes = array( 'content container' );
+		$default_classes = array( 'container' );
 		$container_type  = get_theme_mod( 'giotto_container_type', 'fullwidth' );
 
 		if ( 'fullwidth' === $container_type ) {
-			$default_classes[] = 'is-fluid is-marginless';
+			$default_classes[] = 'is-fluid';
+			$default_classes[] = 'is-marginless';
 		}
 
 		$classes = apply_filters( 'giotto/content_page_class', $default_classes );
@@ -147,7 +150,7 @@ if ( ! function_exists( 'giotto_wrapper_class' ) ):
 	 * @since 1.0.0
 	 */
 	function giotto_wrapper_class() {
-		$default_classes = array( 'columns container' );
+		$default_classes = array( 'columns', 'container' );
 
 		if ( 'left-sidebar' === giotto_get_sidebar_layout() ) {
 			$default_classes[] = 'reverse-row-order';
@@ -185,7 +188,7 @@ if ( ! function_exists( 'giotto_main_class' ) ):
 	 * @since 1.0.0
 	 */
 	function giotto_main_class() {
-		$default_classes = array( '' );
+		$default_classes = array();
 
 		$classes = apply_filters( 'giotto/main_content_class', $default_classes );
 		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
@@ -202,7 +205,8 @@ if ( ! function_exists( 'giotto_sidebar_class' ) ):
 		$default_classes = array( 'widget-area' );
 
 		if ( 'sidebar' === giotto_get_sidebar_layout() || 'left-sidebar' === giotto_get_sidebar_layout() ) {
-			$default_classes[] = 'column is-one-quarter';
+			$default_classes[] = 'column';
+			$default_classes[] = 'is-one-quarter';
 		}
 
 		$classes = apply_filters( 'giotto/primary_content_class', $default_classes );
@@ -280,7 +284,8 @@ if ( ! function_exists( 'giotto_header_class' ) ):
 		$container_type  = get_theme_mod( 'giotto_header_contained_type', 'fullwidth' );
 
 		if ( 'fullwidth' === $container_type ) {
-			$default_classes[] = 'is-fluid is-marginless';
+			$default_classes[] = 'is-fluid';
+			$default_classes[] = 'is-marginless';
 		} else {
 			$default_classes[] = '';
 		}
@@ -293,7 +298,7 @@ endif;
 if ( ! function_exists( 'giotto_inner_header_class' ) ):
 	function giotto_inner_header_class() {
 		//giotto_header_inner_contained_type
-		$default_classes = array( 'container header-inner' );
+		$default_classes = array( 'container', 'header-inner' );
 		$container_type  = get_theme_mod( 'giotto_header_inner_contained_type', 'fullwidth' );
 
 		if ( 'fullwidth' === $container_type ) {
@@ -426,5 +431,12 @@ if ( ! function_exists( 'giotto_show_excerpt' ) ):
 
 		// Return our value
 		return apply_filters( 'giotto/show_excerpt', $show_excerpt );
+	}
+endif;
+if ( ! function_exists( 'giotto_pagination_class' ) ):
+	function giotto_pagination_class() {
+		$default_classes = array( 'posts-pagination', 'is-boxed' );
+		$classes         = apply_filters( 'giotto/pagination_class', $default_classes );
+		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
 	}
 endif;

@@ -1,0 +1,60 @@
+#comments {
+
+  @extend .white-box;
+  margin-top: 2em;
+  padding: 2em 5em 5em;
+
+  li {
+    &.comment {
+      list-style: none;
+      padding: 2em 0;
+      &.depth-1 {
+        border-bottom: 1px solid $grey-lighter;
+      }
+    }
+    .children {
+      .comment-body {
+        border-left: 4px solid $white-ter;
+        padding-left: 2em;
+      }
+    }
+  }
+
+  .comments-title {
+    padding: 0 0 1em 0;
+    border-bottom: 1px solid $grey-lighter;
+  }
+
+  .comment-list {
+    margin-left: 0;
+  }
+
+  .comment-body {
+    footer {
+      @include clearfix;
+      margin-bottom: 1em;
+      .comment-author {
+        img {
+          float: left;
+          border-radius: 50%;
+          border: 1px solid $grey-lighter;
+          padding: 3px;
+          margin-right: 1em;
+        }
+        .says {
+          display: none;
+        }
+        .fn {
+          font-size: $size-5;
+        }
+      }
+      .comment-metadata{
+        font-size: $size-7;
+      }
+    }
+  }
+
+  .comment-content{
+    padding-bottom: 1em;
+  }
+}

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Custom template tags for this theme
  *
@@ -133,12 +134,10 @@ if ( ! function_exists( 'giotto_get_author_avatar' ) ):
 		$show_author_avatar = true;
 		if ( true === $show_author_avatar ) {
 			if ( function_exists( 'get_avatar' ) ) {
-				$user_email = get_the_author_meta( 'user_email' );
-				?>
-                <a class="author-avatar" href="#">
-					<?php echo get_avatar( $user_email, 60 ); ?>
-                </a>
-				<?php
+				$author_email = get_the_author_meta( 'user_email' );
+				$author_link  = get_author_posts_url( get_the_author_meta( 'ID' ) );
+				$template     = '<a class="author-avatar" href="%1$s">%2$s</a>';
+				echo apply_filters( 'giotto/author_avatar', sprintf( $template, $author_link, get_avatar( $author_email, 60 ) ) );
 			}
 		}
 	}
@@ -152,4 +151,75 @@ if ( ! function_exists( 'giotto_get_entry_featured' ) ):
 			echo sprintf( 'style="background-image: url(%s)"', $featured_image );
 		}
 	}
+endif;
+
+if ( ! function_exists( 'giotto_posts_navigation' ) ):
+	function giotto_posts_navigation() {
+		global $wp_query;
+		$big        = 999999999;
+		$translated = __( 'Page', 'giottopress' );
+		$next_link  = '';
+		$prev_link  = '';
+		$pages      = array();
+
+		$links = paginate_links( array(
+			'base'               => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+			'format'             => '?paged=%#%',
+			'current'            => max( 1, get_query_var( 'paged' ) ),
+			'total'              => $wp_query->max_num_pages,
+			'type'               => 'array',
+			'before_page_number' => '<span class="screen-reader-text">' . $translated . ' </span>'
+		) );
+
+		foreach ( $links as $link ) {
+			if ( strpos( $link, 'next page-numbers' ) > 0 ) {
+				$out       = str_replace( 'next page-numbers', 'next page-numbers pagination-next', $link );
+				$next_link = $out;
+			} elseif ( strpos( $link, 'prev page-numbers' ) > 0 ) {
+				$out       = str_replace( 'prev page-numbers', 'prev page-numbers pagination-previous', $link );
+				$prev_link = $out;
+			} else {
+				$out     = str_replace( 'page-numbers', 'page-numbers pagination-next', $link );
+				$pages[] = $out;
+			}
+		}
+		?>
+
+        <div <?php giotto_pagination_class() ?>>
+            <nav class="pagination is-right">
+				<?php echo $prev_link ?>
+				<?php echo $next_link ?>
+                <ul class="pagination-list">
+					<?php foreach ( $pages as $link ): ?>
+                        <li><?php echo $link ?></li>
+					<?php endforeach; ?>
+                </ul>
+            </nav>
+        </div>
+		<?php
+	}
+endif;
+
+if ( ! function_exists( 'giotto_more_tag' ) ):
+	function giotto_more_tag( $link ) {
+		return str_replace( 'more-link', 'more-link button is-primary', $link );
+
+	}
+
+	add_filter( 'the_content_more_link', 'giotto_more_tag' );
+endif;
+
+if ( ! function_exists( 'giotto_single_post_navigation' ) ):
+	function giotto_single_post_navigation( $markup, $class ) {
+		$class    .= ' pagination is-centered';
+		$template = '
+        <nav class="navigation pagination is-centered %1$s" role="navigation">
+            <h2 class="screen-reader-text">%2$s</h2>
+            %3$s
+        </nav>';
+
+		return $template;
+	}
+
+	add_filter( 'navigation_markup_template', 'giotto_single_post_navigation', 10, 2 );
 endif;

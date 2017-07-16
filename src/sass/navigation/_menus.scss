@@ -1,6 +1,7 @@
-header#masthead{
+header#masthead {
   border-bottom-style: solid;
 }
+
 .header-minimal,
 .header-transparent {
   #masthead {
@@ -23,4 +24,11 @@ header#masthead{
   z-index: 99;
   background-color: white;
   padding-top: 0;
+}
+
+.posts-pagination {
+  padding:1em;
+  &.is-boxed {
+    @extend .white-box;
+  }
 }

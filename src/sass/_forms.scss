@@ -1,0 +1,15 @@
+textarea {
+  @extend .textarea;
+}
+
+label {
+  @extend .label;
+}
+
+input:not([type="submit"]){
+  @extend .input;
+}
+
+select {
+  @extend .select
+}

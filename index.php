@@ -39,7 +39,7 @@ get_header(); ?>
 
 				endwhile;
 
-				the_posts_navigation();
+				giotto_posts_navigation();
 
 			else :
 

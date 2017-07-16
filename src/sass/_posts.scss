@@ -4,24 +4,35 @@ body {
 
 .white-box {
   background: #fff;
-  border: 1px solid #eaecee;
   position: relative;
 }
 
-.content{
-  figure{
+.content {
+  figure {
     max-width: 100%;
+  }
+  img {
+    height: auto;
   }
 }
 
 #primary {
   #main {
+    .page-header {
+      @extend .white-box;
+      margin-top: 3em;
+      padding: 1em;
+    }
     .hentry {
       @extend .white-box;
       margin-bottom: 4em;
-      padding: 5em;
-      &:first-child{
+      padding: 2em 5em 5em;
+      border: 1px solid $white-ter;
+      &:first-of-type {
         margin-top: 3em;
+      }
+      &:last-of-type {
+        margin-bottom: 2em;
       }
     }
   }
@@ -32,7 +43,7 @@ body {
     @extend .white-box;
     margin-bottom: 2em;
     padding: 1.5em;
-    &:first-child{
+    &:first-child {
       margin-top: 3em;
     }
   }
@@ -48,25 +59,38 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    border: 1px solid $grey-lighter;
     img {
       border-radius: 50%;
     }
   }
 }
 
-.has-featured-image{
+.entry-content{
+  padding-bottom: 3em;
+}
+
+.has-featured-image {
   background-repeat: no-repeat !important;
   background-size: 100% !important;
 }
-.has-not-featured-image{
+
+.has-not-featured-image {
   padding-top: 2em !important;
 }
+
+.post-navigation{
+  @extend .white-box;
+  padding:1em;
+}
+
 
 @include fullhd {
   #primary {
     #main {
       .hentry {
-        padding: 5em 7em;
+        padding-left: 7em;
+        padding-right: 7em;
       }
     }
   }
