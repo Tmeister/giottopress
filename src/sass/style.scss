@@ -39,7 +39,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@import "variables";
+//@import "variables";
 @import "mixins-master";
 
 /*--------------------------------------------------------------
@@ -122,4 +122,9 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 # Comments
 --------------------------------------------------------------*/
 @import "comments";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "widgets";
 

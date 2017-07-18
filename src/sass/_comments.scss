@@ -1,15 +1,20 @@
 #comments {
 
   @extend .white-box;
+  @extend .is-clearfix;
   margin-top: 2em;
   padding: 2em 5em 5em;
+  border: 1px solid $white-ter;
 
   li {
     &.comment {
       list-style: none;
       padding: 2em 0;
       &.depth-1 {
-        border-bottom: 1px solid $grey-lighter;
+        border-bottom: 1px solid $white-ter;
+      }
+      &.parent {
+        padding-bottom: 0;
       }
     }
     .children {
@@ -22,7 +27,7 @@
 
   .comments-title {
     padding: 0 0 1em 0;
-    border-bottom: 1px solid $grey-lighter;
+    border-bottom: 1px solid $white-ter;
   }
 
   .comment-list {
@@ -37,7 +42,7 @@
         img {
           float: left;
           border-radius: 50%;
-          border: 1px solid $grey-lighter;
+          border: 1px solid $white-ter;
           padding: 3px;
           margin-right: 1em;
         }
@@ -45,16 +50,39 @@
           display: none;
         }
         .fn {
-          font-size: $size-5;
+          font-size: $size-6;
         }
       }
-      .comment-metadata{
+      .comment-metadata {
         font-size: $size-7;
       }
     }
   }
 
-  .comment-content{
+  .comment-content {
     padding-bottom: 1em;
+  }
+
+  #commentform {
+    #submit {
+      @extend .is-pulled-right;
+      @extend .button.is-medium;
+    }
+  }
+
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@include mobile {
+  #comments {
+    padding: 2em;
+    ol {
+      &.children {
+        margin-left: 0 !important;
+      }
+    }
   }
 }

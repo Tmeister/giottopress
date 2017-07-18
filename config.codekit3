@@ -52,7 +52,7 @@
 		"dS": 0,
 		"ft": 2,
 		"ma": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/bower_components\/bulma\/bulma.sass",
 		"oF": 0,
 		"oS": 0,
@@ -1452,6 +1452,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/src\/sass\/_widgets.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/src\/sass\/_widgets.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/src\/sass\/navigation\/_links.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1497,7 +1510,7 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 0,
+		"ma": 1,
 		"oA": 0,
 		"oAP": "\/style.css",
 		"oF": 2,

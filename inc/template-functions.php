@@ -116,7 +116,7 @@ if ( ! function_exists( 'giotto_page_class' ) ):
 	 * @since 1.0.0
 	 */
 	function giotto_page_class() {
-		$default_classes = array( 'container' );
+		$default_classes = array( 'container', 'is-clearfix' );
 		$container_type  = get_theme_mod( 'giotto_container_type', 'fullwidth' );
 
 		if ( 'fullwidth' === $container_type ) {

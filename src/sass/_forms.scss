@@ -13,3 +13,8 @@ input:not([type="submit"]){
 select {
   @extend .select
 }
+
+input[type="submit"]{
+  @extend .button;
+  @extend .button.is-primary;
+}

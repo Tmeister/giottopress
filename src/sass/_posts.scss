@@ -1,5 +1,6 @@
-body {
-  word-break: break-all !important;
+body,
+html {
+  word-wrap: break-word;
 }
 
 .white-box {
@@ -38,17 +39,6 @@ body {
   }
 }
 
-#secondary {
-  .widget {
-    @extend .white-box;
-    margin-bottom: 2em;
-    padding: 1.5em;
-    &:first-child {
-      margin-top: 3em;
-    }
-  }
-}
-
 .entry-header {
   padding-bottom: 3em;
   .author-avatar {
@@ -66,7 +56,7 @@ body {
   }
 }
 
-.entry-content{
+.entry-content {
   padding-bottom: 3em;
 }
 
@@ -79,11 +69,10 @@ body {
   padding-top: 2em !important;
 }
 
-.post-navigation{
+.post-navigation {
   @extend .white-box;
-  padding:1em;
+  padding: 1em;
 }
-
 
 @include fullhd {
   #primary {
@@ -91,6 +80,16 @@ body {
       .hentry {
         padding-left: 7em;
         padding-right: 7em;
+      }
+    }
+  }
+}
+
+@include mobile {
+  #primary {
+    #main {
+      .hentry {
+        padding: 2em;
       }
     }
   }

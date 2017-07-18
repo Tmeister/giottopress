@@ -22,11 +22,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php do_action( 'giotto/before_footer' ); ?>
 
 <footer id="colophon" class="site-footer">
-	<?php
-	do_action( 'giotto/before_footer_content' );
-	do_action( 'giotto/footer' );
-	do_action( 'giotto/after_footer_content' );
-	?>
+<!--	--><?php
+//	do_action( 'giotto/before_footer_content' );
+//	do_action( 'giotto/footer' );
+//	do_action( 'giotto/after_footer_content' );
+//	?>
+    Copy
 </footer><!-- #footer -->
 
 <?php wp_footer(); ?>
