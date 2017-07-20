@@ -13,10 +13,6 @@ get_header(); ?>
         <main id="main" <?php giotto_main_class() ?>>
 
             <section class="error-404 not-found">
-                <header class="page-header">
-                    <h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'giottopress' ); ?></h1>
-                </header><!-- .page-header -->
-
                 <div class="page-content">
                     <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'giottopress' ); ?></p>
 

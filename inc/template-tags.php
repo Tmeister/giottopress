@@ -19,15 +19,10 @@ if ( ! function_exists( 'giotto_posted_on' ) ) :
 	 */
 	function giotto_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-		}
 
 		$time_string = sprintf( $time_string,
 			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( 'c' ) ),
-			esc_html( get_the_modified_date() )
+			esc_html( get_the_date() )
 		);
 
 		$posted_on = sprintf(
@@ -141,6 +136,8 @@ if ( ! function_exists( 'giotto_get_author_avatar' ) ):
 			}
 		}
 	}
+
+//	add_action( 'giotto/before_entry_title', 'giotto_get_author_avatar' );
 endif;
 
 if ( ! function_exists( 'giotto_get_entry_featured' ) ):
@@ -202,7 +199,7 @@ endif;
 
 if ( ! function_exists( 'giotto_more_tag' ) ):
 	function giotto_more_tag( $link ) {
-		return str_replace( 'more-link', 'more-link button is-primary', $link );
+		return str_replace( 'more-link', 'more-tag button', $link );
 
 	}
 
@@ -222,4 +219,140 @@ if ( ! function_exists( 'giotto_single_post_navigation' ) ):
 	}
 
 	add_filter( 'navigation_markup_template', 'giotto_single_post_navigation', 10, 2 );
+endif;
+
+if ( ! function_exists( 'giotto_get_page_header' ) ):
+	function giotto_get_page_header() {
+		$page_header_type = 'left-align';
+		?>
+        <section class="page-header container is-fluid is-marginless">
+            <header class="content container">
+                <div class="wrapper columns is-vcentered">
+                    <div class="column is-half-desktop is-12 page-title-left">
+						<?php do_action( 'giotto/before_page_title' ) ?>
+						<?php do_action( 'giotto/page_title' ) ?>
+						<?php do_action( 'giotto/after_page_title' ) ?>
+                    </div>
+                    <div class="column is-half-desktop is-12">
+                        <div class="page-title-right">
+							<?php do_action( 'giotto/page_title_right' ) ?>
+                        </div>
+                    </div>
+                </div>
+            </header><!-- .page-header -->
+        </section>
+		<?php
+	}
+endif;
+
+if ( ! function_exists( 'giotto_read_more' ) ):
+	function giotto_read_more() {
+		global $post;
+		$output = '<div class="entry-read-more"><a class="more-tag button" href="%s">%s</a></div>';
+
+		echo sprintf( $output, get_permalink( $post->ID ), __( 'Continue Reading', 'giottopress' ) );
+	}
+endif;
+
+/**
+ * Page Header
+ */
+
+if ( ! function_exists( 'giotto_page_header' ) ):
+	function giotto_page_header() {
+		if ( giotto_is_page_header_enable() ) {
+			giotto_get_page_header();
+		}
+	}
+
+	add_action( 'giotto/after_header', 'giotto_page_header' );
+endif;
+
+if ( ! function_exists( 'giotto_is_page_header_enable' ) ):
+	function giotto_is_page_header_enable() {
+		//CHECK CURRENT PAGE TYPE
+
+		//CHECK GLOBAL SETTINGS FOR PAGE HEADER
+
+		if ( is_single() ) {
+			return true;
+		}
+
+		if ( is_page() ) {
+			return true;
+		}
+
+		return true;
+	}
+endif;
+
+if ( ! function_exists( 'giotto_get_page_title' ) ):
+	function giotto_get_page_title() {
+		if ( is_home() ) {
+			$output = '<h2 class="page-title">%s</h2>';
+//			if ( $home = get_option( 'page_for_posts', true ) ) {
+//				return get_the_title( $home );
+//			}
+
+			echo sprintf( $output, __( 'Latest Posts', 'giottopress' ) );
+
+			return;
+		}
+
+		if ( is_archive() ) {
+			$archive_title       = sprintf( '<h1 class="page-title">%s</h1>', get_the_archive_title() );
+			$archive_description = '';
+			$description         = get_the_archive_description();
+
+			if ( ! empty( $description ) ) {
+				$archive_description = sprintf( '<div class="page-subtitle">%s</div>', $description );
+			}
+
+			echo $archive_title . $archive_description;
+			return;
+		}
+
+		if ( is_search() ) {
+			$output = '<h1 class="page-title">%s</h1>';
+
+			echo sprintf(
+				$output,
+				sprintf(
+					esc_html__( 'Search Results for: %s', 'giottopress' ),
+					'<span>' . get_search_query() . '</span>'
+				)
+			);
+
+			return;
+		}
+
+		if ( is_404() ) {
+			echo __( 'Not Found', 'giottopress' );
+
+			return;
+		}
+
+		if ( is_page() ) {
+			$output = '<h1 class="page-title">%s</h1>';
+
+			echo sprintf( $output, get_the_title() );
+
+			return;
+		}
+
+		echo sprintf( '<h2 class="page-title">%s</h2>', __( 'Blog', 'giottopress' ) );
+
+	}
+
+	add_action( 'giotto/page_title', 'giotto_get_page_title' );
+endif;
+
+if ( ! function_exists( 'giotto_get_breadcrumbs' ) ):
+	function giotto_get_breadcrumbs() {
+		if ( function_exists( 'yoast_breadcrumb' ) ) {
+			yoast_breadcrumb( '<div id="breadcrumbs">', '</div>' );
+		}
+	}
+
+	add_action( 'giotto/page_title_right', 'giotto_get_breadcrumbs' );
 endif;

@@ -69,6 +69,14 @@ if ( ! function_exists( 'giotto_post_class' ) ):
 	add_filter( 'post_class', 'giotto_post_class' );
 endif;
 
+if ( ! function_exists( 'giotto_excerpt_more' ) ):
+	function giotto_excerpt_more( $more ) {
+		return '...';
+	}
+
+	add_filter( 'excerpt_more', 'giotto_excerpt_more' );
+endif;
+
 /**
  * Layout functions
  */
@@ -250,7 +258,7 @@ if ( ! function_exists( 'giotto_get_sidebar_layout' ) ):
 			$layout = $layout_single;
 		}
 
-		if ( is_home() || is_archive() || is_tax() || is_category() && $layout_single === false ) {
+		if ( is_home() || is_archive() || is_tax() || is_search() || is_category() && $layout_single === false ) {
 			$layout = get_theme_mod( 'giotto_blog_layout', 'sidebar' );
 		}
 
@@ -419,9 +427,13 @@ if ( ! function_exists( 'giotto_show_excerpt' ) ):
 		$more_tag = apply_filters( 'giotto/more_tag', strpos( $post->post_content, '<!--more-->' ) );
 		$format   = ( false !== get_post_format() ) ? get_post_format() : 'standard';
 
+		if( is_single() ){
+		    return false;
+        }
+
 		// TODO Get the excerpt setting from the Customizer
 		// @kike
-		$show_excerpt = false;//( 'excerpt' == $generate_settings['post_content'] ) ? true : false;
+		$show_excerpt = true;//( 'excerpt' == $generate_settings['post_content'] ) ? true : false;
 
 		// If our post format isn't standard, show the full content
 		$show_excerpt = ( 'standard' !== $format ) ? false : $show_excerpt;
@@ -431,8 +443,10 @@ if ( ! function_exists( 'giotto_show_excerpt' ) ):
 
 		// Return our value
 		return apply_filters( 'giotto/show_excerpt', $show_excerpt );
+//		return true;
 	}
 endif;
+
 if ( ! function_exists( 'giotto_pagination_class' ) ):
 	function giotto_pagination_class() {
 		$default_classes = array( 'posts-pagination', 'is-boxed' );
@@ -440,3 +454,4 @@ if ( ! function_exists( 'giotto_pagination_class' ) ):
 		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
 	}
 endif;
+

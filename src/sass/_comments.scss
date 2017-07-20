@@ -3,15 +3,25 @@
   @extend .white-box;
   @extend .is-clearfix;
   margin-top: 2em;
-  padding: 2em 5em 5em;
-  border: 1px solid $white-ter;
-
+  padding: 2em 0 2em 0;
+  //border: 1px solid $white-ter;
+  .comment-reply-title {
+    border-top: 1px solid $white-ter;
+    border-bottom: 1px solid $white-ter;
+    padding: 1em 0;
+    text-transform: uppercase;
+    font-size: $size-5;
+    font-weight: 500;
+  }
   li {
     &.comment {
       list-style: none;
       padding: 2em 0;
       &.depth-1 {
         border-bottom: 1px solid $white-ter;
+        &:last-child {
+          border-bottom: 0 solid $white-ter;
+        }
       }
       &.parent {
         padding-bottom: 0;
@@ -66,7 +76,12 @@
   #commentform {
     #submit {
       @extend .is-pulled-right;
-      @extend .button.is-medium;
+      //@extend .button.is-medium;
+    }
+    .comment-notes {
+      font-style: italic;
+      font-size: $size-7;
+      font-weight: 700;
     }
   }
 

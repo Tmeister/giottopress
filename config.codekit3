@@ -1305,6 +1305,12 @@
 		"oAP": "\/search.php",
 		"oF": 0
 		},
+	"\/searchform.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/searchform.php",
+		"oF": 0
+		},
 	"\/sidebar.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -1387,6 +1393,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/src\/sass\/_generic.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/src\/sass\/_generic.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/src\/sass\/_mixins-master.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1409,6 +1428,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/src\/sass\/_normalize.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/src\/sass\/_page-title.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/src\/sass\/_page-title.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1461,19 +1493,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/src\/sass\/_widgets.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/src\/sass\/navigation\/_links.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/src\/sass\/navigation\/_links.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

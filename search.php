@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying search results pages
+ * The template for displaying archive pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package giotto
  */
@@ -12,39 +12,32 @@ get_header(); ?>
     <section id="primary" <?php giotto_primary_content_class(); ?>>
         <main id="main" <?php giotto_main_class() ?>>
 
-		<?php
-		if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title"><?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'giottopress' ), '<span>' . get_search_query() . '</span>' );
-				?></h1>
-			</header><!-- .page-header -->
-
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			if ( have_posts() ) : ?>
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+				<?php
+				/* Start the Loop */
+				while ( have_posts() ) : the_post();
 
-			endwhile;
+					/*
+					 * Include the Post-Format-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'template-parts/content', 'search' );
 
-			the_posts_navigation();
+				endwhile;
 
-		else :
+				the_posts_navigation();
 
-			get_template_part( 'template-parts/content', 'none' );
+			else :
 
-		endif; ?>
+				get_template_part( 'template-parts/content', 'none' );
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+			endif; ?>
+
+        </main><!-- #main -->
+    </section><!-- #primary -->
 
 <?php
 do_action( 'giotto/sidebars' );
