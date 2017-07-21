@@ -27,8 +27,16 @@ header#masthead {
 }
 
 .posts-pagination {
-  padding: 1em;
+  padding: 1em 0;
   &.is-boxed {
     @extend .white-box;
+  }
+  .pagination{
+    .page-numbers{
+      text-transform: uppercase;
+      font-size: $size-7;
+      padding: 1.5em;
+      color: $text;
+    }
   }
 }

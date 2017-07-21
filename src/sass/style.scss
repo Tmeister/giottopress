@@ -48,11 +48,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import "../../bower_components/bulma/sass/utilities/all";
 
 /*--------------------------------------------------------------
-# Generic
---------------------------------------------------------------*/
-@import "generic";
-
-/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 @import "accessibility";
@@ -97,6 +92,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 # Content
 --------------------------------------------------------------*/
 @import "../../bower_components/bulma/sass/elements/content";
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+@import "generic";
 
 /*--------------------------------------------------------------
 # Alignments

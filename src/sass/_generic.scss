@@ -3,8 +3,55 @@ html {
   word-wrap: break-word;
 }
 
+#wrapper {
+  &.columns {
+    &:last-child {
+      margin-bottom: 0
+    }
+  }
+}
+
+.content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $text;
+  }
+}
+
 .white-box {
   background: #fff;
   position: relative;
 }
 
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+
+  img[class*="wp-image-"] {
+    @include center-block;
+  }
+
+  .wp-caption-text {
+    margin: 0.8075em 0;
+  }
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+.sticky {
+  display: initial;
+}
+
+.gallery-caption {
+  display: initial;
+}
+
+.bypostauthor {
+  display: initial;
+}

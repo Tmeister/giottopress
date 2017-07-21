@@ -22,14 +22,14 @@
       }
       .entry-read-more {
         padding-top: 1em;
-        .more-tag.button {
-          text-transform: uppercase;
-          font-size: $size-7;
-          padding: 1.5em;
-          color: $text;
-          &:hover {
-            color: $primary;
-          }
+      }
+      .more-tag.button {
+        text-transform: uppercase;
+        font-size: $size-7;
+        padding: 1.5em;
+        color: $text;
+        &:hover {
+          color: $primary;
         }
       }
     }
@@ -74,7 +74,7 @@
   }
 }
 
-.entry-meta{
+.entry-meta {
   font-size: .9em;
 }
 
