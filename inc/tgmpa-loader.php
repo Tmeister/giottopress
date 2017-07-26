@@ -15,8 +15,8 @@
  */
 
 /* No direct access */
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+if ( ! defined('ABSPATH')) {
+    exit;
 }
 
 /**
@@ -24,32 +24,33 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'giotto_register_required_plugins' );
+add_action('tgmpa_register', 'giotto_register_required_plugins');
 
 
 /**
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
-function giotto_register_required_plugins() {
+function giotto_register_required_plugins()
+{
 
-	$plugins = array(
-		array(
-			'name'     => 'Kirki',
-			'slug'     => 'kirki',
-			'required' => true,
-		)
-	);
+    $plugins = array(
+        array(
+            'name'     => 'Kirki',
+            'slug'     => 'kirki',
+            'required' => true,
+        )
+    );
 
-	$config = array(
-		'id'           => 'giottopress',
-		'default_path' => '',
-		'menu'         => 'tgmpa-install-plugins',
-		'has_notices'  => true,
-		'dismissable'  => false,
-		'dismiss_msg'  => '',
-		'is_automatic' => true,
-		'message'      => '',
-	);
+    $config = array(
+        'id'           => 'giottopress',
+        'default_path' => '',
+        'menu'         => 'tgmpa-install-plugins',
+        'has_notices'  => true,
+        'dismissable'  => false,
+        'dismiss_msg'  => '',
+        'is_automatic' => true,
+        'message'      => '',
+    );
 
-	tgmpa( $plugins, $config );
+    tgmpa($plugins, $config);
 }

@@ -7,87 +7,88 @@
  * @package giotto
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+if ( ! defined('ABSPATH')) {
+    exit;
 }
 
-if ( ! function_exists( 'giotto_setup' ) ) :
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
-	 */
+if ( ! function_exists('giotto_setup')) :
+    /**
+     * Sets up theme defaults and registers support for various WordPress features.
+     *
+     * Note that this function is hooked into the after_setup_theme hook, which
+     * runs before the init hook. The init hook is too late for some features, such
+     * as indicating support for post thumbnails.
+     */
 
-	function giotto_setup() {
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on giotto, use a find and replace
-		 * to change 'giottopress' to the name of your theme in all the template files.
-		 */
-		load_theme_textdomain( 'giottopress', get_template_directory() . '/languages' );
+    function giotto_setup()
+    {
+        /*
+         * Make theme available for translation.
+         * Translations can be filed in the /languages/ directory.
+         * If you're building a theme based on giotto, use a find and replace
+         * to change 'giottopress' to the name of your theme in all the template files.
+         */
+        load_theme_textdomain('giottopress', get_template_directory() . '/languages');
 
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+        // Add default posts and comments RSS feed links to head.
+        add_theme_support('automatic-feed-links');
 
-		/*
-		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
-		 */
-		add_theme_support( 'title-tag' );
+        /*
+         * Let WordPress manage the document title.
+         * By adding theme support, we declare that this theme does not use a
+         * hard-coded <title> tag in the document head, and expect WordPress to
+         * provide it for us.
+         */
+        add_theme_support('title-tag');
 
-		/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		 */
-		add_theme_support( 'post-thumbnails' );
+        /*
+         * Enable support for Post Thumbnails on posts and pages.
+         *
+         * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+         */
+        add_theme_support('post-thumbnails');
 
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'main-menu' => esc_html__( 'Primary', 'giottopress' ),
-		) );
+        // This theme uses wp_nav_menu() in one location.
+        register_nav_menus(array(
+            'main-menu' => esc_html__('Primary', 'giottopress'),
+        ));
 
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+        /*
+         * Switch default core markup for search form, comment form, and comments
+         * to output valid HTML5.
+         */
+        add_theme_support('html5', array(
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+        ));
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'giotto_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+        // Set up the WordPress core custom background feature.
+        add_theme_support('custom-background', apply_filters('giotto_custom_background_args', array(
+            'default-color' => 'ffffff',
+            'default-image' => '',
+        )));
 
-		// Add theme support for selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
+        // Add theme support for selective refresh for widgets.
+        add_theme_support('customize-selective-refresh-widgets');
 
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
+        /**
+         * Add support for core custom logo.
+         *
+         * @link https://codex.wordpress.org/Theme_Logo
+         */
+        add_theme_support('custom-logo', array(
+            'height'      => 250,
+            'width'       => 250,
+            'flex-width'  => true,
+            'flex-height' => true,
+        ));
 
-	}
+    }
 endif;
-add_action( 'after_setup_theme', 'giotto_setup' );
+add_action('after_setup_theme', 'giotto_setup');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -96,44 +97,47 @@ add_action( 'after_setup_theme', 'giotto_setup' );
  *
  * @global int $content_width
  */
-function giotto_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'giotto_content_width', 640 );
+function giotto_content_width()
+{
+    $GLOBALS['content_width'] = apply_filters('giotto_content_width', 640);
 }
 
-add_action( 'after_setup_theme', 'giotto_content_width', 0 );
+add_action('after_setup_theme', 'giotto_content_width', 0);
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function giotto_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'giottopress' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'giottopress' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+function giotto_widgets_init()
+{
+    register_sidebar(array(
+        'name'          => esc_html__('Sidebar', 'giottopress'),
+        'id'            => 'sidebar-1',
+        'description'   => esc_html__('Add widgets here.', 'giottopress'),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
 }
 
-add_action( 'widgets_init', 'giotto_widgets_init' );
+add_action('widgets_init', 'giotto_widgets_init');
 
 /**
  * Enqueue scripts and styles.
  */
-function giotto_scripts() {
-	wp_enqueue_style( 'giotto-style', get_stylesheet_uri() );
-	wp_enqueue_script( 'giotto-navigation', get_template_directory_uri() . '/js/navigation-min.js', array(), '1.0', true );
+function giotto_scripts()
+{
+    wp_enqueue_style('giotto-style', get_stylesheet_uri());
+    wp_enqueue_script('giotto-navigation', get_template_directory_uri() . '/js/navigation-min.js', array(), '1.0', true);
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+    if (is_singular() && comments_open() && get_option('thread_comments')) {
+        wp_enqueue_script('comment-reply');
+    }
 }
 
-add_action( 'wp_enqueue_scripts', 'giotto_scripts' );
+add_action('wp_enqueue_scripts', 'giotto_scripts');
 
 
 /**
@@ -170,11 +174,6 @@ require get_template_directory() . '/inc/template-functions.php';
  * Custom Menu Walker
  */
 require get_template_directory() . '/inc/menu-walker.php';
-
-/**
- * Navigation
- */
-require get_template_directory() . '/inc/navigation.php';
 
 /**
  * Load Jetpack compatibility file.

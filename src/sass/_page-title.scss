@@ -1,34 +1,52 @@
-.page-header{
+.page-header {
   padding: 2em 0;
   border-bottom: 1px solid $white-ter;
+  border-top: 1px solid $white-ter;
   background-color: $grey-white;
-  .page-title{
+  .page-title {
     font-size: $size-3;
     @extend .is-marginless;
-    span{
+    span {
       font-weight: 700;
     }
   }
-  .page-subtitle{
+  .page-subtitle {
     margin-top: .5em;
     font-size: .9em;
   }
-  .page-title-right{
+  .page-title-right {
     @extend .is-pulled-right;
   }
-  #breadcrumbs{
+  #breadcrumbs {
     font-size: $size-6;
   }
 }
 
-@include mobile{
-  .page-header{
-    .wrapper{
-      text-align: center;
-      padding:0 2em;
+#primary {
+  .inline-page-title{
+    margin-top: 2em;
+  }
+  .page-title {
+    font-size: $size-3;
+    span {
+      font-weight: 700;
     }
   }
-  .page-title-right{
+
+  .page-subtitle {
+    margin-top: .5em;
+    font-size: .9em;
+  }
+}
+
+@include mobile {
+  .page-header {
+    .wrapper {
+      text-align: center;
+      padding: 0 2em;
+    }
+  }
+  .page-title-right {
     float: none !important;
   }
 }

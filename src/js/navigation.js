@@ -1,12 +1,9 @@
 (function () {
     'use strict';
     document.addEventListener('DOMContentLoaded', function () {
-        console.log('Ready');
         // Get all "nav-burger" elements
-        console.log(document.querySelectorAll('.nav-burger'));
         const $navBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
         // Check if there are any nav burgers
-        console.log($navBurgers);
         if ($navBurgers.length > 0) {
             // Add a click event on each of them
             $navBurgers.forEach(function ($el) {

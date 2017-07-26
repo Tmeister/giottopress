@@ -10,13 +10,8 @@
 #primary {
   #main {
     .hentry {
-      @extend .white-box;
-      //margin-bottom: 4em;
-      padding: 0 0 2em 0;
-      border-bottom: 1px solid $white-ter;
-      &:first-of-type {
-        //margin-top: 3em;
-      }
+      //border-bottom: 1px solid $white-ter;
+      padding-bottom: 3em;
       &:last-of-type {
         margin-bottom: 2em;
       }
@@ -28,9 +23,6 @@
         font-size: $size-7;
         padding: 1.5em;
         color: $text;
-        &:hover {
-          color: $primary;
-        }
       }
     }
   }
@@ -41,6 +33,11 @@
     #main {
       .hentry {
         border-bottom: 0 solid $white-ter;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -79,7 +76,7 @@
 }
 
 .entry-content {
-  padding-bottom: 3em;
+  //padding-bottom: 3em;
 }
 
 .has-featured-image {
@@ -92,19 +89,7 @@
 }
 
 .post-navigation {
-  @extend .white-box;
   padding: 1em;
-}
-
-@include fullhd {
-  #primary {
-    #main {
-      .hentry {
-        //padding-left: 7em;
-        //padding-right: 7em;
-      }
-    }
-  }
 }
 
 @include mobile {

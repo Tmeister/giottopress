@@ -15,8 +15,11 @@
 get_header(); ?>
 
     <section id="primary" <?php giotto_primary_content_class(); ?>>
+
         <main id="main" <?php giotto_main_class() ?>>
+
 			<?php
+
 			if ( have_posts() ) :
 
 				/* Start the Loop */
@@ -27,7 +30,7 @@ get_header(); ?>
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'template-parts/content', get_post_format() );
+					get_template_part( 'templates/content', get_post_format() );
 
 				endwhile;
 
@@ -35,13 +38,16 @@ get_header(); ?>
 
 			else :
 
-				get_template_part( 'template-parts/content', 'none' );
+                get_template_part('templates/content', 'none');
 
 			endif; ?>
 
         </main><!-- #main -->
+
     </section><!-- #primary -->
 
 <?php
+
 do_action( 'giotto/sidebars' );
+
 get_footer();

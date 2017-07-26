@@ -4,6 +4,7 @@ textarea {
 
 label {
   @extend .label;
+  color: $text;
 }
 
 input:not([type="submit"]){

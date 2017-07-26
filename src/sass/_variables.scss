@@ -1,9 +1,10 @@
 $white-ter: #EAECEE;//rgba(0, 0, 0, .1);
-$grey-white: rgba(0, 0, 0, .025);
+$grey-white: #F8F8F8;
 $body-size: 16px;
 $primary: #6772e5;
 $text: #6b7c93;
-$link: #6772e5;
-$link-active: #32325d;
-$text-strong: $link-active;
-$input: $link-active;
+//$link: #6772e5;
+//$link-active: #32325d;
+$text-strong: $text;
+//$input: $link-active;
+//$link-visited: $link;

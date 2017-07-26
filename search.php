@@ -10,35 +10,42 @@
 get_header(); ?>
 
     <section id="primary" <?php giotto_primary_content_class(); ?>>
+
         <main id="main" <?php giotto_main_class() ?>>
 
-			<?php
-			if ( have_posts() ) : ?>
+            <?php
 
-				<?php
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
+            giotto_get_inner_page_title();
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', 'search' );
+            if (have_posts()) : ?>
 
-				endwhile;
+                <?php
+                /* Start the Loop */
+                while (have_posts()) : the_post();
 
-				the_posts_navigation();
+                    /*
+                     * Include the Post-Format-specific template for the content.
+                     * If you want to override this in a child theme, then include a file
+                     * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                     */
+                    get_template_part('templates/content', 'search');
 
-			else :
+                endwhile;
 
-				get_template_part( 'template-parts/content', 'none' );
+                the_posts_navigation();
 
-			endif; ?>
+            else :
+
+                get_template_part('templates/content', 'none');
+
+            endif; ?>
 
         </main><!-- #main -->
+
     </section><!-- #primary -->
 
 <?php
-do_action( 'giotto/sidebars' );
+
+do_action('giotto/sidebars');
+
 get_footer();

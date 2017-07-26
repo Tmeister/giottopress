@@ -13,29 +13,35 @@
  */
 
 get_header(); ?>
-
     <section id="primary" <?php giotto_primary_content_class(); ?>>
+
         <main id="main" <?php giotto_main_class() ?>>
 
-			<?php
-			while ( have_posts() ) : the_post();
+            <?php
 
-				get_template_part( 'template-parts/content', get_post_format() );
+            while (have_posts()) : the_post();
 
-				//TODO ADD Post Navigation Option from Customizer
+                get_template_part('templates/content', get_post_format());
+
+                //TODO ADD Post Navigation Option from Customizer
 //				the_post_navigation();
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+                // If comments are open or we have at least one comment, load up the comment template.
+                if (comments_open() || get_comments_number()) :
 
-			endwhile; // End of the loop.
-			?>
+                    comments_template();
+
+                endif;
+
+            endwhile; // End of the loop.
+            ?>
 
         </main><!-- #main -->
+
     </section><!-- #primary -->
 
 <?php
-do_action( 'giotto/sidebars' );
+
+do_action('giotto/sidebars');
+
 get_footer();

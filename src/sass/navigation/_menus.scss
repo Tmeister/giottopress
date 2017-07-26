@@ -2,23 +2,43 @@ header#masthead {
   border-bottom-style: solid;
 }
 
+@media screen and (min-width: 1000px) {
+  .navbar-dropdown.is-boxed {
+    top: calc(100%);
+  }
+  .navbar-menu {
+    align-items: center;
+    .menu-item {
+      height: 2em;
+    }
+  }
+}
+
 .header-minimal,
 .header-transparent {
   #masthead {
+    .navbar-link::after {
+      border-color: $text;
+    }
     .navbar {
       background-color: transparent;
       .menu-item {
+        color: $text;
         &:visited {
-          color: $text;
+          color: initial;
         }
         &.is-active {
           color: $primary;
         }
       }
     }
+    .navbar-item.has-dropdown:hover .navbar-link {
+      background-color: transparent;
+    }
   }
 }
 
+//.navbar-item.has-dropdown:hover .navbar-link
 #masthead .navbar-menu.is-active {
   position: relative;
   z-index: 99;
@@ -26,13 +46,29 @@ header#masthead {
   padding-top: 0;
 }
 
+header {
+  .is-centered {
+    display: flex;
+    @extend .columns.is-centered;
+    text-align: center;
+  }
+  &.menu-center {
+    .site-branding {
+      padding-top: 1em;
+    }
+    .site-description {
+      display: block;
+    }
+  }
+}
+
 .posts-pagination {
   padding: 1em 0;
   &.is-boxed {
-    @extend .white-box;
+    //@extend .white-box;
   }
-  .pagination{
-    .page-numbers{
+  .pagination {
+    .page-numbers {
       text-transform: uppercase;
       font-size: $size-7;
       padding: 1.5em;
@@ -40,3 +76,4 @@ header#masthead {
     }
   }
 }
+

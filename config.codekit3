@@ -2,14 +2,6 @@
 "AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and\/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https:\/\/codekitapp.com\/",
 "buildSteps": [
 	{
-		"name": "New \"Run Script\" Step",
-		"scriptSourceString": "# Paste your script here.",
-		"scriptType": 1,
-		"scriptUUIDString": "78B3CC8B-9524-48B5-8EA3-5E9965A581D5",
-		"stepType": 2,
-		"uuidString": "4C2A8B81-4D88-4B17-9506-1594DAF1AC4D"
-		},
-	{
 		"name": "Process All Remaining Files and Folders",
 		"stepType": 1,
 		"uuidString": "3B18F5D9-D3A1-4DA0-9CDE-B7855EB09040"
@@ -777,12 +769,6 @@
 		"oAP": "\/inc\/metaboxes.php",
 		"oF": 0
 		},
-	"\/inc\/navigation.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/navigation.php",
-		"oF": 0
-		},
 	"\/inc\/template-functions.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -815,12 +801,6 @@
 		"oF": 1,
 		"sC": 1,
 		"tS": 0
-		},
-	"\/js\/customizer-min.js.map": {
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/js\/customizer-min.js.map",
-		"oF": 0
 		},
 	"\/js\/navigation-min.js": {
 		"ft": 64,
@@ -880,422 +860,6 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"\/sass\/_normalize.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/_normalize.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/elements\/_elements.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/elements\/_elements.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/elements\/_lists.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/elements\/_lists.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/elements\/_tables.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/elements\/_tables.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/forms\/_buttons.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/forms\/_buttons.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/forms\/_fields.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/forms\/_fields.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/forms\/_forms.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/forms\/_forms.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/layout\/_content-sidebar.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/layout\/_content-sidebar.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/layout\/_sidebar-content.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/layout\/_sidebar-content.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/media\/_captions.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/media\/_captions.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/media\/_galleries.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/media\/_galleries.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/media\/_media.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/media\/_media.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/mixins\/_mixins-master.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/mixins\/_mixins-master.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/modules\/_accessibility.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/modules\/_accessibility.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/modules\/_alignments.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/modules\/_alignments.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/modules\/_clearings.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/modules\/_clearings.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/modules\/_infinite-scroll.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/modules\/_infinite-scroll.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/navigation\/_links.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/navigation\/_links.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/navigation\/_menus.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/navigation\/_menus.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/navigation\/_navigation.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/navigation\/_navigation.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/site\/_site.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/site\/_site.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/site\/primary\/_comments.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/site\/primary\/_comments.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/site\/primary\/_posts-and-pages.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/site\/primary\/_posts-and-pages.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/site\/secondary\/_widgets.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/site\/secondary\/_widgets.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/style.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/sass\/style.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/typography\/_copy.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/typography\/_copy.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/typography\/_headings.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/typography\/_headings.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/typography\/_typography.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/typography\/_typography.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/variables-site\/_colors.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/variables-site\/_colors.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/variables-site\/_structure.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/variables-site\/_structure.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/variables-site\/_typography.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/variables-site\/_typography.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/variables-site\/_variables-site.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/variables-site\/_variables-site.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/screenshot.png": {
 		"ft": 32768,
 		"iS": 264,
@@ -1303,7 +867,7 @@
 		"oAP": "\/screenshot.png",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1410,6 +974,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/src\/sass\/_generic.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/src\/sass\/_header.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/src\/sass\/_header.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1573,28 +1150,40 @@
 		"oAP": "\/style.css.map",
 		"oF": 0
 		},
-	"\/template-parts\/content-none.php": {
+	"\/templates\/content-none.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-parts\/content-none.php",
+		"oAP": "\/templates\/content-none.php",
 		"oF": 0
 		},
-	"\/template-parts\/content-page.php": {
+	"\/templates\/content-page.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-parts\/content-page.php",
+		"oAP": "\/templates\/content-page.php",
 		"oF": 0
 		},
-	"\/template-parts\/content-search.php": {
+	"\/templates\/content-search.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-parts\/content-search.php",
+		"oAP": "\/templates\/content-search.php",
 		"oF": 0
 		},
-	"\/template-parts\/content.php": {
+	"\/templates\/content.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/template-parts\/content.php",
+		"oAP": "\/templates\/content.php",
+		"oF": 0
+		},
+	"\/templates\/menu-center.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/menu-center.php",
+		"oF": 0
+		},
+	"\/templates\/menu-left.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/menu-left.php",
 		"oF": 0
 		}
 	},
@@ -1606,7 +1195,8 @@
 	"creationDate": 520993535,
 	"displayValue": "giottopress",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-karate"
+	"iconImageName": "meme-karate",
+	"lastBuiltDate": 522358861
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

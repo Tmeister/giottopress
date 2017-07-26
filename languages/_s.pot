@@ -166,7 +166,7 @@ msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:89 template-parts/content-page.php:35
+#: inc/template-tags.php:89 templates/content-page.php:35
 #, php-format
 #@ giotto
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
@@ -179,35 +179,35 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/content-none.php:14
+#: templates/content-none.php:14
 #@ giotto
 msgid "Nothing Found"
 msgstr ""
 
 #. translators: 1: link to WP admin new post page.
-#: template-parts/content-none.php:25
+#: templates/content-none.php:25
 #, php-format
 #@ giotto
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/content-none.php:38
+#: templates/content-none.php:38
 #@ giotto
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
-#: template-parts/content-none.php:44
+#: templates/content-none.php:44
 #@ giotto
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
 #@ giotto
-#: template-parts/content-page.php:22 template-parts/content.php:45
+#: templates/content-page.php:22 templates/content.php:45
 msgid "Pages:"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content.php:34
+#: templates/content.php:34
 #, php-format
 #@ giotto
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"

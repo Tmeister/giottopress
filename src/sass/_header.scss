@@ -1,0 +1,37 @@
+.main-title {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-right: .5em;
+  a {
+    color: $text;
+    &:visited {
+      color: $text;
+    }
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.site-description {
+  font-size: .9em;
+}
+
+.navbar-brand{
+  a.navbar-item{
+    &:hover{
+      background-color: transparent;
+    }
+  }
+}
+
+body.header-transparent{
+  header#masthead{
+    background: transparent !important;
+    border-bottom: 0 solid transparent;
+    position: absolute;
+    z-index: 99;
+    width:100%;
+  }
+}
