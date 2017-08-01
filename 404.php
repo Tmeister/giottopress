@@ -13,57 +13,33 @@ get_header(); ?>
 
         <main id="main" <?php giotto_main_class() ?>>
 
-            <section class="error-404 not-found">
+            <section class="error-404 not-found has-text-centered content  is-vcentered">
 
-                <div class="page-content">
+                <div class="page-content  is-vcentered">
 
-                    <p><?php esc_html_e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'giottopress'); ?></p>
+                    <div class="columns is-centered  is-vcentered">
 
-                    <?php
+                        <div class="column is-two-thirds  is-vcentered">
 
-                    get_search_form();
+                            <div class="notification is-info  is-vcentered">
 
+                                <h2 class="is-size-3"><?php esc_html_e('Oops. The page you were looking for doesn\'t exist.', 'giottopress') ?></h2>
 
-                    the_widget('WP_Widget_Recent_Posts');
+                                <p class="is-size-5"><?php esc_html_e('You may have mistyped the address or the page may have moved.', 'giottopress'); ?></p>
 
-                    ?>
+                                <p class="is-size-5"><?php esc_html_e('You can try a new searching.', 'giottopress'); ?></p>
 
-                    <div class="widget widget_categories">
+                                <?php
 
-                        <h2 class="widget-title"><?php esc_html_e('Most Used Categories', 'giottopress'); ?></h2>
+                                get_search_form();
 
-                        <ul>
+                                ?>
 
-                            <?php
+                            </div>
 
-                            wp_list_categories(array(
+                        </div>
 
-                                'orderby' => 'count',
-
-                                'order' => 'DESC',
-
-                                'show_count' => 1,
-
-                                'title_li' => '',
-
-                                'number' => 10,
-                            ));
-
-                            ?>
-
-                        </ul>
-
-                    </div><!-- .widget -->
-
-                    <?php
-
-                    /* translators: %1$s: smiley */
-                    $archive_content = '<p>' . sprintf(esc_html__('Try looking in the monthly archives. %1$s', 'giottopress'), convert_smilies(':)')) . '</p>';
-
-                    the_widget('WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content");
-
-                    the_widget('WP_Widget_Tag_Cloud');
-                    ?>
+                    </div>
 
                 </div><!-- .page-content -->
 
@@ -74,4 +50,7 @@ get_header(); ?>
     </section><!-- #primary -->
 
 <?php
+
+do_action('giotto/sidebars');
+
 get_footer();

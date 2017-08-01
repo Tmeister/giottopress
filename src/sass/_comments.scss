@@ -1,18 +1,17 @@
 #comments {
-
-  //@extend .white-box;
   @extend .is-clearfix;
   margin-top: 2em;
   padding: 0 0 2em 0;
-  //border: 1px solid $white-ter;
+
   .comment-reply-title {
     border-top: 1px solid $white-ter;
     border-bottom: 1px solid $white-ter;
     padding: 1em 0;
     text-transform: uppercase;
-    font-size: $size-5;
+    font-size: $size-4;
     font-weight: 500;
   }
+
   li {
     &.comment {
       list-style: none;
@@ -27,17 +26,12 @@
         padding-bottom: 0;
       }
     }
-    .children {
-      .comment-body {
-        border-left: 4px solid $white-ter;
-        padding-left: 2em;
-      }
-    }
   }
 
   .comments-title {
     padding: 0 0 1em 0;
     border-bottom: 1px solid $white-ter;
+    font-size: $size-4;
   }
 
   .comment-list {
@@ -45,6 +39,7 @@
   }
 
   .comment-body {
+    position: relative;
     footer {
       @include clearfix;
       margin-bottom: 1em;
@@ -60,7 +55,7 @@
           display: none;
         }
         .fn {
-          font-size: $size-6;
+          font-size: $size-5;
         }
         a{
           color: $text;
@@ -70,7 +65,7 @@
         }
       }
       .comment-metadata {
-        font-size: $size-7;
+        font-size: $size-6;
         a{
           color: $text;
           &:hover{
@@ -79,10 +74,21 @@
         }
       }
     }
+    .reply{
+      position: absolute;
+      right:0;
+      top:0;
+      a{
+        @extend .button;
+        padding:0 1em;
+      }
+    }
   }
 
   .comment-content {
-    padding-bottom: 1em;
+    padding: 2em;
+    border: 1px solid $white-ter;
+    border-radius: 3px;
   }
 
   #commentform {
@@ -99,7 +105,7 @@
 
   iframe {
     max-width: 100%;
-    height: auto;
+    display: inline-block;
   }
 }
 
@@ -109,6 +115,14 @@
     ol {
       &.children {
         margin-left: 0 !important;
+      }
+    }
+    .comment-content{
+      padding: 1em;
+    }
+    .comment-body{
+      .reply{
+        top: -5px;
       }
     }
   }

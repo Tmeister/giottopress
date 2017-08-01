@@ -10,7 +10,7 @@
 #primary {
   #main {
     .hentry {
-      //border-bottom: 1px solid $white-ter;
+      border-bottom: 1px solid $white-ter;
       padding-bottom: 3em;
       &:last-of-type {
         margin-bottom: 2em;
@@ -54,6 +54,11 @@
   }
 }
 
+.entry-featured-image {
+  padding-top: .5em;
+  padding-bottom: 1em;
+}
+
 .entry-header {
   padding-bottom: 1em;
   .author-avatar {
@@ -71,8 +76,16 @@
   }
 }
 
-.entry-meta {
+.entry-meta,
+.entry-footer {
   font-size: .9em;
+}
+
+.entry-footer {
+  padding: 1em 0 0 0;
+  span {
+    display: block;
+  }
 }
 
 .entry-content {
@@ -96,7 +109,7 @@
   #primary {
     #main {
       .hentry {
-        padding: 2em;
+        padding: 2em .5em;
       }
     }
   }

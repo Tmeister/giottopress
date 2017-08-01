@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "25849",
 "files": {
+	"\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.gitignore",
+		"oF": 0
+		},
 	"\/404.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -211,6 +217,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/bower_components\/bulma\/sass\/components\/card.sass",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/bower_components\/bulma\/sass\/components\/dropdown.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/bower_components\/bulma\/sass\/components\/dropdown.sass",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -912,6 +931,19 @@
 		"oF": 3,
 		"sC": 3,
 		"tS": 1
+		},
+	"\/src\/sass\/_404.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/src\/sass\/_404.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"\/src\/sass\/_accessibility.scss": {
 		"aP": 0,

@@ -128,12 +128,18 @@
         });
     });
 
-    // wp.customize('giotto_primary_menu_sub_color', (value) => {
-    //     value.bind((to) => {
-    //         const $links = $('.header-minimal #masthead .navbar .navbar-dropdown .menu-item, .header-transparent #masthead .navbar .navbar-dropdown .menu-item');
-    //         $links.css({'color': to});
-    //     });
-    // });
+    wp.customize('giotto_header_page_title_color', (value) => {
+        value.bind((to) => {
+            const $links = $('section.page-header .page-title');
+            $links.css({'color': to});
+        });
+    });
 
-//.header-minimal #masthead .navbar .menu-item:visited, .header-transparent #masthead .navbar .menu-item:visited
+    wp.customize('giotto_header_page_title_bg', (value) => {
+        value.bind((to) => {
+            const $links = $('section.page-header');
+            $links.css({'background-color': to});
+        });
+    });
+
 }(jQuery));

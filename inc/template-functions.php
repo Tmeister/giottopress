@@ -94,16 +94,9 @@ if ( ! function_exists('giotto_body_schema')) :
      */
     function giotto_body_schema()
     {
-        // Set up default itemtype
         $itemtype = 'WebPage';
-
-        // Get itemtype for the blog
         $itemtype = (giotto_is_blog()) ? 'Blog' : $itemtype;
-
-        // Get itemtype for search results
         $itemtype = (is_search()) ? 'SearchResultsPage' : $itemtype;
-
-        // Return the HTML
         echo apply_filters('giotto/body_schema', "itemtype='http://schema.org/$itemtype' itemscope='itemscope'", $itemtype);
     }
 
@@ -135,7 +128,7 @@ if ( ! function_exists('giotto_page_class')):
         $default_classes = array('container', 'is-clearfix');
         $container_type  = get_theme_mod('giotto_container_type', 'boxed');
 
-        if ('fullwidth' === $container_type) {
+        if ('fullwidth' === $container_type || 'wide' === $container_type) {
             $default_classes[] = 'is-fluid';
             $default_classes[] = 'is-marginless';
         }
@@ -174,7 +167,7 @@ if ( ! function_exists('giotto_wrapper_class')):
             $default_classes[] = 'reverse-row-order';
         }
 
-        if('fullwidth' === get_theme_mod('giotto_container_type', 'boxed')){
+        if ('fullwidth' === get_theme_mod('giotto_container_type', 'boxed')) {
             $default_classes[] = 'is-fluid';
             $default_classes[] = 'is-marginless';
         }
@@ -267,19 +260,75 @@ if ( ! function_exists('giotto_get_sidebar_layout')):
     {
         global $post;
 
-        $layout        = get_theme_mod('giotto_blog_layout', 'sidebar');
-        $layout_single = (isset($post)) ? get_post_meta($post->ID, 'giotto/post_layout', true) : false;
+        /**
+         * Get the global blog layout
+         */
+        $layout = get_theme_mod('giotto_blog_layout', 'sidebar');
+        /**
+         * Get the global single post layout
+         */
+        $layout_single_global = get_theme_mod('giotto_single_layout', 'sidebar');
+        /**
+         * Get the global page layout
+         */
+        $layout_page_global = get_theme_mod('giotto_page_layout', 'sidebar');
+        /**
+         * If is post get option from the the post meta
+         */
+        $layout_single_meta = (isset($post)) ? get_post_meta($post->ID, 'giotto/post_layout', true) : false;
 
+        /**
+         * If is single, get the single posts global option
+         */
         if (is_single()) {
-            $layout = get_theme_mod('giotto_single_layout', 'sidebar');
+            /**
+             * If the post meta option exists and is not set to global or is not false
+             * set the meta option as the layout
+             * The post meta option override all.
+             */
+            if (false !== $layout_single_meta && ! empty($layout_single_meta) && 'global' !== $layout_single_meta) {
+                $layout = $layout_single_meta;
+            }
+
+            /**
+             * If the option is set to global
+             */
+            if ('global' === $layout_single_meta) {
+                $layout = $layout_single_global;
+            }
         }
 
-        if (false !== $layout_single && ! empty($layout_single)) {
-            $layout = $layout_single;
+        /**
+         * If is page, get the page global option
+         */
+        if (is_page()) {
+            /**
+             * If the page meta option exists and is not set to global or is not false
+             * set the meta option as the layout
+             * The page meta option override all.
+             */
+            if (false !== $layout_single_meta && ! empty($layout_single_meta) && 'global' !== $layout_single_meta) {
+                $layout = $layout_single_meta;
+            }
+
+            /**
+             * If the option is set to global
+             */
+            if ('global' === $layout_single_meta) {
+                $layout = $layout_page_global;
+            }
         }
 
-        if (is_home() || is_archive() || is_tax() || is_search() || is_category() && $layout_single === false) {
+        if (is_home() || is_archive() || is_tax() || is_category() && $layout_single_meta === false) {
             $layout = get_theme_mod('giotto_blog_layout', 'sidebar');
+        }
+
+        if (is_search()) {
+            $layout = get_theme_mod('giotto_results_layout', 'sidebar');
+        }
+
+        if (is_404()) {
+            $layout = get_theme_mod('giotto_error_layout', 'sidebar');
         }
 
         return apply_filters('giotto/sidebar_layout', $layout);
@@ -483,7 +532,41 @@ if ( ! function_exists('giotto_create_main_menu')):
 endif;
 
 /**
- * Post Function
+ * Page Title Functions
+ */
+
+if ( ! function_exists('giotto_page_title_class')):
+    function giotto_page_title_class()
+    {
+        $container_type  = get_theme_mod('giotto_page_title_contained_type', 'fullwidth');
+        $default_classes = array('container', 'page-header');
+        if ('fullwidth' === $container_type) {
+            $default_classes[] = 'is-fluid';
+            $default_classes[] = 'is-marginless';
+        }
+
+        $classes = apply_filters('giotto/page_title_class', $default_classes);
+        echo sprintf('class="%s"', implode(' ', $classes));
+    }
+endif;
+
+if ( ! function_exists('giotto_page_title_inner_class')):
+    function giotto_page_title_inner_class()
+    {
+        $container_type  = get_theme_mod('giotto_page_title_inner_contained_type', 'fullwidth');
+        $default_classes = array('container', 'page-tittle-inner', 'content');
+
+        if ('fullwidth' === $container_type) {
+            $default_classes[] = 'is-fluid';
+        }
+
+        $classes = apply_filters('giotto/page_title_inner_class', $default_classes);
+        echo sprintf('class="%s"', implode(' ', $classes));
+    }
+endif;
+
+/**
+ * Post Functions
  */
 
 if ( ! function_exists('giotto_show_excerpt')):
@@ -497,19 +580,11 @@ if ( ! function_exists('giotto_show_excerpt')):
             return false;
         }
 
-        // TODO Get the excerpt setting from the Customizer
-        // @kike
-        $show_excerpt = false;//( 'excerpt' == $generate_settings['post_content'] ) ? true : false;
-
-        // If our post format isn't standard, show the full content
+        $show_excerpt = ('excerpt' == get_theme_mod('giotto_blog_entries_content', 'full')) ? true : false;
         $show_excerpt = ('standard' !== $format) ? false : $show_excerpt;
-
-        // If the more tag is found, show the full content
         $show_excerpt = ($more_tag) ? false : $show_excerpt;
 
-        // Return our value
         return apply_filters('giotto/show_excerpt', $show_excerpt);
-//		return true;
     }
 endif;
 
@@ -522,3 +597,38 @@ if ( ! function_exists('giotto_pagination_class')):
     }
 endif;
 
+if ( ! function_exists('giotto_is_page_header_enable')):
+    function giotto_is_page_header_enable()
+    {
+        //Page Title Type
+        $page_title_type = get_theme_mod('giotto_page_title_type', 'content-inline');
+
+        if ('header-bottom' !== $page_title_type) {
+            return false;
+        }
+
+//        return false;
+        //CHECK CURRENT PAGE TYPE
+
+        //CHECK GLOBAL SETTINGS FOR PAGE HEADER
+
+        if (is_single()) {
+            return true;
+        }
+
+        if (is_page()) {
+            return true;
+        }
+
+        return true;
+    }
+endif;
+
+if ( ! function_exists('giotto_get_featured_image')):
+    function giotto_get_featured_image()
+    {
+        add_action('giotto/after_entry_header', 'giotto_entry_featured');
+    }
+
+    giotto_get_featured_image();
+endif;

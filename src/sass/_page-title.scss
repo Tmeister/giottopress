@@ -1,29 +1,29 @@
-.page-header {
-  padding: 2em 0;
-  border-bottom: 1px solid $white-ter;
-  border-top: 1px solid $white-ter;
-  background-color: $grey-white;
-  .page-title {
-    font-size: $size-3;
-    @extend .is-marginless;
-    span {
-      font-weight: 700;
+section {
+  &.page-header {
+    padding: 2em 0;
+    background-color: $grey-white;
+    .page-title {
+      font-size: $size-3;
+      @extend .is-marginless;
+      span {
+        font-weight: 700;
+      }
     }
-  }
-  .page-subtitle {
-    margin-top: .5em;
-    font-size: .9em;
-  }
-  .page-title-right {
-    @extend .is-pulled-right;
-  }
-  #breadcrumbs {
-    font-size: $size-6;
+    .page-subtitle {
+      margin-top: .5em;
+      font-size: .9em;
+    }
+    .page-title-right {
+      @extend .is-pulled-right;
+    }
+    #breadcrumbs {
+      font-size: $size-6;
+    }
   }
 }
 
 #primary {
-  .inline-page-title{
+  .inline-page-title {
     margin-top: 2em;
   }
   .page-title {

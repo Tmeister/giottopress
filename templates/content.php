@@ -9,72 +9,85 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php do_action( 'giotto/entry_custom_styles' ) ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php do_action('giotto/entry_custom_styles') ?>>
 
-	<?php do_action( 'giotto/before_entry_header' ); ?>
+    <?php do_action('giotto/before_entry_header'); ?>
 
     <header class="entry-header">
 
-		<?php do_action( 'giotto/before_entry_title' ); ?>
+        <?php do_action('giotto/before_entry_title'); ?>
 
-		<?php giotto_entry_title() ?>
+        <?php giotto_entry_title() ?>
 
-		<?php do_action( 'giotto/after_entry_title' ); ?>
+        <?php do_action('giotto/after_entry_title'); ?>
 
-		<?php giotto_entry_meta() ?>
+        <?php giotto_entry_meta() ?>
+
+        <?php do_action('giotto/after_entry_meta'); ?>
 
     </header><!-- .entry-header -->
 
-	<?php do_action( 'giotto/after_entry_header' ); ?>
+    <?php do_action('giotto/after_entry_header'); ?>
 
     <div class="entry-content">
 
-		<?php
+        <?php do_action('giotto/before_entry_content'); ?>
 
-		if ( false === giotto_show_excerpt() ) {
+        <?php
 
-			the_content( sprintf(
+        if (false === giotto_show_excerpt()) {
 
-				wp_kses(
+            the_content(sprintf(
 
-				/* translators: %s: Name of current post. Only visible to screen readers */
+                wp_kses(
 
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'giottopress' ),
+                /* translators: %s: Name of current post. Only visible to screen readers */
 
-					array(
+                    __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'giottopress'),
 
-						'span' => array(
+                    array(
 
-							'class' => array(),
+                        'span' => array(
 
-						),
+                            'class' => array(),
 
-					)
+                        ),
 
-				),
+                    )
 
-				get_the_title()
+                ),
 
-			) );
+                get_the_title()
 
-			wp_link_pages( array(
+            ));
 
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'giottopress' ),
+            wp_link_pages(array(
 
-				'after' => '</div>',
+                'before' => '<div class="page-links">' . esc_html__('Pages:', 'giottopress'),
 
-			) );
+                'after' => '</div>',
 
-		} else {
+            ));
 
-			the_excerpt();
+        } else {
 
-			giotto_read_more();
+            the_excerpt();
 
-		}
+            giotto_read_more();
 
-		?>
+        }
+
+        ?>
+
+        <?php do_action('giotto/after_entry_content'); ?>
 
     </div><!-- .entry-content -->
+    <footer class="entry-footer">
+        <?php do_action('giotto/before_entry_footer'); ?>
+        <?php giotto_entry_footer(); ?>
+        <?php do_action('giotto/after_entry_footer'); ?>
+    </footer><!-- .entry-footer -->
+
+    <?php do_action('giotto/before_entry_article_close'); ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->
