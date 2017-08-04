@@ -120,6 +120,18 @@ function giotto_widgets_init()
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>',
     ));
+
+    for ($i = 1; $i < 6; $i++) {
+        register_sidebar(array(
+            'name'          => sprintf(esc_html__('Footer %s', 'giottopress'), $i),
+            'id'            => sprintf('footer-%s', $i),
+            'description'   => esc_html__('Add widgets here.', 'giottopress'),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>',
+        ));
+    }
 }
 
 add_action('widgets_init', 'giotto_widgets_init');

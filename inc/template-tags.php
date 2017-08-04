@@ -129,7 +129,15 @@ if ( ! function_exists('giotto_entry_featured')):
     function giotto_entry_featured()
     {
         global $post;
+
+        $show_image = 'show' === get_theme_mod('giotto_blog_entry_featured', 'hide') ? true : false;
+
+        if ( ! apply_filters('giotto/show_featured_image', $show_image)) {
+            return;
+        }
+
         $featured_image = get_the_post_thumbnail_url($post->ID, 'full');
+
         if (false !== $featured_image) {
             ?>
             <div class="entry-featured-image">
@@ -158,6 +166,8 @@ if ( ! function_exists('giotto_posts_navigation')):
             'type'               => 'array',
             'before_page_number' => '<span class="screen-reader-text">' . $translated . ' </span>'
         ));
+
+        $links = (null === $links) ? array() : $links;
 
         foreach ($links as $link) {
             if (strpos($link, 'next page-numbers') > 0) {
@@ -346,15 +356,6 @@ endif;
 /**
  * Footer
  */
-if ( ! function_exists('giotto_footer_bootstrap')):
-    function giotto_footer_bootstrap()
-    {
-        echo "FOOTER";
-    }
-
-    add_action('giotto/footer', 'giotto_footer_bootstrap');
-endif;
-
 if ( ! function_exists('giotto_site_credits')):
     function giotto_site_credits()
     {

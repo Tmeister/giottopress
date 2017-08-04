@@ -57,6 +57,10 @@
 .entry-featured-image {
   padding-top: .5em;
   padding-bottom: 1em;
+  img{
+    width:100%;
+    height:auto;
+  }
 }
 
 .entry-header {

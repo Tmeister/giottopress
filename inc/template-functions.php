@@ -525,7 +525,8 @@ if ( ! function_exists('giotto_create_main_menu')):
                 'container'      => '',
                 'menu_class'     => '',
                 'items_wrap'     => '%3$s',
-                'walker'         => new Giotto_Custom_Walker()
+                'walker'         => new Giotto_Custom_Walker(),
+                'fallback_cb'    => 'wp_page_menu'
             )
         );
     }
@@ -631,4 +632,83 @@ if ( ! function_exists('giotto_get_featured_image')):
     }
 
     giotto_get_featured_image();
+endif;
+
+/**
+ * Footer
+ */
+
+if ( ! function_exists('giotto_footer_class')):
+    function giotto_footer_class()
+    {
+        $container_type  = get_theme_mod('giotto_footer_contained_type', 'fullwidth');
+        $default_classes = array('container');
+
+        if ('fullwidth' === $container_type) {
+            $default_classes[] = 'is-fluid';
+            $default_classes[] = 'is-marginless';
+        } else {
+            $default_classes[] = '';
+        }
+
+
+        $classes = apply_filters('giotto/footer_class', $default_classes);
+        echo sprintf('class="%s"', implode(' ', $classes));
+    }
+endif;
+
+if ( ! function_exists('giotto_inner_footer_class')):
+    function giotto_inner_footer_class()
+    {
+        $default_classes = array('container', 'footer-inner');
+        $container_type  = get_theme_mod('giotto_footer_inner_contained_type', 'fullwidth');
+
+        if ('fullwidth' === $container_type) {
+            $default_classes[] = 'is-fluid';
+        }
+
+        $classes = apply_filters('giotto/footer_inner_class', $default_classes);
+        echo sprintf('class="%s"', implode(' ', $classes));
+    }
+endif;
+
+if ( ! function_exists('giotto_footer_bootstrap')):
+    function giotto_footer_bootstrap()
+    {
+        $footer_sidebars     = (int)get_theme_mod('giotto_footer_sidebars', '4');
+        $has_active_sidebars = false;
+
+        for ($i = 1; $i < $footer_sidebars + 1; $i++) {
+            if (is_active_sidebar(sprintf('footer-%1$s', $i))) {
+                $has_active_sidebars = true;
+            }
+        }
+
+        if (0 === $footer_sidebars && ! $has_active_sidebars) {
+            return;
+        }
+
+
+        ?>
+        <div id="site-footer" <?php giotto_footer_class(); ?>>
+            <div <?php giotto_inner_footer_class(); ?>>
+                <div class="columns">
+                    <?php for ($i = 1; $i < $footer_sidebars + 1; $i++): ?>
+                        <?php
+                        $column_width = get_theme_mod(sprintf('footer-column-width-%s', $i), '3');
+                        $custom_class = get_theme_mod(sprintf('footer-custom-class-%s', $i), '');
+                        $column_class = sprintf('column is-%s', $column_width);
+                        $classes      = sprintf('class="%1$s %2$s"', $custom_class, $column_class);
+                        ?>
+                        <div <?php echo $classes ?>>
+                            <?php dynamic_sidebar(sprintf('footer-%1$s', $i)); ?>
+                        </div>
+                    <?php endfor; ?>
+                </div><!-- .columns -->
+            </div><!-- #inner-footer -->
+        </div><!-- #site-footer -->
+        <?php
+    }
+
+    add_action('giotto/footer', 'giotto_footer_bootstrap');
 endif;

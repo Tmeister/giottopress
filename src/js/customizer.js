@@ -142,4 +142,41 @@
         });
     });
 
+    wp.customize('giotto_footer_contained_type', (value) => {
+        value.bind((to) => {
+            const $header = $('#site-footer');
+
+            if ('fullwidth' === to) {
+                $header.addClass('is-fluid is-marginless');
+            }
+
+            if ('contained' === to) {
+                $header.removeClass('is-fluid is-marginless');
+            }
+        });
+    });
+
+    wp.customize('giotto_footer_inner_contained_type', (value) => {
+        value.bind((to) => {
+            const $header_inner = $('.footer-inner');
+
+            if ('fullwidth' === to) {
+                $header_inner.addClass('is-fluid');
+            }
+
+            if ('contained' === to) {
+                $header_inner.removeClass('is-fluid');
+            }
+        });
+    });
+
+    wp.customize('giotto_footer_bg_color', (value) => {
+        value.bind((to) => {
+            const $header = $('#site-footer');
+            $header.css({
+                'background-color': to
+            })
+        });
+    });
+
 }(jQuery));

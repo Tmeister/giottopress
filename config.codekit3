@@ -997,6 +997,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/src\/sass\/_gallery.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/src\/sass\/_gallery.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/src\/sass\/_generic.scss": {
 		"aP": 0,
 		"bl": 0,

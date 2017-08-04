@@ -13,15 +13,15 @@ get_header(); ?>
 
         <main id="main" <?php giotto_main_class() ?>>
 
-            <section class="error-404 not-found has-text-centered content  is-vcentered">
+            <section class="error-404 not-found has-text-centered content">
 
-                <div class="page-content  is-vcentered">
+                <div class="page-content">
 
-                    <div class="columns is-centered  is-vcentered">
+                    <div class="columns is-centered">
 
-                        <div class="column is-two-thirds  is-vcentered">
+                        <div class="column is-two-thirds">
 
-                            <div class="notification is-info  is-vcentered">
+                            <div class="notification is-info">
 
                                 <h2 class="is-size-3"><?php esc_html_e('Oops. The page you were looking for doesn\'t exist.', 'giottopress') ?></h2>
 
