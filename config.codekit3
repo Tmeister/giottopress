@@ -2,17 +2,16 @@
 "AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and\/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https:\/\/codekitapp.com\/",
 "buildSteps": [
 	{
+		"name": "Process All Remaining Files and Folders",
+		"stepType": 1,
+		"uuidString": "3B18F5D9-D3A1-4DA0-9CDE-B7855EB09040"
+		},
+	{
 		"name": "New \"Run Script\" Step",
-		"scriptSourceString": "# Paste your script here.",
 		"scriptType": 1,
 		"scriptUUIDString": "817AD9E7-57F5-4224-8E9A-437BC2263EB9",
 		"stepType": 2,
 		"uuidString": "DFEAEAED-0C5E-4BCE-81C8-368B13D700CD"
-		},
-	{
-		"name": "Process All Remaining Files and Folders",
-		"stepType": 1,
-		"uuidString": "3B18F5D9-D3A1-4DA0-9CDE-B7855EB09040"
 		}
 	],
 "creatorBuild": "25849",
@@ -893,7 +892,7 @@
 		"oA": 0,
 		"oAP": "\/screenshot.png",
 		"oF": 0,
-		"oIPL": 0,
+		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
@@ -1262,13 +1261,13 @@
 	"displayValue": "giottopress",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-karate",
-	"lastBuiltDate": 522358861
+	"lastBuiltDate": 524022596
 	},
 "projectSettings": {
-	"abortBuildOnError": 1,
+	"abortBuildOnError": 0,
 	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
-	"autoBuildNewItems": 1,
+	"autoBuildNewItems": 0,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
 	"babelAuxiliaryCommentAfter": "",
 	"babelAuxiliaryCommentBefore": "",
@@ -1519,7 +1518,7 @@
 	"browserRefreshDelay": 0,
 	"buildFolderActive": 0,
 	"buildFolderName": "build",
-	"cleanBuild": 1,
+	"cleanBuild": 0,
 	"coffeeLintFlags2": {
 		"arrow_spacing": {
 			"active": 0,
@@ -2621,7 +2620,7 @@
 		},
 	"esLintSourceType": 0,
 	"externalServerAddress": "http:\/\/fpress.dev\/",
-	"gitIgnoreBuildFolder": 1,
+	"gitIgnoreBuildFolder": 0,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
 	"jsHintFlags2": {
