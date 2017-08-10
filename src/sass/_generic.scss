@@ -56,18 +56,6 @@ html {
   display: block;
 }
 
-.site-credits{
-  padding:1em 0;
-  background-color: $credits-bg-color;
-  color: white;
-  a{
-    color: white;
-    &:hover{
-      color: $primary;
-    }
-  }
-}
-
 cite{
   display: block;
 }

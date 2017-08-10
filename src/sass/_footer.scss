@@ -1,0 +1,23 @@
+#site-footer{
+  .widget{
+    font-size: .9em;
+    ul{
+      li{
+        padding:.25em 0;
+      }
+    }
+  }
+}
+
+.site-credits{
+  padding:1em 0;
+  background-color: $credits-bg-color;
+  color: white;
+  font-size: .9em;
+  a{
+    color: white;
+    &:hover{
+      color: $primary;
+    }
+  }
+}

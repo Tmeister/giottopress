@@ -78,6 +78,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import "../../bower_components/bulma/sass/elements/form";
 
 /*--------------------------------------------------------------
+# Tags
+--------------------------------------------------------------*/
+@import "../../bower_components/bulma/sass/elements/tag";
+
+/*--------------------------------------------------------------
 # Navvar
 --------------------------------------------------------------*/
 @import "../../bower_components/bulma/sass/components/navbar";
@@ -147,6 +152,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 # Galleries
 --------------------------------------------------------------*/
 @import "gallery";
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+@import "footer";
 
 /*--------------------------------------------------------------
 # 404

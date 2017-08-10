@@ -152,7 +152,6 @@ if ( ! class_exists('Giotto_Custom_Walker')) {
             parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
         }
 
-
         private function get_item_classes($item, $args)
         {
             $defaults = array(
@@ -212,6 +211,51 @@ if ( ! class_exists('Giotto_Custom_Walker')) {
             }
 
             return $attributes;
+        }
+
+        /**
+         * Menu Fallback
+         * =============
+         * If this function is assigned to the wp_nav_menu's fallback_cb variable
+         * and a menu has not been assigned to the theme location in the WordPress
+         * menu manager the function with display nothing to a non-logged in user,
+         * and will add a link to the WordPress menu manager if logged in as an admin.
+         *
+         * @param array $args passed from the wp_nav_menu function.
+         */
+        public static function fallback($args)
+        {
+            if (current_user_can('edit_theme_options')) {
+                /* Get Arguments. */
+                $container       = $args['container'];
+                $container_id    = $args['container_id'];
+                $container_class = $args['container_class'];
+                $menu_class      = $args['menu_class'];
+                $menu_id         = $args['menu_id'];
+                if ($container) {
+                    echo '<' . esc_attr($container);
+                    if ($container_id) {
+                        echo ' id="' . esc_attr($container_id) . '"';
+                    }
+                    if ($container_class) {
+                        echo ' class="' . sanitize_html_class($container_class) . '"';
+                    }
+                    echo '>';
+                }
+                echo '<div';
+                if ($menu_id) {
+                    echo ' id="' . esc_attr($menu_id) . '"';
+                }
+                if ($menu_class) {
+                    echo ' class="' . esc_attr($menu_class) . '"';
+                }
+                echo '>';
+                echo '<a class="navbar-item" href="' . esc_url(admin_url('nav-menus.php')) . '" title="">' . esc_attr('Add a menu', 'giottopress') . '</a>';
+                echo '</div>';
+                if ($container) {
+                    echo '</' . esc_attr($container) . '>';
+                }
+            }
         }
     }
 } // End if().

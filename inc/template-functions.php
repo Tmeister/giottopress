@@ -401,8 +401,8 @@ endif;
 if ( ! function_exists('giotto_site_branding')):
     function giotto_site_branding()
     {
-        $title_disable   = get_theme_mod('giotto_hide_title', 'false');
-        $tagline_disable = get_theme_mod('giotto_hide_tagline', 'false');
+        $title_disable   = get_theme_mod('giotto_hide_title', false);
+        $tagline_disable = get_theme_mod('giotto_hide_tagline', false);
 
         /**
          * If the logo exists do not print the text.
@@ -525,8 +525,9 @@ if ( ! function_exists('giotto_create_main_menu')):
                 'container'      => '',
                 'menu_class'     => '',
                 'items_wrap'     => '%3$s',
+                'depth'          => 3,
                 'walker'         => new Giotto_Custom_Walker(),
-                'fallback_cb'    => 'wp_page_menu'
+                'fallback_cb'    => 'Giotto_Custom_Walker::fallback'
             )
         );
     }
