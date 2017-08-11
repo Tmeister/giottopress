@@ -189,6 +189,9 @@ Giotto_Kirki::add_field('giotto_theme', array(
     ),
 ));
 
+/**
+ * General Styling
+ */
 Giotto_Kirki::add_panel('giotto_panel_general_styles', array(
     'title' => __('General Styling', 'giottopress'),
     'panel' => 'giotto_panel_general_options',
@@ -260,21 +263,6 @@ Giotto_Kirki::add_field('giotto_theme', array(
 
 Giotto_Kirki::add_field('giotto_theme', array(
     'type'     => 'color',
-    'settings' => 'giotto_site_text_color',
-    'label'    => __('Site Text Color', 'giottopress'),
-    'section'  => 'giotto_section_general_styles',
-    'default'  => '#4c555a',
-    'output'   => array(
-        array(
-            'exclude'  => array('#4c555a'),
-            'element'  => 'body, .main-title a, .content .entry-title a, #comments .comment-body footer .comment-author a, #comments .comment-body footer .comment-metadata a, .widget a, strong, pre, table th, .button.is-link, input.is-link[type="submit"], #comments .comment-body .reply a.is-link,.tag, .tagcloud a, .content h1,.content h2,.content h3,.content h4,.content h5,.content h6, label, .posts-pagination .pagination .page-numbers, .content .entry-title a,#primary #main .hentry .more-tag.button, #primary #main .hentry input.more-tag[type="submit"], #primary #main .hentry #comments .comment-body .reply a.more-tag, #comments .comment-body .reply #primary #main .hentry a.more-tag, #comments .comment-body footer .comment-author a, #comments .comment-body footer .comment-metadata a, .widget a',
-            'property' => 'color'
-        )
-    )
-));
-
-Giotto_Kirki::add_field('giotto_theme', array(
-    'type'     => 'color',
     'settings' => 'giotto_site_primary_color',
     'label'    => __('Primary Color', 'giottopress'),
     'section'  => 'giotto_section_general_styles',
@@ -287,7 +275,7 @@ Giotto_Kirki::add_field('giotto_theme', array(
         ),
         array(
             'exclude'  => array('#008cdd'),
-            'element'  => '.button.is-primary, input[type="submit"], #comments .comment-body .reply a.is-primary, .button.is-primary[disabled], input[disabled][type="submit"], #comments .comment-body .reply a.is-primary[disabled], .tag.is-primary, .tagcloud a.is-primary, .navbar-burger.is-active span, .tag.is-primary, .tagcloud a',
+            'element'  => '.button.is-primary, input[type="submit"], #comments .comment-body .reply a.is-primary, .button.is-primary[disabled], input[disabled][type="submit"], #comments .comment-body .reply a.is-primary[disabled], .navbar-burger.is-active span',
             'property' => 'background-color'
         )
     )
@@ -362,16 +350,67 @@ Giotto_Kirki::add_field('giotto_theme', array(
     )
 ));
 
-Giotto_Kirki::add_panel('giotto_panel_general_styling', array(
-    'title' => __('General Styling', 'giottopress'),
+Giotto_Kirki::add_panel('giotto_panel_general_typography', array(
+    'title' => __('General Typography', 'giottopress'),
     'panel' => 'giotto_panel_general_options',
 ));
 
-Giotto_Kirki::add_section('giotto_section_general_styling', array(
-    'title'    => __('General Styling', 'giottopress'),
+Giotto_Kirki::add_section('giotto_section_general_typography', array(
+    'title'    => __('General Typography', 'giottopress'),
     'priority' => 80,
     'panel'    => 'giotto_panel_general_options',
 ));
+
+Giotto_Kirki::add_field('giotto_theme', array(
+    'type'     => 'typography',
+    'settings' => 'giotto_site_main_typography',
+    'label'    => esc_attr__('Body Typography', 'kirki'),
+    'section'  => 'giotto_section_general_typography',
+    'default'  => array(
+        'font-family' => 'Roboto',
+        'font-size'   => '16px',
+        'variant'     => 'regular',
+        'subsets'     => array('latin-ext'),
+    ),
+    'output'   => array(
+        array(
+            'element' => 'body',
+        ),
+    ),
+));
+
+Giotto_Kirki::add_field('giotto_theme', array(
+    'type'     => 'typography',
+    'settings' => 'giotto_site_heading_typography',
+    'label'    => esc_attr__('Heading Typography', 'kirki'),
+    'section'  => 'giotto_section_general_typography',
+    'default'  => array(
+        'font-family' => 'Roboto',
+        'variant'     => 'regular',
+        'subsets'     => array('latin-ext'),
+    ),
+    'output'   => array(
+        array(
+            'element' => 'h1, h2, h3, h4, h5, h6, .content h1,.content h2,.content h3,.content h4,.content h5,.content h6, .content .entry-title a, h1.page-title, .page-title',
+        ),
+    ),
+));
+
+Giotto_Kirki::add_field('giotto_theme', array(
+    'type'     => 'color',
+    'settings' => 'giotto_site_text_color',
+    'label'    => __('Site Text Color', 'giottopress'),
+    'section'  => 'giotto_section_general_typography',
+    'default'  => '#4c555a',
+    'output'   => array(
+        array(
+//            'exclude'  => array('#4c555a'),
+            'element'  => 'body, .main-title a, .content .entry-title a, #comments .comment-body footer .comment-author a, #comments .comment-body footer .comment-metadata a, .widget a, strong, pre, table th, .button.is-link, input.is-link[type="submit"], #comments .comment-body .reply a.is-link,.tag, .tagcloud a, .content h1,.content h2,.content h3,.content h4,.content h5,.content h6, label, .posts-pagination .pagination .page-numbers, .content .entry-title a,#primary #main .hentry .more-tag.button, #primary #main .hentry input.more-tag[type="submit"], #primary #main .hentry #comments .comment-body .reply a.more-tag, #comments .comment-body .reply #primary #main .hentry a.more-tag, #comments .comment-body footer .comment-author a, #comments .comment-body footer .comment-metadata a, .widget a, h1.page-title, .page-title, widget-title',
+            'property' => 'color'
+        )
+    )
+));
+
 
 /**
  * 2) Header

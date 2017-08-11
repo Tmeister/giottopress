@@ -854,37 +854,37 @@ a.has-text-danger:hover, a.has-text-danger:focus { color: #ff0537; }
 
 .button.is-black.is-inverted.is-outlined[disabled], input.is-black.is-inverted.is-outlined[disabled][type="submit"], #comments .comment-body .reply a.is-black.is-inverted.is-outlined[disabled] { background-color: transparent; border-color: white; box-shadow: none; color: white; }
 
-.button.is-light, input.is-light[type="submit"], #comments .comment-body .reply a.is-light { background-color: #EAECEE; border-color: transparent; color: #363636; }
+.button.is-light, input.is-light[type="submit"], #comments .comment-body .reply a.is-light, #comments .comment-body .reply .tagcloud a, .tagcloud #comments .comment-body .reply a, .tagcloud a.button { background-color: #EAECEE; border-color: transparent; color: #363636; }
 
-.button.is-light:hover, input.is-light[type="submit"]:hover, #comments .comment-body .reply a.is-light:hover, .button.is-light.is-hovered, input.is-light.is-hovered[type="submit"], #comments .comment-body .reply a.is-light.is-hovered { background-color: #e3e6e8; border-color: transparent; color: #363636; }
+.button.is-light:hover, input.is-light[type="submit"]:hover, #comments .comment-body .reply a.is-light:hover, #comments .comment-body .reply .tagcloud a:hover, .tagcloud #comments .comment-body .reply a:hover, .tagcloud a.button:hover, .button.is-light.is-hovered, input.is-light.is-hovered[type="submit"], #comments .comment-body .reply a.is-light.is-hovered, #comments .comment-body .reply .tagcloud a.is-hovered, .tagcloud #comments .comment-body .reply a.is-hovered, .tagcloud a.button.is-hovered { background-color: #e3e6e8; border-color: transparent; color: #363636; }
 
-.button.is-light:focus, input.is-light[type="submit"]:focus, #comments .comment-body .reply a.is-light:focus, .button.is-light.is-focused, input.is-light.is-focused[type="submit"], #comments .comment-body .reply a.is-light.is-focused { border-color: transparent; box-shadow: 0 0 0.5em rgba(234, 236, 238, 0.25); color: #363636; }
+.button.is-light:focus, input.is-light[type="submit"]:focus, #comments .comment-body .reply a.is-light:focus, #comments .comment-body .reply .tagcloud a:focus, .tagcloud #comments .comment-body .reply a:focus, .tagcloud a.button:focus, .button.is-light.is-focused, input.is-light.is-focused[type="submit"], #comments .comment-body .reply a.is-light.is-focused, #comments .comment-body .reply .tagcloud a.is-focused, .tagcloud #comments .comment-body .reply a.is-focused, .tagcloud a.button.is-focused { border-color: transparent; box-shadow: 0 0 0.5em rgba(234, 236, 238, 0.25); color: #363636; }
 
-.button.is-light:active, input.is-light[type="submit"]:active, #comments .comment-body .reply a.is-light:active, .button.is-light.is-active, input.is-light.is-active[type="submit"], #comments .comment-body .reply a.is-light.is-active { background-color: #dcdfe3; border-color: transparent; box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2); color: #363636; }
+.button.is-light:active, input.is-light[type="submit"]:active, #comments .comment-body .reply a.is-light:active, #comments .comment-body .reply .tagcloud a:active, .tagcloud #comments .comment-body .reply a:active, .tagcloud a.button:active, .button.is-light.is-active, input.is-light.is-active[type="submit"], #comments .comment-body .reply a.is-light.is-active, #comments .comment-body .reply .tagcloud a.is-active, .tagcloud #comments .comment-body .reply a.is-active, .tagcloud a.button.is-active { background-color: #dcdfe3; border-color: transparent; box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2); color: #363636; }
 
-.button.is-light[disabled], input.is-light[disabled][type="submit"], #comments .comment-body .reply a.is-light[disabled] { background-color: #EAECEE; border-color: transparent; box-shadow: none; }
+.button.is-light[disabled], input.is-light[disabled][type="submit"], #comments .comment-body .reply a.is-light[disabled], #comments .comment-body .reply .tagcloud a[disabled], .tagcloud #comments .comment-body .reply a[disabled], .tagcloud a.button[disabled] { background-color: #EAECEE; border-color: transparent; box-shadow: none; }
 
-.button.is-light.is-inverted, input.is-light.is-inverted[type="submit"], #comments .comment-body .reply a.is-light.is-inverted { background-color: #363636; color: #EAECEE; }
+.button.is-light.is-inverted, input.is-light.is-inverted[type="submit"], #comments .comment-body .reply a.is-light.is-inverted, #comments .comment-body .reply .tagcloud a.is-inverted, .tagcloud #comments .comment-body .reply a.is-inverted, .tagcloud a.button.is-inverted { background-color: #363636; color: #EAECEE; }
 
-.button.is-light.is-inverted:hover, input.is-light.is-inverted[type="submit"]:hover, #comments .comment-body .reply a.is-light.is-inverted:hover { background-color: #292929; }
+.button.is-light.is-inverted:hover, input.is-light.is-inverted[type="submit"]:hover, #comments .comment-body .reply a.is-light.is-inverted:hover, #comments .comment-body .reply .tagcloud a.is-inverted:hover, .tagcloud #comments .comment-body .reply a.is-inverted:hover, .tagcloud a.button.is-inverted:hover { background-color: #292929; }
 
-.button.is-light.is-inverted[disabled], input.is-light.is-inverted[disabled][type="submit"], #comments .comment-body .reply a.is-light.is-inverted[disabled] { background-color: #363636; border-color: transparent; box-shadow: none; color: #EAECEE; }
+.button.is-light.is-inverted[disabled], input.is-light.is-inverted[disabled][type="submit"], #comments .comment-body .reply a.is-light.is-inverted[disabled], #comments .comment-body .reply .tagcloud a.is-inverted[disabled], .tagcloud #comments .comment-body .reply a.is-inverted[disabled], .tagcloud a.button.is-inverted[disabled] { background-color: #363636; border-color: transparent; box-shadow: none; color: #EAECEE; }
 
-.button.is-light.is-loading:after, input.is-light.is-loading[type="submit"]:after, #comments .comment-body .reply a.is-light.is-loading:after { border-color: transparent transparent #363636 #363636 !important; }
+.button.is-light.is-loading:after, input.is-light.is-loading[type="submit"]:after, #comments .comment-body .reply a.is-light.is-loading:after, #comments .comment-body .reply .tagcloud a.is-loading:after, .tagcloud #comments .comment-body .reply a.is-loading:after, .tagcloud a.button.is-loading:after { border-color: transparent transparent #363636 #363636 !important; }
 
-.button.is-light.is-outlined, input.is-light.is-outlined[type="submit"], #comments .comment-body .reply a.is-light.is-outlined { background-color: transparent; border-color: #EAECEE; color: #EAECEE; }
+.button.is-light.is-outlined, input.is-light.is-outlined[type="submit"], #comments .comment-body .reply a.is-light.is-outlined, #comments .comment-body .reply .tagcloud a.is-outlined, .tagcloud #comments .comment-body .reply a.is-outlined, .tagcloud a.button.is-outlined { background-color: transparent; border-color: #EAECEE; color: #EAECEE; }
 
-.button.is-light.is-outlined:hover, input.is-light.is-outlined[type="submit"]:hover, #comments .comment-body .reply a.is-light.is-outlined:hover, .button.is-light.is-outlined:focus, input.is-light.is-outlined[type="submit"]:focus, #comments .comment-body .reply a.is-light.is-outlined:focus { background-color: #EAECEE; border-color: #EAECEE; color: #363636; }
+.button.is-light.is-outlined:hover, input.is-light.is-outlined[type="submit"]:hover, #comments .comment-body .reply a.is-light.is-outlined:hover, #comments .comment-body .reply .tagcloud a.is-outlined:hover, .tagcloud #comments .comment-body .reply a.is-outlined:hover, .tagcloud a.button.is-outlined:hover, .button.is-light.is-outlined:focus, input.is-light.is-outlined[type="submit"]:focus, #comments .comment-body .reply a.is-light.is-outlined:focus, #comments .comment-body .reply .tagcloud a.is-outlined:focus, .tagcloud #comments .comment-body .reply a.is-outlined:focus, .tagcloud a.button.is-outlined:focus { background-color: #EAECEE; border-color: #EAECEE; color: #363636; }
 
-.button.is-light.is-outlined.is-loading:after, input.is-light.is-outlined.is-loading[type="submit"]:after, #comments .comment-body .reply a.is-light.is-outlined.is-loading:after { border-color: transparent transparent #EAECEE #EAECEE !important; }
+.button.is-light.is-outlined.is-loading:after, input.is-light.is-outlined.is-loading[type="submit"]:after, #comments .comment-body .reply a.is-light.is-outlined.is-loading:after, #comments .comment-body .reply .tagcloud a.is-outlined.is-loading:after, .tagcloud #comments .comment-body .reply a.is-outlined.is-loading:after, .tagcloud a.button.is-outlined.is-loading:after { border-color: transparent transparent #EAECEE #EAECEE !important; }
 
-.button.is-light.is-outlined[disabled], input.is-light.is-outlined[disabled][type="submit"], #comments .comment-body .reply a.is-light.is-outlined[disabled] { background-color: transparent; border-color: #EAECEE; box-shadow: none; color: #EAECEE; }
+.button.is-light.is-outlined[disabled], input.is-light.is-outlined[disabled][type="submit"], #comments .comment-body .reply a.is-light.is-outlined[disabled], #comments .comment-body .reply .tagcloud a.is-outlined[disabled], .tagcloud #comments .comment-body .reply a.is-outlined[disabled], .tagcloud a.button.is-outlined[disabled] { background-color: transparent; border-color: #EAECEE; box-shadow: none; color: #EAECEE; }
 
-.button.is-light.is-inverted.is-outlined, input.is-light.is-inverted.is-outlined[type="submit"], #comments .comment-body .reply a.is-light.is-inverted.is-outlined { background-color: transparent; border-color: #363636; color: #363636; }
+.button.is-light.is-inverted.is-outlined, input.is-light.is-inverted.is-outlined[type="submit"], #comments .comment-body .reply a.is-light.is-inverted.is-outlined, #comments .comment-body .reply .tagcloud a.is-inverted.is-outlined, .tagcloud #comments .comment-body .reply a.is-inverted.is-outlined, .tagcloud a.button.is-inverted.is-outlined { background-color: transparent; border-color: #363636; color: #363636; }
 
-.button.is-light.is-inverted.is-outlined:hover, input.is-light.is-inverted.is-outlined[type="submit"]:hover, #comments .comment-body .reply a.is-light.is-inverted.is-outlined:hover, .button.is-light.is-inverted.is-outlined:focus, input.is-light.is-inverted.is-outlined[type="submit"]:focus, #comments .comment-body .reply a.is-light.is-inverted.is-outlined:focus { background-color: #363636; color: #EAECEE; }
+.button.is-light.is-inverted.is-outlined:hover, input.is-light.is-inverted.is-outlined[type="submit"]:hover, #comments .comment-body .reply a.is-light.is-inverted.is-outlined:hover, #comments .comment-body .reply .tagcloud a.is-inverted.is-outlined:hover, .tagcloud #comments .comment-body .reply a.is-inverted.is-outlined:hover, .tagcloud a.button.is-inverted.is-outlined:hover, .button.is-light.is-inverted.is-outlined:focus, input.is-light.is-inverted.is-outlined[type="submit"]:focus, #comments .comment-body .reply a.is-light.is-inverted.is-outlined:focus, #comments .comment-body .reply .tagcloud a.is-inverted.is-outlined:focus, .tagcloud #comments .comment-body .reply a.is-inverted.is-outlined:focus, .tagcloud a.button.is-inverted.is-outlined:focus { background-color: #363636; color: #EAECEE; }
 
-.button.is-light.is-inverted.is-outlined[disabled], input.is-light.is-inverted.is-outlined[disabled][type="submit"], #comments .comment-body .reply a.is-light.is-inverted.is-outlined[disabled] { background-color: transparent; border-color: #363636; box-shadow: none; color: #363636; }
+.button.is-light.is-inverted.is-outlined[disabled], input.is-light.is-inverted.is-outlined[disabled][type="submit"], #comments .comment-body .reply a.is-light.is-inverted.is-outlined[disabled], #comments .comment-body .reply .tagcloud a.is-inverted.is-outlined[disabled], .tagcloud #comments .comment-body .reply a.is-inverted.is-outlined[disabled], .tagcloud a.button.is-inverted.is-outlined[disabled] { background-color: transparent; border-color: #363636; box-shadow: none; color: #363636; }
 
 .button.is-dark, input.is-dark[type="submit"], #comments .comment-body .reply a.is-dark { background-color: #363636; border-color: transparent; color: #EAECEE; }
 
@@ -918,37 +918,37 @@ a.has-text-danger:hover, a.has-text-danger:focus { color: #ff0537; }
 
 .button.is-dark.is-inverted.is-outlined[disabled], input.is-dark.is-inverted.is-outlined[disabled][type="submit"], #comments .comment-body .reply a.is-dark.is-inverted.is-outlined[disabled] { background-color: transparent; border-color: #EAECEE; box-shadow: none; color: #EAECEE; }
 
-.button.is-primary, input[type="submit"], #comments .comment-body .reply a.is-primary, #comments .comment-body .reply .tagcloud a, .tagcloud #comments .comment-body .reply a, .tagcloud a.button { background-color: #008cdd; border-color: transparent; color: #fff; }
+.button.is-primary, input[type="submit"], #comments .comment-body .reply a.is-primary { background-color: #008cdd; border-color: transparent; color: #fff; }
 
-.button.is-primary:hover, input[type="submit"]:hover, #comments .comment-body .reply a.is-primary:hover, #comments .comment-body .reply .tagcloud a:hover, .tagcloud #comments .comment-body .reply a:hover, .tagcloud a.button:hover, .button.is-primary.is-hovered, input.is-hovered[type="submit"], #comments .comment-body .reply a.is-primary.is-hovered, #comments .comment-body .reply .tagcloud a.is-hovered, .tagcloud #comments .comment-body .reply a.is-hovered, .tagcloud a.button.is-hovered { background-color: #0084d0; border-color: transparent; color: #fff; }
+.button.is-primary:hover, input[type="submit"]:hover, #comments .comment-body .reply a.is-primary:hover, .button.is-primary.is-hovered, input.is-hovered[type="submit"], #comments .comment-body .reply a.is-primary.is-hovered { background-color: #0084d0; border-color: transparent; color: #fff; }
 
-.button.is-primary:focus, input[type="submit"]:focus, #comments .comment-body .reply a.is-primary:focus, #comments .comment-body .reply .tagcloud a:focus, .tagcloud #comments .comment-body .reply a:focus, .tagcloud a.button:focus, .button.is-primary.is-focused, input.is-focused[type="submit"], #comments .comment-body .reply a.is-primary.is-focused, #comments .comment-body .reply .tagcloud a.is-focused, .tagcloud #comments .comment-body .reply a.is-focused, .tagcloud a.button.is-focused { border-color: transparent; box-shadow: 0 0 0.5em rgba(0, 140, 221, 0.25); color: #fff; }
+.button.is-primary:focus, input[type="submit"]:focus, #comments .comment-body .reply a.is-primary:focus, .button.is-primary.is-focused, input.is-focused[type="submit"], #comments .comment-body .reply a.is-primary.is-focused { border-color: transparent; box-shadow: 0 0 0.5em rgba(0, 140, 221, 0.25); color: #fff; }
 
-.button.is-primary:active, input[type="submit"]:active, #comments .comment-body .reply a.is-primary:active, #comments .comment-body .reply .tagcloud a:active, .tagcloud #comments .comment-body .reply a:active, .tagcloud a.button:active, .button.is-primary.is-active, input.is-active[type="submit"], #comments .comment-body .reply a.is-primary.is-active, #comments .comment-body .reply .tagcloud a.is-active, .tagcloud #comments .comment-body .reply a.is-active, .tagcloud a.button.is-active { background-color: #007cc4; border-color: transparent; box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2); color: #fff; }
+.button.is-primary:active, input[type="submit"]:active, #comments .comment-body .reply a.is-primary:active, .button.is-primary.is-active, input.is-active[type="submit"], #comments .comment-body .reply a.is-primary.is-active { background-color: #007cc4; border-color: transparent; box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2); color: #fff; }
 
-.button.is-primary[disabled], input[disabled][type="submit"], #comments .comment-body .reply a.is-primary[disabled], #comments .comment-body .reply .tagcloud a[disabled], .tagcloud #comments .comment-body .reply a[disabled], .tagcloud a.button[disabled] { background-color: #008cdd; border-color: transparent; box-shadow: none; }
+.button.is-primary[disabled], input[disabled][type="submit"], #comments .comment-body .reply a.is-primary[disabled] { background-color: #008cdd; border-color: transparent; box-shadow: none; }
 
-.button.is-primary.is-inverted, input.is-inverted[type="submit"], #comments .comment-body .reply a.is-primary.is-inverted, #comments .comment-body .reply .tagcloud a.is-inverted, .tagcloud #comments .comment-body .reply a.is-inverted, .tagcloud a.button.is-inverted { background-color: #fff; color: #008cdd; }
+.button.is-primary.is-inverted, input.is-inverted[type="submit"], #comments .comment-body .reply a.is-primary.is-inverted { background-color: #fff; color: #008cdd; }
 
-.button.is-primary.is-inverted:hover, input.is-inverted[type="submit"]:hover, #comments .comment-body .reply a.is-primary.is-inverted:hover, #comments .comment-body .reply .tagcloud a.is-inverted:hover, .tagcloud #comments .comment-body .reply a.is-inverted:hover, .tagcloud a.button.is-inverted:hover { background-color: #f2f2f2; }
+.button.is-primary.is-inverted:hover, input.is-inverted[type="submit"]:hover, #comments .comment-body .reply a.is-primary.is-inverted:hover { background-color: #f2f2f2; }
 
-.button.is-primary.is-inverted[disabled], input.is-inverted[disabled][type="submit"], #comments .comment-body .reply a.is-primary.is-inverted[disabled], #comments .comment-body .reply .tagcloud a.is-inverted[disabled], .tagcloud #comments .comment-body .reply a.is-inverted[disabled], .tagcloud a.button.is-inverted[disabled] { background-color: #fff; border-color: transparent; box-shadow: none; color: #008cdd; }
+.button.is-primary.is-inverted[disabled], input.is-inverted[disabled][type="submit"], #comments .comment-body .reply a.is-primary.is-inverted[disabled] { background-color: #fff; border-color: transparent; box-shadow: none; color: #008cdd; }
 
-.button.is-primary.is-loading:after, input.is-loading[type="submit"]:after, #comments .comment-body .reply a.is-primary.is-loading:after, #comments .comment-body .reply .tagcloud a.is-loading:after, .tagcloud #comments .comment-body .reply a.is-loading:after, .tagcloud a.button.is-loading:after { border-color: transparent transparent #fff #fff !important; }
+.button.is-primary.is-loading:after, input.is-loading[type="submit"]:after, #comments .comment-body .reply a.is-primary.is-loading:after { border-color: transparent transparent #fff #fff !important; }
 
-.button.is-primary.is-outlined, input.is-outlined[type="submit"], #comments .comment-body .reply a.is-primary.is-outlined, #comments .comment-body .reply .tagcloud a.is-outlined, .tagcloud #comments .comment-body .reply a.is-outlined, .tagcloud a.button.is-outlined { background-color: transparent; border-color: #008cdd; color: #008cdd; }
+.button.is-primary.is-outlined, input.is-outlined[type="submit"], #comments .comment-body .reply a.is-primary.is-outlined { background-color: transparent; border-color: #008cdd; color: #008cdd; }
 
-.button.is-primary.is-outlined:hover, input.is-outlined[type="submit"]:hover, #comments .comment-body .reply a.is-primary.is-outlined:hover, #comments .comment-body .reply .tagcloud a.is-outlined:hover, .tagcloud #comments .comment-body .reply a.is-outlined:hover, .tagcloud a.button.is-outlined:hover, .button.is-primary.is-outlined:focus, input.is-outlined[type="submit"]:focus, #comments .comment-body .reply a.is-primary.is-outlined:focus, #comments .comment-body .reply .tagcloud a.is-outlined:focus, .tagcloud #comments .comment-body .reply a.is-outlined:focus, .tagcloud a.button.is-outlined:focus { background-color: #008cdd; border-color: #008cdd; color: #fff; }
+.button.is-primary.is-outlined:hover, input.is-outlined[type="submit"]:hover, #comments .comment-body .reply a.is-primary.is-outlined:hover, .button.is-primary.is-outlined:focus, input.is-outlined[type="submit"]:focus, #comments .comment-body .reply a.is-primary.is-outlined:focus { background-color: #008cdd; border-color: #008cdd; color: #fff; }
 
-.button.is-primary.is-outlined.is-loading:after, input.is-outlined.is-loading[type="submit"]:after, #comments .comment-body .reply a.is-primary.is-outlined.is-loading:after, #comments .comment-body .reply .tagcloud a.is-outlined.is-loading:after, .tagcloud #comments .comment-body .reply a.is-outlined.is-loading:after, .tagcloud a.button.is-outlined.is-loading:after { border-color: transparent transparent #008cdd #008cdd !important; }
+.button.is-primary.is-outlined.is-loading:after, input.is-outlined.is-loading[type="submit"]:after, #comments .comment-body .reply a.is-primary.is-outlined.is-loading:after { border-color: transparent transparent #008cdd #008cdd !important; }
 
-.button.is-primary.is-outlined[disabled], input.is-outlined[disabled][type="submit"], #comments .comment-body .reply a.is-primary.is-outlined[disabled], #comments .comment-body .reply .tagcloud a.is-outlined[disabled], .tagcloud #comments .comment-body .reply a.is-outlined[disabled], .tagcloud a.button.is-outlined[disabled] { background-color: transparent; border-color: #008cdd; box-shadow: none; color: #008cdd; }
+.button.is-primary.is-outlined[disabled], input.is-outlined[disabled][type="submit"], #comments .comment-body .reply a.is-primary.is-outlined[disabled] { background-color: transparent; border-color: #008cdd; box-shadow: none; color: #008cdd; }
 
-.button.is-primary.is-inverted.is-outlined, input.is-inverted.is-outlined[type="submit"], #comments .comment-body .reply a.is-primary.is-inverted.is-outlined, #comments .comment-body .reply .tagcloud a.is-inverted.is-outlined, .tagcloud #comments .comment-body .reply a.is-inverted.is-outlined, .tagcloud a.button.is-inverted.is-outlined { background-color: transparent; border-color: #fff; color: #fff; }
+.button.is-primary.is-inverted.is-outlined, input.is-inverted.is-outlined[type="submit"], #comments .comment-body .reply a.is-primary.is-inverted.is-outlined { background-color: transparent; border-color: #fff; color: #fff; }
 
-.button.is-primary.is-inverted.is-outlined:hover, input.is-inverted.is-outlined[type="submit"]:hover, #comments .comment-body .reply a.is-primary.is-inverted.is-outlined:hover, #comments .comment-body .reply .tagcloud a.is-inverted.is-outlined:hover, .tagcloud #comments .comment-body .reply a.is-inverted.is-outlined:hover, .tagcloud a.button.is-inverted.is-outlined:hover, .button.is-primary.is-inverted.is-outlined:focus, input.is-inverted.is-outlined[type="submit"]:focus, #comments .comment-body .reply a.is-primary.is-inverted.is-outlined:focus, #comments .comment-body .reply .tagcloud a.is-inverted.is-outlined:focus, .tagcloud #comments .comment-body .reply a.is-inverted.is-outlined:focus, .tagcloud a.button.is-inverted.is-outlined:focus { background-color: #fff; color: #008cdd; }
+.button.is-primary.is-inverted.is-outlined:hover, input.is-inverted.is-outlined[type="submit"]:hover, #comments .comment-body .reply a.is-primary.is-inverted.is-outlined:hover, .button.is-primary.is-inverted.is-outlined:focus, input.is-inverted.is-outlined[type="submit"]:focus, #comments .comment-body .reply a.is-primary.is-inverted.is-outlined:focus { background-color: #fff; color: #008cdd; }
 
-.button.is-primary.is-inverted.is-outlined[disabled], input.is-inverted.is-outlined[disabled][type="submit"], #comments .comment-body .reply a.is-primary.is-inverted.is-outlined[disabled], #comments .comment-body .reply .tagcloud a.is-inverted.is-outlined[disabled], .tagcloud #comments .comment-body .reply a.is-inverted.is-outlined[disabled], .tagcloud a.button.is-inverted.is-outlined[disabled] { background-color: transparent; border-color: #fff; box-shadow: none; color: #fff; }
+.button.is-primary.is-inverted.is-outlined[disabled], input.is-inverted.is-outlined[disabled][type="submit"], #comments .comment-body .reply a.is-primary.is-inverted.is-outlined[disabled] { background-color: transparent; border-color: #fff; box-shadow: none; color: #fff; }
 
 .button.is-info, input.is-info[type="submit"], #comments .comment-body .reply a.is-info { background-color: #3273dc; border-color: transparent; color: #fff; }
 
@@ -1123,11 +1123,11 @@ a.has-text-danger:hover, a.has-text-danger:focus { color: #ff0537; }
 
 .input.is-black, input.is-black:not([type="submit"]), .textarea.is-black, textarea.is-black { border-color: #0a0a0a; }
 
-.input.is-light, input.is-light:not([type="submit"]), .textarea.is-light, textarea.is-light { border-color: #EAECEE; }
+.input.is-light, input.is-light:not([type="submit"]), .tagcloud a.input, .textarea.is-light, textarea.is-light, .tagcloud a.textarea { border-color: #EAECEE; }
 
 .input.is-dark, input.is-dark:not([type="submit"]), .textarea.is-dark, textarea.is-dark { border-color: #363636; }
 
-.input.is-primary, input.is-primary:not([type="submit"]), .tagcloud a.input, .textarea.is-primary, textarea.is-primary, .tagcloud a.textarea { border-color: #008cdd; }
+.input.is-primary, input.is-primary:not([type="submit"]), .textarea.is-primary, textarea.is-primary { border-color: #008cdd; }
 
 .input.is-info, input.is-info:not([type="submit"]), .textarea.is-info, textarea.is-info { border-color: #3273dc; }
 
@@ -1209,11 +1209,11 @@ a.has-text-danger:hover, a.has-text-danger:focus { color: #ff0537; }
 
 .select.is-black select, select.is-black select { border-color: #0a0a0a; }
 
-.select.is-light select, select.is-light select { border-color: #EAECEE; }
+.select.is-light select, select.is-light select, .tagcloud a.select select { border-color: #EAECEE; }
 
 .select.is-dark select, select.is-dark select { border-color: #363636; }
 
-.select.is-primary select, select.is-primary select, .tagcloud a.select select { border-color: #008cdd; }
+.select.is-primary select, select.is-primary select { border-color: #008cdd; }
 
 .select.is-info select, select.is-info select { border-color: #3273dc; }
 
@@ -1259,11 +1259,11 @@ a.has-text-danger:hover, a.has-text-danger:focus { color: #ff0537; }
 
 .help.is-black { color: #0a0a0a; }
 
-.help.is-light { color: #EAECEE; }
+.help.is-light, .tagcloud a.help { color: #EAECEE; }
 
 .help.is-dark { color: #363636; }
 
-.help.is-primary, .tagcloud a.help { color: #008cdd; }
+.help.is-primary { color: #008cdd; }
 
 .help.is-info { color: #3273dc; }
 
@@ -1412,11 +1412,11 @@ a.has-text-danger:hover, a.has-text-danger:focus { color: #ff0537; }
 
 .tag.is-black, .tagcloud a.is-black { background-color: #0a0a0a; color: white; }
 
-.tag.is-light, .tagcloud a.is-light { background-color: #EAECEE; color: #363636; }
+.tag.is-light, .tagcloud a { background-color: #EAECEE; color: #363636; }
 
 .tag.is-dark, .tagcloud a.is-dark { background-color: #363636; color: #EAECEE; }
 
-.tag.is-primary, .tagcloud a { background-color: #008cdd; color: #fff; }
+.tag.is-primary, .tagcloud a.is-primary { background-color: #008cdd; color: #fff; }
 
 .tag.is-info, .tagcloud a.is-info { background-color: #3273dc; color: #fff; }
 
@@ -1921,9 +1921,7 @@ section.page-header #breadcrumbs { font-size: 1rem; }
 
 .widget a:hover { color: #008cdd; }
 
-.tagcloud a { text-decoration: none !important; color: white; }
-
-.tagcloud a:hover { color: white; }
+.tagcloud a { text-decoration: none !important; }
 
 /*--------------------------------------------------------------
 # Galleries
@@ -1953,6 +1951,8 @@ section.page-header #breadcrumbs { font-size: 1rem; }
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+#site-footer { background-color: white; }
+
 #site-footer .widget { font-size: .9em; }
 
 #site-footer .widget ul li { padding: .25em 0; }

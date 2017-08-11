@@ -125,15 +125,36 @@ if ( ! function_exists('giotto_page_class')):
      */
     function giotto_page_class()
     {
-        $default_classes = array('container', 'is-clearfix');
-        $container_type  = get_theme_mod('giotto_container_type', 'boxed');
+        global $post;
+
+        $default_classes  = array('container', 'is-clearfix');
+        $settings_classes = array();
+        /**
+         * Global container setting
+         */
+        $container_type = get_theme_mod('giotto_container_type', 'boxed');
+        /**
+         * Singular container setting
+         */
+        $container_single_meta = (isset($post)) ? get_post_meta($post->ID, 'giotto/post_layout', true) : false;
 
         if ('fullwidth' === $container_type || 'wide' === $container_type) {
-            $default_classes[] = 'is-fluid';
-            $default_classes[] = 'is-marginless';
+            $settings_classes[] = 'is-fluid';
+            $settings_classes[] = 'is-marginless';
         }
 
-        $classes = apply_filters('giotto/content_page_class', $default_classes);
+        /**
+         * If the container meta exists, override the global setting
+         */
+        if (false !== $container_single_meta) {
+            $settings_classes = array();
+            if ('fullwidth' === $container_single_meta || 'wide' === $container_single_meta) {
+                $settings_classes[] = 'is-fluid';
+                $settings_classes[] = 'is-marginless';
+            }
+        }
+
+        $classes = apply_filters('giotto/content_page_class', array_merge($default_classes, $settings_classes));
         echo sprintf('class="%s"', implode(' ', $classes));
     }
 endif;
@@ -161,18 +182,39 @@ if ( ! function_exists('giotto_wrapper_class')):
      */
     function giotto_wrapper_class()
     {
-        $default_classes = array('columns', 'container');
+        global $post;
 
+        $default_classes       = array('columns', 'container');
+        $settings_classes      = array();
+        $container_single_meta = (isset($post)) ? get_post_meta($post->ID, 'giotto/post_layout', true) : false;
+
+        /**
+         * If sidebar on the left set the reverse order
+         */
         if ('left-sidebar' === giotto_get_sidebar_layout()) {
-            $default_classes[] = 'reverse-row-order';
+            $settings_classes[] = 'reverse-row-order';
         }
 
+        /**
+         * Global Setting
+         */
         if ('fullwidth' === get_theme_mod('giotto_container_type', 'boxed')) {
-            $default_classes[] = 'is-fluid';
-            $default_classes[] = 'is-marginless';
+            $settings_classes[] = 'is-fluid';
+            $settings_classes[] = 'is-marginless';
         }
 
-        $classes = apply_filters('giotto/wrapper_class', $default_classes);
+        /**
+         * If the singular settings is set, override the global setting
+         */
+        if (false !== $container_single_meta) {
+            $settings_classes = array();
+            if ('fullwidth' === $container_single_meta) {
+                $settings_classes[] = 'is-fluid';
+                $settings_classes[] = 'is-marginless';
+            }
+        }
+
+        $classes = apply_filters('giotto/wrapper_class', array_merge($default_classes, $settings_classes));
         echo sprintf('class="%s"', implode(' ', $classes));
     }
 endif;
@@ -275,7 +317,7 @@ if ( ! function_exists('giotto_get_sidebar_layout')):
         /**
          * If is post get option from the the post meta
          */
-        $layout_single_meta = (isset($post)) ? get_post_meta($post->ID, 'giotto/post_layout', true) : false;
+        $layout_single_meta = (isset($post)) ? get_post_meta($post->ID, 'giotto/post_sidebar', true) : false;
 
         /**
          * If is single, get the single posts global option

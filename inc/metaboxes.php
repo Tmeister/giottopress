@@ -277,25 +277,12 @@ if ( ! class_exists('Giotto_Meta_Box')) :
             ?>
 
             <style type="text/css">
-                /* version 3.8 fix */
-                .form-table th {
-                    padding: 20px 10px;
-                }
-
-                .giotto-row {
-                    padding: 8px 4px;
-                }
-
-                .giotto-label,
-                label {
+                #giotto-post-layout label,
+                #giotto-post-sidebar label{
                     display: block;
                     vertical-align: top;
                     width: 100%;
                     padding: 5px 0;
-                }
-
-                .giotto-label {
-                    padding: 0;
                 }
 
                 .giotto-meta-field, .giotto-meta-field-text {
@@ -327,17 +314,17 @@ if ( ! function_exists('giotto_meta_box')) {
 /**
  * The Metaboxes
  */
-$posts_types = get_post_types(array('public' => true));
-$args        = array(
-    'meta_box_id'   => 'giotto/post_layout',
-    'label'         => 'Layout',
+$posts_types  = get_post_types(array('public' => true));
+$sidebar_args = array(
+    'meta_box_id'   => 'giotto-post-sidebar',
+    'label'         => 'Sidebar position',
     'post_type'     => $posts_types,
     'context'       => 'side',
     'priority'      => 'low',
     'hook_priority' => 10,
     'fields'        => array(
         array(
-            'name'    => 'giotto/post_layout',
+            'name'    => 'giotto/post_sidebar',
             'label'   => '',
             'type'    => 'radio',
             'class'   => 'giotto-meta-field',
@@ -352,4 +339,30 @@ $args        = array(
     )
 );
 
-giotto_meta_box($args);
+giotto_meta_box($sidebar_args);
+
+$layout_args = array(
+    'meta_box_id'   => 'giotto-post-layout',
+    'label'         => 'Layout',
+    'post_type'     => $posts_types,
+    'context'       => 'side',
+    'priority'      => 'low',
+    'hook_priority' => 10,
+    'fields'        => array(
+        array(
+            'name'    => 'giotto/post_layout',
+            'label'   => '',
+            'type'    => 'radio',
+            'class'   => 'giotto-meta-field',
+            'default' => 'global',
+            'options' => array(
+                'global'    => esc_attr__('Default', 'giottopress'),
+                'boxed'     => esc_attr__('Boxed', 'giottopress'),
+                'wide'      => esc_attr__('Wide', 'giottopress'),
+                'fullwidth' => esc_attr__('Fullwidth', 'giottopress'),
+            ),
+        ),
+    )
+);
+
+giotto_meta_box($layout_args);

@@ -33,12 +33,8 @@
 .tagcloud{
   a{
     @extend .tag;
-    @extend .is-primary;
+    @extend .is-light;
     @extend .is-rounded;
     text-decoration: none !important;
-    color: white;
-    &:hover{
-      color: white;
-    }
   }
 }
