@@ -403,10 +403,11 @@ if ( ! function_exists('giotto_header_class')):
     {
         $container_type    = get_theme_mod('giotto_header_contained_type', 'fullwidth');
         $menu_style        = get_theme_mod('giotto_menu_style', 'left');
+        $header_style      = get_theme_mod('giotto_header_general_style', 'fullwidth');
         $default_classes   = array('container');
         $default_classes[] = sprintf('menu-%s', $menu_style);
 
-        if ('fullwidth' === $container_type) {
+        if ('fullwidth' === $container_type || 'fullwidth' !== $header_style) {
             $default_classes[] = 'is-fluid';
             $default_classes[] = 'is-marginless';
         } else {

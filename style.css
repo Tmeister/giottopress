@@ -1689,19 +1689,21 @@ cite { display: block; }
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#masthead .navbar-brand .navbar-item img { height: 3.5em; max-height: 3.5em; }
+header#masthead .main-title { font-size: 1.2em; text-transform: uppercase; font-weight: 700; margin-right: .5em; }
 
-.main-title { font-size: 1.2em; text-transform: uppercase; font-weight: 700; margin-right: .5em; }
+header#masthead .main-title a { color: #4c555a; }
 
-.main-title a { color: #4c555a; }
+header#masthead .main-title a:visited { color: #4c555a; }
 
-.main-title a:visited { color: #4c555a; }
+header#masthead .main-title a:hover { color: #008cdd; }
 
-.main-title a:hover { color: #008cdd; }
+header#masthead .site-description { font-size: .9em; }
 
-.site-description { font-size: .9em; }
+header#masthead .navbar-brand a.navbar-item:hover { background-color: transparent; }
 
-.navbar-brand a.navbar-item:hover { background-color: transparent; }
+header#masthead .navbar-brand .navbar-item img { height: 3.5em; max-height: 3.5em; }
+
+body.header-minimal header#masthead { background-color: white; }
 
 body.header-transparent header#masthead { background: transparent !important; border-bottom: 0 solid transparent; position: absolute; z-index: 99; width: 100%; }
 
@@ -1738,11 +1740,9 @@ header#masthead { border-bottom-style: solid; border-color: #eaecee; border-widt
 
 .header-minimal #masthead .navbar .menu-item, .header-transparent #masthead .navbar .menu-item { color: #4c555a; }
 
-.header-minimal #masthead .navbar .menu-item:visited, .header-transparent #masthead .navbar .menu-item:visited { color: initial; }
+.header-minimal #masthead .navbar .menu-item:visited, .header-transparent #masthead .navbar .menu-item:visited { color: #4c555a; }
 
 .header-minimal #masthead .navbar .menu-item.is-active, .header-transparent #masthead .navbar .menu-item.is-active { color: #008cdd; }
-
-.header-minimal #masthead .navbar-item.has-dropdown:hover .navbar-link, .header-transparent #masthead .navbar-item.has-dropdown:hover .navbar-link { background-color: transparent; }
 
 #masthead .navbar-menu.is-active { position: relative; z-index: 99; background-color: white; padding-top: 0; }
 
@@ -1760,7 +1760,11 @@ header.menu-center .site-description { display: block; }
 
 .navbar-dropdown .has-dropdown > a:after { transform: rotate(225deg); top: 55%; }
 
-.navbar-dropdown .has-dropdown .navbar-dropdown { position: absolute; left: 100%; top: 0 !important; opacity: 0 !important; }
+.navbar-dropdown .has-dropdown .navbar-dropdown { position: absolute; left: -100%; top: 0 !important; opacity: 0 !important; }
+
+.navbar-item.has-dropdown:hover .navbar-item.has-dropdown .navbar-link { background-color: initial; }
+
+.navbar-item.has-dropdown:hover .navbar-item.has-dropdown .navbar-link:hover, .navbar-item.has-dropdown:hover .navbar-item.has-dropdown:hover { background-color: #EAECEE; }
 
 .navbar-dropdown .has-dropdown:hover .navbar-dropdown { opacity: 1 !important; }
 
@@ -1967,3 +1971,5 @@ section.page-header #breadcrumbs { font-size: 1rem; }
 # 404
 --------------------------------------------------------------*/
 .error-404 { padding-top: 4em; min-height: calc(75vh); }
+
+/*# sourceMappingURL=style.css.map */

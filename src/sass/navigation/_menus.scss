@@ -15,15 +15,12 @@ header#masthead {
       .menu-item {
         color: $text;
         &:visited {
-          color: initial;
+          color: $text;
         }
         &.is-active {
           color: $primary;
         }
       }
-    }
-    .navbar-item.has-dropdown:hover .navbar-link {
-      background-color: transparent;
     }
   }
 }
@@ -77,11 +74,20 @@ header {
     }
     .navbar-dropdown {
       position: absolute;
-      left: 100%;
+      left: -100%;
       top: 0 !important;
       opacity: 0 !important;
     }
   }
+}
+
+.navbar-item.has-dropdown:hover .navbar-item.has-dropdown .navbar-link {
+  background-color: initial;
+}
+
+.navbar-item.has-dropdown:hover .navbar-item.has-dropdown .navbar-link:hover,
+.navbar-item.has-dropdown:hover .navbar-item.has-dropdown:hover {
+  background-color: #EAECEE;
 }
 
 .navbar-dropdown {
@@ -97,13 +103,13 @@ header {
 @include mobile {
   .navbar-dropdown {
     .has-dropdown {
-        .navbar-dropdown {
-          opacity: 1 !important;
-          position: initial;
-          a{
-            padding-left: 3em !important;
-          }
+      .navbar-dropdown {
+        opacity: 1 !important;
+        position: initial;
+        a {
+          padding-left: 3em !important;
         }
+      }
     }
   }
 }

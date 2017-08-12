@@ -1,41 +1,51 @@
-#masthead .navbar-brand .navbar-item img{
-  height: 3.5em;
-  max-height: 3.5em;
-}
-.main-title {
-  font-size: 1.2em;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-right: .5em;
-  a {
-    color: $text;
-    &:visited {
+header#masthead {
+  .main-title {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: .5em;
+    a {
       color: $text;
+      &:visited {
+        color: $text;
+      }
+      &:hover {
+        color: $primary;
+      }
     }
-    &:hover {
-      color: $primary;
+  }
+
+  .site-description {
+    font-size: .9em;
+  }
+
+  .navbar-brand {
+    a.navbar-item {
+      &:hover {
+        background-color: transparent;
+      }
     }
+  }
+
+  .navbar-brand .navbar-item img {
+    height: 3.5em;
+    max-height: 3.5em;
   }
 }
 
-.site-description {
-  font-size: .9em;
-}
-
-.navbar-brand{
-  a.navbar-item{
-    &:hover{
-      background-color: transparent;
-    }
+body.header-minimal {
+  header#masthead {
+    background-color: white;
   }
 }
 
-body.header-transparent{
-  header#masthead{
+body.header-transparent {
+  header#masthead {
     background: transparent !important;
     border-bottom: 0 solid transparent;
     position: absolute;
     z-index: 99;
-    width:100%;
+    width: 100%;
   }
 }
+

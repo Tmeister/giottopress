@@ -429,18 +429,25 @@ Giotto_Kirki::add_field('giotto_theme', array(
 ));
 
 Giotto_Kirki::add_field('giotto_theme', array(
-    'type'      => 'select',
-    'settings'  => 'giotto_header_contained_type',
-    'label'     => __('Header Width', 'giottopress'),
-    'section'   => 'giotto_section_header_general',
-    'default'   => 'fullwidth',
-    'priority'  => 10,
-    'multiple'  => false,
-    'transport' => 'postMessage',
-    'choices'   => array(
+    'type'            => 'select',
+    'settings'        => 'giotto_header_contained_type',
+    'label'           => __('Header Width', 'giottopress'),
+    'section'         => 'giotto_section_header_general',
+    'default'         => 'fullwidth',
+    'priority'        => 10,
+    'multiple'        => false,
+    'transport'       => 'postMessage',
+    'choices'         => array(
         'fullwidth' => esc_attr__('Fullwidth', 'giottopress'),
         'contained' => esc_attr__('Contained', 'giottopress'),
     ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'giotto_header_general_style',
+            'operator' => '==',
+            'value'    => 'minimal'
+        )
+    )
 ));
 
 Giotto_Kirki::add_field('giotto_theme', array(
@@ -813,15 +820,10 @@ Giotto_Kirki::add_field('giotto_theme', array(
     'output'   => array(
         array(
             'exclude'  => array('#e7e9ec'),
-            'element'  => '.header-minimal #masthead .navbar .menu-item:hover',
-            'property' => 'background-color',
-        ),
-        array(
-            'exclude'  => array('#e7e9ec'),
-            'element'  => '.header-transparent #masthead .navbar .menu-item:hover',
+            'element'  => '.header-minimal #masthead .navbar .menu-item:hover, .navbar-item.has-dropdown:hover > .navbar-link,
+.navbar-item.has-dropdown.is-active > .navbar-link, .header-transparent #masthead .navbar .menu-item:hover, .navbar-item.has-dropdown:hover .navbar-item.has-dropdown:hover',
             'property' => 'background-color',
         )
-
     ),
     'choices'  => array(
         'alpha' => true,
@@ -837,13 +839,14 @@ Giotto_Kirki::add_field('giotto_theme', array(
     'output'   => array(
         array(
             'exclude'  => array('#555555'),
-            'element'  => '.header-minimal #masthead .navbar .menu-item:hover',
+            'element'  => '.header-minimal #masthead .navbar .menu-item:hover, .header-transparent #masthead .navbar .menu-item.is-active',
             'property' => 'color',
         ),
         array(
-            'exclude'  => array('#555555'),
-            'element'  => '.header-transparent #masthead .navbar .menu-item.is-active',
+            'exclude'  => array(),
+            'element'  => '.navbar-item.has-dropdown:hover, .navbar-item.has-dropdown:hover > .navbar-item ',
             'property' => 'color',
+            'suffix'   => ' !important'
         )
     ),
     'choices'  => array(
@@ -851,57 +854,59 @@ Giotto_Kirki::add_field('giotto_theme', array(
     ),
 ));
 
-Giotto_Kirki::add_field('giotto_theme', array(
-    'type'     => 'custom',
-    'settings' => 'custom-separator-submenu',
-    'label'    => '',
-    'section'  => 'giotto_section_primary_menu',
-    'default'  => '<br/><div class="customize-section-title" style="padding:10px 20px;">Submenu</div>',
-));
+//Giotto_Kirki::add_field('giotto_theme', array(
+//    'type'     => 'custom',
+//    'settings' => 'custom-separator-submenu',
+//    'label'    => '',
+//    'section'  => 'giotto_section_primary_menu',
+//    'default'  => '<br/><div class="customize-section-title" style="padding:10px 20px;">Submenu</div>',
+//));
 
-Giotto_Kirki::add_field('giotto_theme', array(
-    'type'      => 'color',
-    'settings'  => 'giotto_primary_menu_sub_color',
-    'label'     => __('Submenus Link Color', 'giottopress'),
-    'section'   => 'giotto_section_primary_menu',
-    'default'   => '#666666',
-    'transport' => 'postMessage',
-    'output'    => array(
-        array(
-            'exclude'  => array('#666666'),
-            'element'  => '.header-minimal #masthead .navbar .navbar-dropdown .menu-item',
-            'property' => 'color',
-        ),
-        array(
-            'exclude'  => array('#666666'),
-            'element'  => '.header-transparent #masthead .navbar .navbar-dropdown .menu-item',
-            'property' => 'color',
-        ),
-    ),
-));
 
-Giotto_Kirki::add_field('giotto_theme', array(
-    'type'     => 'color',
-    'settings' => 'giotto_primary_submenu_over_bg',
-    'label'    => __('Submenu Background Color', 'giottopress'),
-    'section'  => 'giotto_section_primary_menu',
-    'default'  => '#e7e9ec',
-    'output'   => array(
-        array(
-            'exclude'  => array('#e7e9ec'),
-            'element'  => '.header-minimal #masthead .navbar .navbar-dropdown .menu-item:hover',
-            'property' => 'background-color',
-        ),
-        array(
-            'exclude'  => array('#e7e9ec'),
-            'element'  => '.header-transparent #masthead .navbar .navbar-dropdown .menu-item:hover',
-            'property' => 'background-color',
-        )
-    ),
-    'choices'  => array(
-        'alpha' => true,
-    ),
-));
+//Giotto_Kirki::add_field('giotto_theme', array(
+//    'type'      => 'color',
+//    'settings'  => 'giotto_primary_menu_sub_color',
+//    'label'     => __('Submenus Link Color', 'giottopress'),
+//    'section'   => 'giotto_section_primary_menu',
+//    'default'   => '#666666',
+//    'transport' => 'postMessage',
+//    'output'    => array(
+//        array(
+//            'exclude'  => array('#666666'),
+//            'element'  => '.header-minimal #masthead .navbar .navbar-dropdown .menu-item',
+//            'property' => 'color',
+//        ),
+//        array(
+//            'exclude'  => array('#666666'),
+//            'element'  => '.header-transparent #masthead .navbar .navbar-dropdown .menu-item',
+//            'property' => 'color',
+//        ),
+//    ),
+//));
+//
+//Giotto_Kirki::add_field('giotto_theme', array(
+//    'type'     => 'color',
+//    'settings' => 'giotto_primary_submenu_over_bg',
+//    'label'    => __('Submenu Background Color', 'giottopress'),
+//    'section'  => 'giotto_section_primary_menu',
+//    'default'  => '#e7e9ec',
+//    'output'   => array(
+//        array(
+//            'exclude'  => array('#e7e9ec'),
+//            'element'  => '.header-minimal #masthead .navbar .navbar-dropdown .menu-item:hover',
+//            'property' => 'background-color',
+//        ),
+//        array(
+//            'exclude'  => array('#e7e9ec'),
+//            'element'  => '.header-transparent #masthead .navbar .navbar-dropdown .menu-item:hover',
+//            'property' => 'background-color',
+//        )
+//    ),
+//    'choices'  => array(
+//        'alpha' => true,
+//    ),
+//));
+
 
 /**
  * Page Title
@@ -1238,7 +1243,7 @@ Giotto_Kirki::add_field('giotto_theme', array(
     'settings' => 'giotto_footer_sidebars',
     'label'    => __('Footer Widget Areas ', 'giottopress'),
     'section'  => 'giotto_section_footer_widgets',
-    'default'  => 4,
+    'default'  => 0,
     'choices'  => array(
         'min'  => 0,
         'max'  => 5,
