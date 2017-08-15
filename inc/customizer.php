@@ -58,10 +58,20 @@ function giotto_customize_partial_blogdescription()
  */
 function giotto_customize_preview_js()
 {
-    wp_enqueue_script('giotto_customizer', get_template_directory_uri() . '/js/customizer-min.js', array('customize-preview'), '20170712', true);
+    wp_enqueue_script('giotto_customizer', get_template_directory_uri() . '/js/customizer-min.js', array('customize-preview'), '20170814', true);
 }
 
 add_action('customize_preview_init', 'giotto_customize_preview_js');
+
+function giotto_enqueue_controls_scripts()
+{
+    if ( ! defined('GIOTTO_PRO')) {
+        wp_enqueue_script('giotto_pro_customizer', trailingslashit(get_template_directory_uri()) . '/get-pro/customizer-pro-min.js', array('customize-controls'));
+        wp_enqueue_style('giotto_pro_customizer', trailingslashit(get_template_directory_uri()) . '/get-pro/customizer-pro.css');
+    }
+}
+
+add_action('customize_controls_enqueue_scripts', 'giotto_enqueue_controls_scripts', 0);
 
 function giotto_remove_default_panels($wp_customize)
 {
@@ -72,7 +82,6 @@ function giotto_remove_default_panels($wp_customize)
 
 add_action('customize_register', 'giotto_remove_default_panels');
 
-
 /**
  * Add the theme configuration
  */
@@ -82,7 +91,7 @@ Giotto_Kirki::add_config('giotto_theme', array(
 ));
 
 /**
- * 1) General Options
+ * General Options
  */
 Giotto_Kirki::add_panel('giotto_panel_general_options', array(
     'title'    => __('General Options', 'giottopress'),
@@ -650,7 +659,8 @@ Giotto_Kirki::add_field('giotto_theme', array(
     'output'          => array(
         'exclude'  => array('#ffffff'),
         'element'  => 'header#masthead',
-        'property' => 'background-color'
+        'property' => 'background-color',
+        'suffix'   => '!important'
     ),
     'choices'         => array(
         'alpha' => true,
@@ -853,60 +863,6 @@ Giotto_Kirki::add_field('giotto_theme', array(
         'alpha' => true,
     ),
 ));
-
-//Giotto_Kirki::add_field('giotto_theme', array(
-//    'type'     => 'custom',
-//    'settings' => 'custom-separator-submenu',
-//    'label'    => '',
-//    'section'  => 'giotto_section_primary_menu',
-//    'default'  => '<br/><div class="customize-section-title" style="padding:10px 20px;">Submenu</div>',
-//));
-
-
-//Giotto_Kirki::add_field('giotto_theme', array(
-//    'type'      => 'color',
-//    'settings'  => 'giotto_primary_menu_sub_color',
-//    'label'     => __('Submenus Link Color', 'giottopress'),
-//    'section'   => 'giotto_section_primary_menu',
-//    'default'   => '#666666',
-//    'transport' => 'postMessage',
-//    'output'    => array(
-//        array(
-//            'exclude'  => array('#666666'),
-//            'element'  => '.header-minimal #masthead .navbar .navbar-dropdown .menu-item',
-//            'property' => 'color',
-//        ),
-//        array(
-//            'exclude'  => array('#666666'),
-//            'element'  => '.header-transparent #masthead .navbar .navbar-dropdown .menu-item',
-//            'property' => 'color',
-//        ),
-//    ),
-//));
-//
-//Giotto_Kirki::add_field('giotto_theme', array(
-//    'type'     => 'color',
-//    'settings' => 'giotto_primary_submenu_over_bg',
-//    'label'    => __('Submenu Background Color', 'giottopress'),
-//    'section'  => 'giotto_section_primary_menu',
-//    'default'  => '#e7e9ec',
-//    'output'   => array(
-//        array(
-//            'exclude'  => array('#e7e9ec'),
-//            'element'  => '.header-minimal #masthead .navbar .navbar-dropdown .menu-item:hover',
-//            'property' => 'background-color',
-//        ),
-//        array(
-//            'exclude'  => array('#e7e9ec'),
-//            'element'  => '.header-transparent #masthead .navbar .navbar-dropdown .menu-item:hover',
-//            'property' => 'background-color',
-//        )
-//    ),
-//    'choices'  => array(
-//        'alpha' => true,
-//    ),
-//));
-
 
 /**
  * Page Title

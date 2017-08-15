@@ -146,7 +146,7 @@ if ( ! function_exists('giotto_page_class')):
         /**
          * If the container meta exists, override the global setting
          */
-        if (false !== $container_single_meta) {
+        if (false !== $container_single_meta && is_singular()) {
             $settings_classes = array();
             if ('fullwidth' === $container_single_meta || 'wide' === $container_single_meta) {
                 $settings_classes[] = 'is-fluid';
@@ -192,7 +192,7 @@ if ( ! function_exists('giotto_wrapper_class')):
          * If sidebar on the left set the reverse order
          */
         if ('left-sidebar' === giotto_get_sidebar_layout()) {
-            $settings_classes[] = 'reverse-row-order';
+            $default_classes[] = 'reverse-row-order';
         }
 
         /**
@@ -206,7 +206,7 @@ if ( ! function_exists('giotto_wrapper_class')):
         /**
          * If the singular settings is set, override the global setting
          */
-        if (false !== $container_single_meta) {
+        if (false !== $container_single_meta & is_singular()) {
             $settings_classes = array();
             if ('fullwidth' === $container_single_meta) {
                 $settings_classes[] = 'is-fluid';
@@ -317,7 +317,7 @@ if ( ! function_exists('giotto_get_sidebar_layout')):
         /**
          * If is post get option from the the post meta
          */
-        $layout_single_meta = (isset($post)) ? get_post_meta($post->ID, 'giotto/post_sidebar', true) : false;
+        $layout_single_meta = (isset($post)) ? get_post_meta($post->ID, 'giotto/post_sidebar', true) : 'global';
 
         /**
          * If is single, get the single posts global option
@@ -328,14 +328,14 @@ if ( ! function_exists('giotto_get_sidebar_layout')):
              * set the meta option as the layout
              * The post meta option override all.
              */
-            if (false !== $layout_single_meta && ! empty($layout_single_meta) && 'global' !== $layout_single_meta) {
+            if ('global' !== $layout_single_meta && ! empty($layout_single_meta)) {
                 $layout = $layout_single_meta;
             }
 
             /**
              * If the option is set to global
              */
-            if ('global' === $layout_single_meta) {
+            if ('global' === $layout_single_meta || empty($layout_single_meta)) {
                 $layout = $layout_single_global;
             }
         }
@@ -349,14 +349,14 @@ if ( ! function_exists('giotto_get_sidebar_layout')):
              * set the meta option as the layout
              * The page meta option override all.
              */
-            if (false !== $layout_single_meta && ! empty($layout_single_meta) && 'global' !== $layout_single_meta) {
+            if ('global' !== $layout_single_meta || ! empty($layout_single_meta)) {
                 $layout = $layout_single_meta;
             }
 
             /**
              * If the option is set to global
              */
-            if ('global' === $layout_single_meta) {
+            if ('global' === $layout_single_meta && empty($layout_single_meta)) {
                 $layout = $layout_page_global;
             }
         }

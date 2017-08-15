@@ -11,19 +11,44 @@ Text Domain: giottopress
 Tags: one-column
 
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 
 GiottoPress is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
-/*-------------------------------------------------------------- >>> TABLE OF CONTENTS: ---------------------------------------------------------------- # Normalize # Typography # Elements # Forms # Navigation ## Links ## Menus # Accessibility # Alignments # Clearings # Widgets # Content ## Posts and pages ## Comments # Infinite scroll # Media ## Captions ## Galleries --------------------------------------------------------------*/
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Utilities
+# Accessibility
+# Base
+# Grid
+# Others
+# Buttons
+# Forms
+# Tags
+# Navbar
+# Pagination
+# Content
+# Generic
+# Header
+# Alignments
+# Navigation
+# Typography
+# Posts/Pages
+# Page Titles
+# Comments
+# Widgets
+# Galleries
+# Footer
+# 404
+--------------------------------------------------------------*/
+/*!--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
 @keyframes spinAround { from { transform: rotate(0deg); }
   to { transform: rotate(359deg); } }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
@@ -34,7 +59,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus { outline: 0; }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
 /*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
@@ -380,7 +405,7 @@ a.has-text-danger:hover, a.has-text-danger:focus { color: #ff0537; }
 
 .is-unselectable { -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Grid
 --------------------------------------------------------------*/
 .column { display: block; flex-basis: 0; flex-grow: 1; flex-shrink: 1; padding: 0.75rem; }
@@ -709,7 +734,7 @@ a.has-text-danger:hover, a.has-text-danger:focus { color: #ff0537; }
 
 @media screen and (min-width: 1008px) { .columns.is-desktop { display: flex; } }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Others
 --------------------------------------------------------------*/
 .block:not(:last-child) { margin-bottom: 1.5rem; }
@@ -759,7 +784,7 @@ a.has-text-danger:hover, a.has-text-danger:focus { color: #ff0537; }
 
 .number { align-items: center; background-color: #EAECEE; border-radius: 290486px; display: inline-flex; font-size: 1.25rem; height: 2em; justify-content: center; margin-right: 1.5rem; min-width: 2.5em; padding: 0.25rem 0.5rem; text-align: center; vertical-align: top; }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Buttons
 --------------------------------------------------------------*/
 .button, input[type="submit"], #comments .comment-body .reply a { -moz-appearance: none; -webkit-appearance: none; align-items: center; border: 1px solid transparent; border-radius: 3px; box-shadow: none; display: inline-flex; font-size: 1rem; height: 2.25em; justify-content: flex-start; line-height: 1.5; padding-bottom: calc(0.375em - 1px); padding-left: calc(0.625em - 1px); padding-right: calc(0.625em - 1px); padding-top: calc(0.375em - 1px); position: relative; vertical-align: top; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-color: white; border-color: #dbdbdb; color: #363636; cursor: pointer; justify-content: center; padding-left: 0.75em; padding-right: 0.75em; text-align: center; white-space: nowrap; }
@@ -1094,7 +1119,7 @@ a.has-text-danger:hover, a.has-text-danger:focus { color: #ff0537; }
 
 .button.is-static, input.is-static[type="submit"], #comments .comment-body .reply a.is-static { background-color: #EAECEE; border-color: #dbdbdb; color: #7a7a7a; box-shadow: none; pointer-events: none; }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
 .input, input:not([type="submit"]), .textarea, textarea { -moz-appearance: none; -webkit-appearance: none; align-items: center; border: 1px solid transparent; border-radius: 3px; box-shadow: none; display: inline-flex; font-size: 1rem; height: 2.25em; justify-content: flex-start; line-height: 1.5; padding-bottom: calc(0.375em - 1px); padding-left: calc(0.625em - 1px); padding-right: calc(0.625em - 1px); padding-top: calc(0.375em - 1px); position: relative; vertical-align: top; background-color: white; border-color: #dbdbdb; color: #363636; box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1); max-width: 100%; width: 100%; }
@@ -1385,7 +1410,9 @@ a.has-text-danger:hover, a.has-text-danger:focus { color: #ff0537; }
 
 .control.is-loading.is-large:after { font-size: 1.5rem; }
 
-/*--------------------------------------------------------------
+label { color: #4c555a; }
+
+/*!--------------------------------------------------------------
 # Tags
 --------------------------------------------------------------*/
 .tags { align-items: center; display: flex; flex-wrap: wrap; justify-content: flex-start; }
@@ -1446,8 +1473,8 @@ a.has-text-danger:hover, a.has-text-danger:focus { color: #ff0537; }
 
 a.tag:hover, .tagcloud a:hover { text-decoration: underline; }
 
-/*--------------------------------------------------------------
-# Navvar
+/*!--------------------------------------------------------------
+# Navbar
 --------------------------------------------------------------*/
 .navbar { background-color: white; min-height: 3.25rem; position: relative; }
 
@@ -1536,7 +1563,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
   a.navbar-item.is-active:not(:hover), .navbar-link.is-active:not(:hover) { background-color: transparent; }
   .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link { background-color: #EAECEE; } }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Pagination
 --------------------------------------------------------------*/
 .pagination { font-size: 1rem; margin: -0.25rem; }
@@ -1588,7 +1615,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
   .pagination.is-right .pagination-next { order: 2; }
   .pagination.is-right .pagination-list { justify-content: flex-end; order: 3; } }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 .content:not(:last-child) { margin-bottom: 1.5rem; }
@@ -1659,7 +1686,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 
 .content.is-large { font-size: 1.5rem; }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
 body, html { word-wrap: break-word; }
@@ -1686,7 +1713,7 @@ body, html { word-wrap: break-word; }
 
 cite { display: block; }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 header#masthead .main-title { font-size: 1.2em; text-transform: uppercase; font-weight: 700; margin-right: .5em; }
@@ -1707,7 +1734,7 @@ body.header-minimal header#masthead { background-color: white; }
 
 body.header-transparent header#masthead { background: transparent !important; border-bottom: 0 solid transparent; position: absolute; z-index: 99; width: 100%; }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
 .alignleft { display: inline; float: left; margin-right: 1.5em; }
@@ -1718,12 +1745,7 @@ body.header-transparent header#masthead { background: transparent !important; bo
 
 .reverse-row-order { flex-direction: row-reverse; }
 
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-label { color: #4c555a; }
-
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -1768,13 +1790,26 @@ header.menu-center .site-description { display: block; }
 
 .navbar-dropdown .has-dropdown:hover .navbar-dropdown { opacity: 1 !important; }
 
-@media screen and (max-width: 768px) { .navbar-dropdown .has-dropdown .navbar-dropdown { opacity: 1 !important; position: initial; }
-  .navbar-dropdown .has-dropdown .navbar-dropdown a { padding-left: 3em !important; } }
+@media screen and (min-width: 769px) and (max-width: 1007px) { .navbar-dropdown .has-dropdown .navbar-dropdown { opacity: 1 !important; position: initial; }
+  .navbar-dropdown .has-dropdown .navbar-dropdown a { padding-left: 3em !important; }
+  .menu-center .navbar-burger { margin: 0 auto; }
+  .menu-center #site-navigation { min-height: 0; height: 0; width: 100%; }
+  .menu-center #site-navigation .navbar-menu { display: none; }
+  .menu-center #site-navigation .navbar-menu.is-active { display: block; }
+  .menu-center .navbar-item, .menu-center .navbar-link { text-align: left; } }
 
-@media screen and (min-width: 1000px) { .navbar-dropdown.is-boxed { top: calc(100%); }
+@media screen and (max-width: 768px) { .navbar-dropdown .has-dropdown .navbar-dropdown { opacity: 1 !important; position: initial; }
+  .navbar-dropdown .has-dropdown .navbar-dropdown a { padding-left: 3em !important; }
+  .menu-center .navbar-burger { margin: 0 auto; }
+  .menu-center #site-navigation { min-height: 0; height: 0; width: 100%; }
+  .menu-center #site-navigation .navbar-menu { display: none; }
+  .menu-center #site-navigation .navbar-menu.is-active { display: block; }
+  .menu-center .navbar-item, .menu-center .navbar-link { text-align: left; } }
+
+@media screen and (min-width: 1008px) { .navbar-dropdown.is-boxed { top: calc(100%); }
   .navbar-menu { align-items: center; } }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 a { -webkit-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.25s; }
@@ -1787,7 +1822,7 @@ a { -webkit-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.2
 
 .content ul ul, .content ol ul { list-style-type: circle; }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Posts/Pages
 --------------------------------------------------------------*/
 .content figure { max-width: 100%; }
@@ -1830,7 +1865,7 @@ a { -webkit-transition: all 0.25s; -o-transition: all 0.25s; transition: all 0.2
 
 @media screen and (max-width: 768px) { #primary #main .hentry { padding: 2em .5em; } }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Page Titles
 --------------------------------------------------------------*/
 section.page-header { padding: 2em 0; background-color: #F8F8F8; }
@@ -1854,7 +1889,7 @@ section.page-header #breadcrumbs { font-size: 1rem; }
 @media screen and (max-width: 768px) { .page-header .wrapper { text-align: center; padding: 0 2em; }
   .page-title-right { float: none !important; } }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Comments
 --------------------------------------------------------------*/
 #comments { margin-top: 2em; padding: 0 0 2em 0; }
@@ -1910,7 +1945,7 @@ section.page-header #breadcrumbs { font-size: 1rem; }
   #comments .comment-content { padding: 1em; }
   #comments .comment-body .reply { top: -5px; } }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widget { padding: 1.5em 0; }
@@ -1927,7 +1962,7 @@ section.page-header #breadcrumbs { font-size: 1rem; }
 
 .tagcloud a { text-decoration: none !important; }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Galleries
 --------------------------------------------------------------*/
 .gallery figure { padding: .5em; }
@@ -1952,7 +1987,7 @@ section.page-header #breadcrumbs { font-size: 1rem; }
 
 .gallery.gallery-columns-10 figure { width: 10%; float: left; }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #site-footer { background-color: white; }
@@ -1967,9 +2002,7 @@ section.page-header #breadcrumbs { font-size: 1rem; }
 
 .site-credits a:hover { color: #008cdd; }
 
-/*--------------------------------------------------------------
+/*!--------------------------------------------------------------
 # 404
 --------------------------------------------------------------*/
 .error-404 { padding-top: 4em; min-height: calc(75vh); }
-
-/*# sourceMappingURL=style.css.map */

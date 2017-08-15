@@ -1,0 +1,1 @@
+"use strict";!function(t){t.sectionConstructor.giotto_up_sell=t.Section.extend({attachEvents:function t(){},isContextuallyActive:function t(){return!0}})}(wp.customize);

@@ -1,0 +1,19 @@
+.control-section-giotto_up_sell {
+  border-top: 1px solid red !important;
+  h3 {
+    color: red !important;
+    font-weight: 700;
+    border-bottom: 1px solid red !important;
+  }
+}
+
+.control-section-giotto_up_sell .button {
+  margin-top: -4px;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.rtl .control-section-giotto_up_sell .button {
+  margin-left: 0;
+  margin-right: 8px;
+}

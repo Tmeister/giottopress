@@ -8,6 +8,7 @@
 		},
 	{
 		"name": "New \"Run Script\" Step",
+		"scriptSourceString": "# Paste your script source code here.",
 		"scriptType": 1,
 		"scriptUUIDString": "817AD9E7-57F5-4224-8E9A-437BC2263EB9",
 		"stepType": 2,
@@ -753,6 +754,27 @@
 		"oAP": "\/functions.php",
 		"oF": 0
 		},
+	"\/get-pro\/customizer-pro-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/get-pro\/customizer-pro-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/get-pro\/upsell-customizer.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/get-pro\/upsell-customizer.php",
+		"oF": 0
+		},
+	"\/get-pro\/upsell-section-pro.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/get-pro\/upsell-section-pro.php",
+		"oF": 0
+		},
 	"\/header.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -920,6 +942,15 @@
 		"oA": 2,
 		"oAP": "\/single.php",
 		"oF": 0
+		},
+	"\/src\/js\/customizer-pro.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/get-pro\/customizer-pro-min.js",
+		"oF": 2,
+		"sC": 3,
+		"tS": 1
 		},
 	"\/src\/js\/customizer.js": {
 		"ft": 64,
@@ -1147,6 +1178,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/src\/sass\/customizer-pro.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/get-pro\/customizer-pro.css",
+		"oF": 2,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/src\/sass\/navigation\/_links.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1192,7 +1236,7 @@
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 0,
 		"oAP": "\/style.css",
 		"oF": 2,

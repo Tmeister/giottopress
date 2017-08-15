@@ -50,7 +50,7 @@ if ( ! function_exists('giotto_setup')) :
 
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus(array(
-            'main-menu' => esc_html__('Primary', 'giottopress'),
+            'main-menu' => esc_html__('Primary Menu', 'giottopress'),
         ));
 
         /*
@@ -66,10 +66,10 @@ if ( ! function_exists('giotto_setup')) :
         ));
 
         // Set up the WordPress core custom background feature.
-        add_theme_support('custom-background', apply_filters('giotto_custom_background_args', array(
-            'default-color' => 'ffffff',
-            'default-image' => '',
-        )));
+//        add_theme_support('custom-background', apply_filters('giotto_custom_background_args', array(
+//            'default-color' => 'ffffff',
+//            'default-image' => '',
+//        )));
 
         // Add theme support for selective refresh for widgets.
         add_theme_support('customize-selective-refresh-widgets');
@@ -166,6 +166,11 @@ require get_template_directory() . '/inc/kirki-fallback.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Customizer PRO.
+ */
+require get_template_directory() . '/get-pro/upsell-customizer.php';
 
 /**
  * Load Metaboxes

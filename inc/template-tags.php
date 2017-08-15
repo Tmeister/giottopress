@@ -359,6 +359,9 @@ endif;
 if ( ! function_exists('giotto_site_credits')):
     function giotto_site_credits()
     {
+        if (apply_filters('giotto/show_credits', true) === false) {
+            return;
+        }
         $credits = apply_filters(
             'giotto/site_credits',
             sprintf(

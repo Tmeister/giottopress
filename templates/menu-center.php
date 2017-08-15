@@ -12,6 +12,13 @@
     <?php giotto_site_branding() ?>
     <?php giotto_site_logo() ?>
 </section>
+
+<section class="navbar-burger" data-target="main-nav-bar-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</section>
+
 <section class="is-centered">
     <nav itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope" id="site-navigation" <?php giotto_main_navigation_class(); ?>>
         <div class="navbar-menu" id="main-nav-bar-menu">
@@ -21,11 +28,6 @@
                 add_action('giotto/navbar_start', 'giotto_create_main_menu');
                 do_action('giotto/navbar_start');
                 ?>
-                <div class="navbar-burger" data-target="main-nav-bar-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </div>
         </div>
     </nav><!-- #site-navigation -->
