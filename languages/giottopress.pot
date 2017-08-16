@@ -1,10 +1,10 @@
 # Copyright (C) 2017 Enrique Chavez
-# This file is distributed under the GNU General Public License v2 or later.
+# This file is distributed under the GNU General Public License v3.0 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: GiottoPress 1.0.0\n"
 "Report-Msgid-Bugs-To: https://giottopress.io/support\n"
-"POT-Creation-Date: 2017-08-15 01:55:03+00:00\n"
+"POT-Creation-Date: 2017-08-16 23:36:44+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,32 +55,124 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:53 inc/customizer.php:762
+#: functions.php:53 inc/customizer.php:743
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:109
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:117 functions.php:128
+#: functions.php:111 functions.php:122
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:126 inc/customizer.php:1218
+#: functions.php:120 inc/customizer.php:1198
 msgid "Footer %s"
-msgstr ""
-
-#: get-pro/upsell-customizer.php:75
-msgid "Get GiottoPress Pro!"
-msgstr ""
-
-#: get-pro/upsell-customizer.php:76
-msgid "Go Pro"
 msgstr ""
 
 #: header.php:43
 msgid "Skip to content"
+msgstr ""
+
+#: inc/admin/about-theme/about-theme.php:64
+msgid ""
+"Hi! Thank you for choosing GiottoPress! To fully take advantage of the "
+"theme please make sure you visit our %swelcome page%s."
+msgstr ""
+
+#: inc/admin/about-theme/about-theme.php:66
+msgid "Get started with GiottoPress"
+msgstr ""
+
+#: inc/admin/about-theme/about-theme.php:96
+#: inc/admin/about-theme/sections/getting-started.php:20
+msgid "Getting started"
+msgstr ""
+
+#: inc/admin/about-theme/about-theme.php:98
+msgid "Contribute"
+msgstr ""
+
+#: inc/admin/about-theme/sections/getting-started.php:14
+msgid "Welcome to GiottoPress!"
+msgstr ""
+
+#: inc/admin/about-theme/sections/getting-started.php:15
+msgid ""
+"I want to make sure you have the best experience using GiottoPress and that "
+"is why I gathered here all the necessary information for you. I hope you "
+"will enjoy using GiottoPress, as much as I enjoy creating great products."
+msgstr ""
+
+#: inc/admin/about-theme/sections/getting-started.php:22
+msgid "Customize everything in a single place."
+msgstr ""
+
+#: inc/admin/about-theme/sections/getting-started.php:23
+msgid ""
+"Using the WordPress Customizer you can easily customize every aspect of the "
+"theme."
+msgstr ""
+
+#: inc/admin/about-theme/sections/getting-started.php:24
+msgid "Go to Customizer"
+msgstr ""
+
+#: inc/admin/about-theme/sections/getting-started.php:30
+msgid "Need more features?"
+msgstr ""
+
+#: inc/admin/about-theme/sections/getting-started.php:32
+msgid "Check our premium version for this theme."
+msgstr ""
+
+#: inc/admin/about-theme/sections/getting-started.php:33
+msgid ""
+"Check out the Premium version of this theme which comes with additional "
+"features and advanced customization."
+msgstr ""
+
+#: inc/admin/about-theme/sections/getting-started.php:34
+msgid "Get Premium Version"
+msgstr ""
+
+#: inc/admin/about-theme/sections/getting-started.php:40
+msgid "Documentation"
+msgstr ""
+
+#: inc/admin/about-theme/sections/getting-started.php:42
+msgid "How to install this theme in a few minutes."
+msgstr ""
+
+#: inc/admin/about-theme/sections/getting-started.php:43
+msgid ""
+"Please read the online documentation page to setup this theme. It only "
+"takes a few minutes on a clean WordPress install."
+msgstr ""
+
+#: inc/admin/about-theme/sections/getting-started.php:44
+msgid "Read Documentation"
+msgstr ""
+
+#: inc/admin/about-theme/sections/translate.php:10
+msgid "How can I contribute?"
+msgstr ""
+
+#: inc/admin/about-theme/sections/translate.php:14
+msgid "Are you enjoying GiottoPress?"
+msgstr ""
+
+#: inc/admin/about-theme/sections/translate.php:16
+msgid "Rate our theme on %sWordPress.org%s. I'd really appreciate it!"
+msgstr ""
+
+#: inc/admin/get-pro/upsell-customizer.php:75
+msgid "Get GiottoPress Pro!"
+msgstr ""
+
+#: inc/admin/get-pro/upsell-customizer.php:76
+msgid "Go Pro"
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:333
@@ -433,395 +525,395 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/customizer.php:97
+#: inc/customizer.php:80
 msgid "General Options"
 msgstr ""
 
-#: inc/customizer.php:102 inc/customizer.php:107
+#: inc/customizer.php:85 inc/customizer.php:90
 msgid "General Settings"
 msgstr ""
 
-#: inc/customizer.php:114
+#: inc/customizer.php:97
 msgid "Layout Style"
 msgstr ""
 
-#: inc/customizer.php:120 inc/metaboxes.php:360
+#: inc/customizer.php:103 inc/metaboxes.php:367
 msgid "Boxed"
 msgstr ""
 
-#: inc/customizer.php:121 inc/metaboxes.php:361
+#: inc/customizer.php:104 inc/metaboxes.php:368
 msgid "Wide"
 msgstr ""
 
-#: inc/customizer.php:122 inc/customizer.php:450 inc/customizer.php:472
-#: inc/customizer.php:911 inc/customizer.php:931 inc/customizer.php:1133
-#: inc/customizer.php:1147 inc/metaboxes.php:362
+#: inc/customizer.php:105 inc/customizer.php:431 inc/customizer.php:453
+#: inc/customizer.php:892 inc/customizer.php:912 inc/customizer.php:1114
+#: inc/customizer.php:1128 inc/metaboxes.php:369
 msgid "Fullwidth"
 msgstr ""
 
-#: inc/customizer.php:129
+#: inc/customizer.php:112
 msgid "Blog Layout"
 msgstr ""
 
-#: inc/customizer.php:135 inc/customizer.php:150 inc/customizer.php:165
-#: inc/customizer.php:180 inc/customizer.php:195 inc/metaboxes.php:334
+#: inc/customizer.php:118 inc/customizer.php:133 inc/customizer.php:148
+#: inc/customizer.php:163 inc/customizer.php:178 inc/metaboxes.php:338
 msgid "Content / Sidebar"
 msgstr ""
 
-#: inc/customizer.php:136 inc/customizer.php:151 inc/customizer.php:166
-#: inc/customizer.php:181 inc/customizer.php:196 inc/metaboxes.php:335
+#: inc/customizer.php:119 inc/customizer.php:134 inc/customizer.php:149
+#: inc/customizer.php:164 inc/customizer.php:179 inc/metaboxes.php:339
 msgid "Content"
 msgstr ""
 
-#: inc/customizer.php:137 inc/customizer.php:152 inc/customizer.php:167
-#: inc/customizer.php:182 inc/customizer.php:197 inc/metaboxes.php:336
+#: inc/customizer.php:120 inc/customizer.php:135 inc/customizer.php:150
+#: inc/customizer.php:165 inc/customizer.php:180 inc/metaboxes.php:340
 msgid "Sidebar / Content"
 msgstr ""
 
-#: inc/customizer.php:144
+#: inc/customizer.php:127
 msgid "Single Post Layout"
 msgstr ""
 
-#: inc/customizer.php:159
+#: inc/customizer.php:142
 msgid "Single Page Layout"
 msgstr ""
 
-#: inc/customizer.php:174
+#: inc/customizer.php:157
 msgid "Search Result Layout"
 msgstr ""
 
-#: inc/customizer.php:189
+#: inc/customizer.php:172
 msgid "404 Error Layout"
 msgstr ""
 
-#: inc/customizer.php:205 inc/customizer.php:210
+#: inc/customizer.php:188 inc/customizer.php:193
 msgid "General Styling"
 msgstr ""
 
-#: inc/customizer.php:219
+#: inc/customizer.php:202
 msgid "Site Background"
 msgstr ""
 
-#: inc/customizer.php:225
+#: inc/customizer.php:208
 msgid "Site Background Color"
 msgstr ""
 
-#: inc/customizer.php:249
+#: inc/customizer.php:232
 msgid "Content Background Color"
 msgstr ""
 
-#: inc/customizer.php:270
+#: inc/customizer.php:253
 msgid "Primary Colors"
 msgstr ""
 
-#: inc/customizer.php:276
+#: inc/customizer.php:259
 msgid "Primary Color"
 msgstr ""
 
-#: inc/customizer.php:296
+#: inc/customizer.php:279
 msgid "Hover Primary Color"
 msgstr ""
 
-#: inc/customizer.php:311
+#: inc/customizer.php:294
 msgid "Main Border Color"
 msgstr ""
 
-#: inc/customizer.php:328
+#: inc/customizer.php:311
 msgid "Links Color"
 msgstr ""
 
-#: inc/customizer.php:334
+#: inc/customizer.php:317
 msgid "Color"
 msgstr ""
 
-#: inc/customizer.php:350
+#: inc/customizer.php:333
 msgid "Color:Hover"
 msgstr ""
 
-#: inc/customizer.php:363 inc/customizer.php:368
+#: inc/customizer.php:346 inc/customizer.php:351
 msgid "General Typography"
 msgstr ""
 
-#: inc/customizer.php:376
+#: inc/customizer.php:359
 msgid "Body Typography"
 msgstr ""
 
-#: inc/customizer.php:394
+#: inc/customizer.php:377
 msgid "Heading Typography"
 msgstr ""
 
-#: inc/customizer.php:411
+#: inc/customizer.php:394
 msgid "Site Text Color"
 msgstr ""
 
-#: inc/customizer.php:428
+#: inc/customizer.php:409
 msgid "Header"
 msgstr ""
 
-#: inc/customizer.php:437 inc/customizer.php:893 inc/customizer.php:1115
-#: inc/customizer.php:1120
+#: inc/customizer.php:418 inc/customizer.php:874 inc/customizer.php:1096
+#: inc/customizer.php:1101
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer.php:443
+#: inc/customizer.php:424
 msgid "Header Width"
 msgstr ""
 
-#: inc/customizer.php:451 inc/customizer.php:473 inc/customizer.php:912
-#: inc/customizer.php:932 inc/customizer.php:1134 inc/customizer.php:1148
+#: inc/customizer.php:432 inc/customizer.php:454 inc/customizer.php:893
+#: inc/customizer.php:913 inc/customizer.php:1115 inc/customizer.php:1129
 msgid "Contained"
 msgstr ""
 
-#: inc/customizer.php:465
+#: inc/customizer.php:446
 msgid "Header Inner Width"
 msgstr ""
 
-#: inc/customizer.php:482
+#: inc/customizer.php:463
 msgid "Style"
 msgstr ""
 
-#: inc/customizer.php:488
+#: inc/customizer.php:469
 msgid "Header Style"
 msgstr ""
 
-#: inc/customizer.php:494
+#: inc/customizer.php:475
 msgid "Minimal"
 msgstr ""
 
-#: inc/customizer.php:495
+#: inc/customizer.php:476
 msgid "Transparent (Over Content)"
 msgstr ""
 
-#: inc/customizer.php:504
+#: inc/customizer.php:485
 msgid "Menu"
 msgstr ""
 
-#: inc/customizer.php:510
+#: inc/customizer.php:491
 msgid "Menu Position"
 msgstr ""
 
-#: inc/customizer.php:515
+#: inc/customizer.php:496
 msgid "Menu on Right"
 msgstr ""
 
-#: inc/customizer.php:516
+#: inc/customizer.php:497
 msgid "Menu on bottom"
 msgstr ""
 
-#: inc/customizer.php:523
+#: inc/customizer.php:504
 msgid "Navigation  Alignment"
 msgstr ""
 
-#: inc/customizer.php:528
+#: inc/customizer.php:509
 msgid "Right"
 msgstr ""
 
-#: inc/customizer.php:529
+#: inc/customizer.php:510
 msgid "Left"
 msgstr ""
 
-#: inc/customizer.php:545
+#: inc/customizer.php:526
 msgid "Height"
 msgstr ""
 
-#: inc/customizer.php:563
+#: inc/customizer.php:544
 msgid "Header Height (em) "
 msgstr ""
 
-#: inc/customizer.php:604
+#: inc/customizer.php:585
 msgid "Logo Height (em) "
 msgstr ""
 
-#: inc/customizer.php:648
+#: inc/customizer.php:629
 msgid "BG Color & Border"
 msgstr ""
 
-#: inc/customizer.php:654
+#: inc/customizer.php:635
 msgid "Header Background Color "
 msgstr ""
 
-#: inc/customizer.php:680
+#: inc/customizer.php:661
 msgid "Header Border Bottom Height "
 msgstr ""
 
-#: inc/customizer.php:710
+#: inc/customizer.php:691
 msgid "Header Border Bottom Color "
 msgstr ""
 
-#: inc/customizer.php:735
+#: inc/customizer.php:716
 msgid "Content Page Padding "
 msgstr ""
 
-#: inc/customizer.php:771
+#: inc/customizer.php:752
 msgid "Links"
 msgstr ""
 
-#: inc/customizer.php:777 inc/customizer.php:846
+#: inc/customizer.php:758 inc/customizer.php:827
 msgid "Link Color"
 msgstr ""
 
-#: inc/customizer.php:798
+#: inc/customizer.php:779
 msgid "Current Link Color"
 msgstr ""
 
-#: inc/customizer.php:821
+#: inc/customizer.php:802
 msgid "Hover"
 msgstr ""
 
-#: inc/customizer.php:827 inc/customizer.php:1045
+#: inc/customizer.php:808 inc/customizer.php:1026
 msgid "Background Color"
 msgstr ""
 
-#: inc/customizer.php:871
+#: inc/customizer.php:852
 msgid "Page Title"
 msgstr ""
 
-#: inc/customizer.php:878
+#: inc/customizer.php:859
 msgid "Page Title Visibility"
 msgstr ""
 
-#: inc/customizer.php:882
+#: inc/customizer.php:863
 msgid "In Content"
 msgstr ""
 
-#: inc/customizer.php:883
+#: inc/customizer.php:864
 msgid "Below Header"
 msgstr ""
 
-#: inc/customizer.php:884
+#: inc/customizer.php:865
 msgid "Hidden"
 msgstr ""
 
-#: inc/customizer.php:906
+#: inc/customizer.php:887
 msgid "Page Title Width"
 msgstr ""
 
-#: inc/customizer.php:926
+#: inc/customizer.php:907
 msgid "Page Title Inner Width"
 msgstr ""
 
-#: inc/customizer.php:948
+#: inc/customizer.php:929
 msgid "Titles"
 msgstr ""
 
-#: inc/customizer.php:961
+#: inc/customizer.php:942
 msgid "Frontpage Title"
 msgstr ""
 
-#: inc/customizer.php:962
+#: inc/customizer.php:943
 msgid ""
 "This label will be displayed on the frontpage only if the settings are set "
 "to show the latest post"
 msgstr ""
 
-#: inc/customizer.php:964 inc/template-tags.php:300
+#: inc/customizer.php:945 inc/template-tags.php:300
 msgid "Latest Posts"
 msgstr ""
 
-#: inc/customizer.php:977
+#: inc/customizer.php:958
 msgid "Blog Title"
 msgstr ""
 
-#: inc/customizer.php:979
+#: inc/customizer.php:960
 msgid "This label will be displayed on the blog single posts"
 msgstr ""
 
-#: inc/customizer.php:980 inc/customizer.php:1067 inc/customizer.php:1072
+#: inc/customizer.php:961 inc/customizer.php:1048 inc/customizer.php:1053
 #: inc/template-tags.php:349
 msgid "Blog"
 msgstr ""
 
-#: inc/customizer.php:995
+#: inc/customizer.php:976
 msgid ""
 "The In-Content page title are visible only on the archives, search results "
 "page and single pages."
 msgstr ""
 
-#: inc/customizer.php:1011
+#: inc/customizer.php:992
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer.php:1024
+#: inc/customizer.php:1005
 msgid "Title Color"
 msgstr ""
 
-#: inc/customizer.php:1077
+#: inc/customizer.php:1058
 msgid "Blog Entries"
 msgstr ""
 
-#: inc/customizer.php:1084
+#: inc/customizer.php:1065
 msgid "Blog Post Content"
 msgstr ""
 
-#: inc/customizer.php:1088
+#: inc/customizer.php:1069
 msgid "Show Full Post"
 msgstr ""
 
-#: inc/customizer.php:1089
+#: inc/customizer.php:1070
 msgid "Show Excerpt"
 msgstr ""
 
-#: inc/customizer.php:1096
+#: inc/customizer.php:1077
 msgid "Blog Post Feature Image"
 msgstr ""
 
-#: inc/customizer.php:1100
+#: inc/customizer.php:1081
 msgid "Show Image"
 msgstr ""
 
-#: inc/customizer.php:1101
+#: inc/customizer.php:1082
 msgid "Hide Image"
 msgstr ""
 
-#: inc/customizer.php:1110
+#: inc/customizer.php:1091
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer.php:1127
+#: inc/customizer.php:1108
 msgid "Footer Width"
 msgstr ""
 
-#: inc/customizer.php:1141
+#: inc/customizer.php:1122
 msgid "Footer Inner Width"
 msgstr ""
 
-#: inc/customizer.php:1155
+#: inc/customizer.php:1136
 msgid "Footer Background Color "
 msgstr ""
 
-#: inc/customizer.php:1172
+#: inc/customizer.php:1153
 msgid "Footer Spacing"
 msgstr ""
 
-#: inc/customizer.php:1187 inc/customizer.php:1192
+#: inc/customizer.php:1168 inc/customizer.php:1173
 msgid "Widgets"
 msgstr ""
 
-#: inc/customizer.php:1200
+#: inc/customizer.php:1180
 msgid "Footer Widget Areas "
 msgstr ""
 
-#: inc/customizer.php:1232
+#: inc/customizer.php:1212
 msgid "Columns"
 msgstr ""
 
-#: inc/customizer.php:1234
+#: inc/customizer.php:1214
 msgid "How many columns in the row should the widget area use? Max 12"
 msgstr ""
 
-#: inc/customizer.php:1253
+#: inc/customizer.php:1233
 msgid "Custom Classes"
 msgstr ""
 
-#: inc/customizer.php:1273
+#: inc/customizer.php:1253
 msgid "Hide Title"
 msgstr ""
 
-#: inc/customizer.php:1282
+#: inc/customizer.php:1262
 msgid "Hide Tagline"
 msgstr ""
 
-#: inc/metaboxes.php:333 inc/metaboxes.php:359
+#: inc/metaboxes.php:337 inc/metaboxes.php:366
 msgid "Default"
 msgstr ""
 
@@ -894,13 +986,8 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: templates/content-page.php:22 templates/content.php:66
+#: templates/content-page.php:18 templates/content.php:66
 msgid "Pages:"
-msgstr ""
-
-#: templates/content-page.php:35
-#. translators: %s: Name of current post. Only visible to screen readers
-msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
 #: templates/content.php:46
@@ -917,7 +1004,12 @@ msgid "https://giottopress.io/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Giotto Description."
+msgid ""
+"GiottoPress is a lightweight, faster, clean, super flexible and Bulma based "
+"responsive theme suitable for any kind of blog, personal, fashion, food, "
+"travel, photography, publishing or tutorial blog sites, you will be amazed "
+"by the real time customizer with lots of smart options that will help you "
+"build your website with ease."
 msgstr ""
 
 #. Author URI of the plugin/theme
