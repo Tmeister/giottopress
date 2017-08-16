@@ -66,8 +66,8 @@ add_action('customize_preview_init', 'giotto_customize_preview_js');
 function giotto_enqueue_controls_scripts()
 {
     if ( ! defined('GIOTTO_PRO')) {
-        wp_enqueue_script('giotto_pro_customizer', trailingslashit(get_template_directory_uri()) . '/get-pro/customizer-pro-min.js', array('customize-controls'));
-        wp_enqueue_style('giotto_pro_customizer', trailingslashit(get_template_directory_uri()) . '/get-pro/customizer-pro.css');
+        wp_enqueue_script('giotto_pro_customizer', trailingslashit(get_template_directory_uri()) . '/inc/admin/get-pro/customizer-pro-min.js', array('customize-controls'));
+        wp_enqueue_style('giotto_pro_customizer', trailingslashit(get_template_directory_uri()) . '/inc/admin/get-pro/customizer-pro.css');
     }
 }
 
@@ -373,7 +373,7 @@ Giotto_Kirki::add_section('giotto_section_general_typography', array(
 Giotto_Kirki::add_field('giotto_theme', array(
     'type'     => 'typography',
     'settings' => 'giotto_site_main_typography',
-    'label'    => esc_attr__('Body Typography', 'kirki'),
+    'label'    => esc_attr__('Body Typography', 'giottopress'),
     'section'  => 'giotto_section_general_typography',
     'default'  => array(
         'font-family' => 'Roboto',
@@ -391,7 +391,7 @@ Giotto_Kirki::add_field('giotto_theme', array(
 Giotto_Kirki::add_field('giotto_theme', array(
     'type'     => 'typography',
     'settings' => 'giotto_site_heading_typography',
-    'label'    => esc_attr__('Heading Typography', 'kirki'),
+    'label'    => esc_attr__('Heading Typography', 'giottopress'),
     'section'  => 'giotto_section_general_typography',
     'default'  => array(
         'font-family' => 'Roboto',
@@ -413,7 +413,6 @@ Giotto_Kirki::add_field('giotto_theme', array(
     'default'  => '#4c555a',
     'output'   => array(
         array(
-//            'exclude'  => array('#4c555a'),
             'element'  => 'body, .main-title a, .content .entry-title a, #comments .comment-body footer .comment-author a, #comments .comment-body footer .comment-metadata a, .widget a, strong, pre, table th, .button.is-link, input.is-link[type="submit"], #comments .comment-body .reply a.is-link,.tag, .tagcloud a, .content h1,.content h2,.content h3,.content h4,.content h5,.content h6, label, .posts-pagination .pagination .page-numbers, .content .entry-title a,#primary #main .hentry .more-tag.button, #primary #main .hentry input.more-tag[type="submit"], #primary #main .hentry #comments .comment-body .reply a.more-tag, #comments .comment-body .reply #primary #main .hentry a.more-tag, #comments .comment-body footer .comment-author a, #comments .comment-body footer .comment-metadata a, .widget a, h1.page-title, .page-title, .widget-title',
             'property' => 'color'
         )

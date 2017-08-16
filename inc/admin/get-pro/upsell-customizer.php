@@ -63,7 +63,7 @@ final class Giotto_Up_Sell
     public function sections($manager)
     {
         // Load custom sections.
-        require_once(trailingslashit(get_template_directory()) . 'get-pro/upsell-section-pro.php');
+        require_once(trailingslashit(get_template_directory()) . 'inc/admin/get-pro/upsell-section-pro.php');
         // Register custom section types.
         $manager->register_section_type('Giotto_Up_Sell_Section_Pro');
         // Register sections.

@@ -754,37 +754,6 @@
 		"oAP": "\/functions.php",
 		"oF": 0
 		},
-	"\/get-pro\/customizer-pro-min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/get-pro\/customizer-pro-min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/get-pro\/customizer-pro.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/get-pro\/customizer-pro-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/get-pro\/upsell-customizer.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/get-pro\/upsell-customizer.php",
-		"oF": 0
-		},
-	"\/get-pro\/upsell-section-pro.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/get-pro\/upsell-section-pro.php",
-		"oF": 0
-		},
 	"\/Gruntfile.js": {
 		"ft": 64,
 		"mi": 0,
@@ -798,6 +767,74 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/header.php",
+		"oF": 0
+		},
+	"\/inc\/admin\/about-theme\/about-theme.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/admin\/about-theme\/about-theme.php",
+		"oF": 0
+		},
+	"\/inc\/admin\/about-theme\/css\/about.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/inc\/admin\/about-theme\/css\/about-min.css",
+		"oF": 1,
+		"oS": 3
+		},
+	"\/inc\/admin\/about-theme\/js\/about.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/inc\/admin\/about-theme\/js\/about-min.js",
+		"oF": 1,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/inc\/admin\/about-theme\/sections\/getting-started.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/admin\/about-theme\/sections\/getting-started.php",
+		"oF": 0
+		},
+	"\/inc\/admin\/about-theme\/sections\/translate.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/admin\/about-theme\/sections\/translate.php",
+		"oF": 0
+		},
+	"\/inc\/admin\/get-pro\/customizer-pro-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/inc\/admin\/get-pro\/customizer-pro-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/inc\/admin\/get-pro\/customizer-pro.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/inc\/admin\/get-pro\/customizer-pro-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/inc\/admin\/get-pro\/upsell-customizer.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/admin\/get-pro\/upsell-customizer.php",
+		"oF": 0
+		},
+	"\/inc\/admin\/get-pro\/upsell-section-pro.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/admin\/get-pro\/upsell-section-pro.php",
 		"oF": 0
 		},
 	"\/inc\/class-tgm-plugin-activation.php": {

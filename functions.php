@@ -168,11 +168,6 @@ require get_template_directory() . '/inc/kirki-fallback.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Customizer PRO.
- */
-require get_template_directory() . '/get-pro/upsell-customizer.php';
-
-/**
  * Load Metaboxes
  */
 require get_template_directory() . '/inc/metaboxes.php';
@@ -196,3 +191,15 @@ require get_template_directory() . '/inc/menu-walker.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Customizer PRO.
+ */
+require get_template_directory() . '/inc/admin/get-pro/upsell-customizer.php';
+
+/**
+ * Welcome Screen
+ */
+if (is_admin()) {
+    require get_template_directory() . '/inc/admin/about-theme/about-theme.php';
+}
