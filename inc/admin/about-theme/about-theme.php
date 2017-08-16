@@ -37,7 +37,7 @@ class giottopress_about_theme
      */
     public function giottopress_about_register_menu()
     {
-        add_theme_page('About GiottoPress', 'About GiottoPress', 'activate_plugins', 'giottopress-about', array($this, 'giottopress_about_screen'));
+        add_theme_page('GiottoPress', 'GiottoPress', 'activate_plugins', 'giottopress-about', array($this, 'giottopress_about_screen'));
     }
 
     /**

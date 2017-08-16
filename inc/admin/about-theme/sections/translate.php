@@ -11,9 +11,9 @@
 	</div>
 
 	<div class="giottopress-tab-pane-half">
-		<h4><?php esc_html_e( 'Are you enjoying giottopress?', 'giottopress' ); ?></h4>
+		<h4><?php esc_html_e( 'Are you enjoying GiottoPress?', 'giottopress' ); ?></h4>
 
-		<p class="review-link"><?php echo sprintf( esc_html__( 'Rate our theme on %sWordPress.org%s. We\'d really appreciate it!', 'giottopress' ), '<a href="https://wordpress.org/themes/giottopress">', '</a>' ); ?></p>
+		<p class="review-link"><?php echo sprintf( esc_html__( 'Rate our theme on %sWordPress.org%s. I\'d really appreciate it!', 'giottopress' ), '<a href="https://wordpress.org/themes/giottopress">', '</a>' ); ?></p>
 
 		<p><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></p>
 	</div>

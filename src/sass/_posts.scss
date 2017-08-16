@@ -7,6 +7,30 @@
   }
 }
 
+#page {
+  &.is-fluid {
+    &.is-marginless {
+      #wrapper {
+        &.is-fluid {
+          &.is-marginless {
+            #primary {
+              padding: 0;
+              #main {
+                article {
+                  &.hentry {
+                    margin: 0 !important;
+                    padding: 0 !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 #primary {
   #main {
     .hentry {
@@ -57,9 +81,9 @@
 .entry-featured-image {
   padding-top: .5em;
   padding-bottom: 1em;
-  img{
-    width:100%;
-    height:auto;
+  img {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -97,8 +121,8 @@
 }
 
 .has-featured-image {
-  background-repeat: no-repeat !important;
-  background-size: 100% !important;
+  //background-repeat: no-repeat !important;
+  //background-size: 100% !important;
 }
 
 .has-not-featured-image {
