@@ -17,7 +17,7 @@ if ( ! class_exists('Giotto_Custom_Walker')) {
          * Start Level.
          *
          * @see Walker::start_lvl()
-         * @since 3.0.0
+         * @since 1.0.0
          *
          * @access public
          *
@@ -43,7 +43,7 @@ if ( ! class_exists('Giotto_Custom_Walker')) {
          * Start El.
          *
          * @see Walker::start_el()
-         * @since 3.0.0
+         * @since 1.0.0
          *
          * @access public
          *
@@ -126,7 +126,7 @@ if ( ! class_exists('Giotto_Custom_Walker')) {
          * This method shouldn't be called directly, use the walk() method instead.
          *
          * @see Walker::start_el()
-         * @since 2.5.0
+         * @since 1.0.0
          *
          * @access public
          *

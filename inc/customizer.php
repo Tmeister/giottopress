@@ -2,36 +2,12 @@
 /**
  * giotto Theme Customizer
  *
- * @package giotto
+ * @package Giotto
  */
 /* No direct access */
 if ( ! defined('ABSPATH')) {
     exit;
 }
-/**
- * Add postMessage support for site title and description for the Theme Customizer.
- *
- * @param WP_Customize_Manager $wp_customize Theme Customizer object.
- */
-function giotto_customize_register($wp_customize)
-{
-    $wp_customize->get_setting('blogname')->transport         = 'postMessage';
-    $wp_customize->get_setting('blogdescription')->transport  = 'postMessage';
-    $wp_customize->get_setting('header_textcolor')->transport = 'postMessage';
-
-    if (isset($wp_customize->selective_refresh)) {
-        $wp_customize->selective_refresh->add_partial('blogname', array(
-            'selector'        => '.site-title a',
-            'render_callback' => 'giotto_customize_partial_blogname',
-        ));
-        $wp_customize->selective_refresh->add_partial('blogdescription', array(
-            'selector'        => '.site-description',
-            'render_callback' => 'giotto_customize_partial_blogdescription',
-        ));
-    }
-}
-
-//add_action( 'customize_register', 'giotto_customize_register' );
 
 /**
  * Render the site title for the selective refresh partial.
@@ -63,6 +39,9 @@ function giotto_customize_preview_js()
 
 add_action('customize_preview_init', 'giotto_customize_preview_js');
 
+/**
+ * Add the GET PRO button on the customizer
+ */
 function giotto_enqueue_controls_scripts()
 {
     if ( ! defined('GIOTTO_PRO')) {
@@ -73,6 +52,10 @@ function giotto_enqueue_controls_scripts()
 
 add_action('customize_controls_enqueue_scripts', 'giotto_enqueue_controls_scripts', 0);
 
+/**
+ * Remove some custom panels
+ * @param $wp_customize
+ */
 function giotto_remove_default_panels($wp_customize)
 {
     $wp_customize->remove_control('header_image');
@@ -419,9 +402,8 @@ Giotto_Kirki::add_field('giotto_theme', array(
     )
 ));
 
-
 /**
- * 2) Header
+ * Header
  */
 Giotto_Kirki::add_section('giotto_section_header_general', array(
     'title'    => __('Header', 'giottopress'),
@@ -1060,7 +1042,7 @@ Giotto_Kirki::add_field('giotto_theme', array(
 ));
 
 /**
- * 3 Blog
+ * Blog
  */
 Giotto_Kirki::add_panel('giotto_panel_blog', array(
     'title'    => __('Blog', 'giottopress'),
@@ -1191,7 +1173,6 @@ Giotto_Kirki::add_section('giotto_section_footer_widgets', array(
     'title' => __('Widgets', 'giottopress'),
     'panel' => 'giotto_panel_footer',
 ));
-
 
 Giotto_Kirki::add_field('giotto_theme', array(
     'type'     => 'slider',

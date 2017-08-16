@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package giotto
+ * @package Giotto
  */
 
 /* No direct access */

@@ -9,10 +9,11 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package giotto
+ * @package Giotto
  */
 
 get_header(); ?>
+
     <section id="primary" <?php giotto_primary_content_class(); ?>>
 
         <main id="main" <?php giotto_main_class() ?>>
@@ -22,9 +23,6 @@ get_header(); ?>
             while (have_posts()) : the_post();
 
                 get_template_part('templates/content', get_post_format());
-
-                //TODO ADD Post Navigation Option from Customizer
-//				the_post_navigation();
 
                 // If comments are open or we have at least one comment, load up the comment template.
                 if (comments_open() || get_comments_number()) :

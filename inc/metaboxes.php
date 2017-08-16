@@ -315,6 +315,10 @@ if ( ! function_exists('giotto_meta_box')) {
  * The Metaboxes
  */
 $posts_types  = get_post_types(array('public' => true));
+
+/**
+ * Sidebar option metabox
+ */
 $sidebar_args = array(
     'meta_box_id'   => 'giotto-post-sidebar',
     'label'         => 'Sidebar position',
@@ -341,6 +345,9 @@ $sidebar_args = array(
 
 giotto_meta_box($sidebar_args);
 
+/**
+ * Layout metabox
+ */
 $layout_args = array(
     'meta_box_id'   => 'giotto-post-layout',
     'label'         => 'Layout',

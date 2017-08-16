@@ -978,17 +978,6 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"\/screenshot.png": {
-		"ft": 32768,
-		"iS": 264,
-		"oA": 0,
-		"oAP": "\/screenshot.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
 	"\/search.php": {
 		"ft": 8192,
 		"oA": 2,
