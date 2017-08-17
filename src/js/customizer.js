@@ -109,7 +109,6 @@
     wp.customize('giotto_primary_menu_color', (value) => {
         value.bind((to) => {
             const $links = $('.header-minimal #masthead .navbar .menu-item:not(.is-active), .header-transparent #masthead .navbar .menu-item:not(.is-active)');
-            console.log($links);
             $links.css({'color': to});
         });
     });

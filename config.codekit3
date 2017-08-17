@@ -978,6 +978,17 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/screenshot.png": {
+		"ft": 32768,
+		"iS": 78342,
+		"oA": 0,
+		"oAP": "\/screenshot.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/search.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -1022,7 +1033,7 @@
 		},
 	"\/src\/js\/navigation.js": {
 		"ft": 64,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/js\/navigation-min.js",
 		"oF": 3,
@@ -1309,7 +1320,7 @@
 		"oA": 0,
 		"oAP": "\/style.css",
 		"oF": 2,
-		"oS": 3,
+		"oS": 2,
 		"uL": 1
 		},
 	"\/style.css": {
