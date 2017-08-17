@@ -6,26 +6,26 @@
  */
 ?>
 
-<form class="searchform" id="searchform" action="<?php echo esc_url(home_url('/')); ?>">
+<form class="searchform" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 
-    <div class="field has-addons">
+	<div class="field has-addons">
 
-        <div class="control is-expanded">
+		<div class="control is-expanded">
 
-            <input class="input" name="s" id="s" placeholder="<?php esc_attr_e('Search', 'giottopress'); ?>">
+			<input class="input" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'giottopress' ); ?>">
 
-        </div>
+		</div>
 
-        <div class="control">
+		<div class="control">
 
-            <a class="button is-primary">
+			<a class="button is-primary">
 
-                <?php esc_attr_e('Search', 'giottopress'); ?>
+				<?php esc_attr_e( 'Search', 'giottopress' ); ?>
 
-            </a>
+			</a>
 
-        </div>
+		</div>
 
-    </div>
+	</div>
 
 </form>

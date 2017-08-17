@@ -9,48 +9,48 @@
 
 get_header(); ?>
 
-    <section id="primary" <?php giotto_primary_content_class(); ?>>
+	<section id="primary" <?php giotto_primary_content_class(); ?>>
 
-        <main id="main" <?php giotto_main_class() ?>>
+		<main id="main" <?php giotto_main_class() ?>>
 
-            <section class="error-404 not-found has-text-centered content">
+			<section class="error-404 not-found has-text-centered content">
 
-                <div class="page-content">
+				<div class="page-content">
 
-                    <div class="columns is-centered">
+					<div class="columns is-centered">
 
-                        <div class="column is-two-thirds">
+						<div class="column is-two-thirds">
 
-                            <div class="notification is-info">
+							<div class="notification is-info">
 
-                                <h2 class="is-size-3"><?php esc_html_e('Oops. The page you were looking for doesn\'t exist.', 'giottopress') ?></h2>
+								<h2 class="is-size-3"><?php esc_html_e( 'Oops. The page you were looking for doesn\'t exist.', 'giottopress' ) ?></h2>
 
-                                <p class="is-size-5"><?php esc_html_e('You may have mistyped the address or the page may have moved.', 'giottopress'); ?></p>
+								<p class="is-size-5"><?php esc_html_e( 'You may have mistyped the address or the page may have moved.', 'giottopress' ); ?></p>
 
-                                <p class="is-size-5"><?php esc_html_e('You can try a new searching.', 'giottopress'); ?></p>
+								<p class="is-size-5"><?php esc_html_e( 'You can try a new searching.', 'giottopress' ); ?></p>
 
-                                <?php
+								<?php
 
-                                get_search_form();
+								get_search_form();
 
-                                ?>
+								?>
 
-                            </div>
+							</div>
 
-                        </div>
+						</div>
 
-                    </div>
+					</div>
 
-                </div><!-- .page-content -->
+				</div><!-- .page-content -->
 
-            </section><!-- .error-404 -->
+			</section><!-- .error-404 -->
 
-        </main><!-- #main -->
+		</main><!-- #main -->
 
-    </section><!-- #primary -->
+	</section><!-- #primary -->
 
 <?php
 
-do_action('giotto/sidebars');
+do_action( 'giotto/sidebars' );
 
 get_footer();

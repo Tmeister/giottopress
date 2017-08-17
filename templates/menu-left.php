@@ -11,58 +11,58 @@
 
 <nav itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope" id="site-navigation" <?php giotto_main_navigation_class(); ?>>
 
-    <div class="navbar-brand">
+	<div class="navbar-brand">
 
-        <?php giotto_site_branding() ?>
+		<?php giotto_site_branding() ?>
 
-        <?php giotto_site_logo() ?>
+		<?php giotto_site_logo() ?>
 
-        <div class="navbar-burger" data-target="main-nav-bar-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+		<div class="navbar-burger" data-target="main-nav-bar-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
 
-    </div>
+	</div>
 
-    <div class="navbar-menu" id="main-nav-bar-menu">
+	<div class="navbar-menu" id="main-nav-bar-menu">
 
-        <div class="navbar-start">
+		<div class="navbar-start">
 
-            <?php
+			<?php
 
-            $nav_position = get_theme_mod('giotto_navbar_alignment');
+			$nav_position = get_theme_mod( 'giotto_navbar_alignment' );
 
-            if ('left' === $nav_position) {
+			if ( 'left' === $nav_position ) {
 
-                add_action('giotto/navbar_start', 'giotto_create_main_menu');
+				add_action( 'giotto/navbar_start', 'giotto_create_main_menu' );
 
-            }
+			}
 
-            do_action('giotto/navbar_start');
+			do_action( 'giotto/navbar_start' );
 
-            ?>
+			?>
 
-        </div>
+		</div>
 
-        <div class="navbar-end">
+		<div class="navbar-end">
 
-            <?php
+			<?php
 
-            $nav_position = get_theme_mod('giotto_navbar_alignment', 'right');
+			$nav_position = get_theme_mod( 'giotto_navbar_alignment', 'right' );
 
-            if ('right' === $nav_position) {
+			if ( 'right' === $nav_position ) {
 
-                add_action('giotto/navbar_end', 'giotto_create_main_menu');
+				add_action( 'giotto/navbar_end', 'giotto_create_main_menu' );
 
-            }
+			}
 
-            do_action('giotto/navbar_end');
+			do_action( 'giotto/navbar_end' );
 
-            ?>
+			?>
 
-        </div>
+		</div>
 
-    </div>
+	</div>
 
 </nav><!-- #site-navigation -->

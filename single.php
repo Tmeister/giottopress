@@ -14,32 +14,32 @@
 
 get_header(); ?>
 
-    <section id="primary" <?php giotto_primary_content_class(); ?>>
+	<section id="primary" <?php giotto_primary_content_class(); ?>>
 
-        <main id="main" <?php giotto_main_class() ?>>
+		<main id="main" <?php giotto_main_class() ?>>
 
-            <?php
+			<?php
 
-            while (have_posts()) : the_post();
+			while ( have_posts() ) : the_post();
 
-                get_template_part('templates/content', get_post_format());
+				get_template_part( 'templates/content', get_post_format() );
 
-                // If comments are open or we have at least one comment, load up the comment template.
-                if (comments_open() || get_comments_number()) :
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
 
-                    comments_template();
+					comments_template();
 
-                endif;
+				endif;
 
-            endwhile; // End of the loop.
-            ?>
+			endwhile; // End of the loop.
+			?>
 
-        </main><!-- #main -->
+		</main><!-- #main -->
 
-    </section><!-- #primary -->
+	</section><!-- #primary -->
 
 <?php
 
-do_action('giotto/sidebars');
+do_action( 'giotto/sidebars' );
 
 get_footer();

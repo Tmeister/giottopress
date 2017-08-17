@@ -10,8 +10,8 @@
  */
 
 /* No direct access */
-if ( ! defined('ABSPATH')) {
-    exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
 ?>
 
@@ -21,11 +21,11 @@ if ( ! defined('ABSPATH')) {
 
 </div><!-- #page -->
 
-<?php do_action('giotto/before_footer'); ?>
+<?php do_action( 'giotto/before_footer' ); ?>
 
-<?php do_action('giotto/footer') ?>
+<?php do_action( 'giotto/footer' ) ?>
 
-<?php do_action('giotto/after_footer'); ?>
+<?php do_action( 'giotto/after_footer' ); ?>
 
 <?php wp_footer(); ?>
 

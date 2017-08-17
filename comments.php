@@ -15,118 +15,112 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-if (post_password_required()) {
-    return;
+if ( post_password_required() ) {
+	return;
 }
 ?>
 
 <div id="comments" class="comments-area content">
 
-    <?php
+	<?php
 
-    if (have_comments()) : ?>
+	if ( have_comments() ) : ?>
 
-        <h2 class="comments-title">
+		<h2 class="comments-title">
 
-            <?php
+			<?php
 
-            $comment_count = get_comments_number();
+			$comment_count = get_comments_number();
 
-            if (1 === $comment_count) {
+			if ( 1 === $comment_count ) {
 
-                printf(
+				printf(
+					esc_html_e( 'One thought on &ldquo;%1$s&rdquo;', 'giottopress' ),
+					'<span>' . get_the_title() . '</span>'
+				);
 
-                    esc_html_e('One thought on &ldquo;%1$s&rdquo;', 'giottopress'),
+			} else {
 
-                    '<span>' . get_the_title() . '</span>'
+				printf(
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'giottopress' ) ),
+					number_format_i18n( $comment_count ),
+					'<span>' . get_the_title() . '</span>'
+				);
 
-                );
-            } else {
+			}
+			?>
+		</h2><!-- .comments-title -->
 
-                printf(
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 
-                    esc_html(_nx('%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'giottopress')),
+			<nav id="comment-nav-above" class="navigation comment-navigation">
 
-                    number_format_i18n($comment_count),
+				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'giottopress' ); ?></h2>
 
-                    '<span>' . get_the_title() . '</span>'
+				<div class="nav-links">
 
-                );
+					<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'giottopress' ) ); ?></div>
 
-            }
-            ?>
-        </h2><!-- .comments-title -->
+					<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'giottopress' ) ); ?></div>
 
-        <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : // Are there comments to navigate through? ?>
+				</div><!-- .nav-links -->
 
-            <nav id="comment-nav-above" class="navigation comment-navigation">
+			</nav><!-- #comment-nav-above -->
 
-                <h2 class="screen-reader-text"><?php esc_html_e('Comment navigation', 'giottopress'); ?></h2>
+		<?php endif; // Check for comment navigation. ?>
 
-                <div class="nav-links">
+		<ol class="comment-list">
 
-                    <div class="nav-previous"><?php previous_comments_link(esc_html__('Older Comments', 'giottopress')); ?></div>
+			<?php
 
-                    <div class="nav-next"><?php next_comments_link(esc_html__('Newer Comments', 'giottopress')); ?></div>
+			wp_list_comments( array(
 
-                </div><!-- .nav-links -->
+				'style' => 'ol',
 
-            </nav><!-- #comment-nav-above -->
+				'short_ping' => true,
 
-        <?php endif; // Check for comment navigation. ?>
+				'avatar_size' => 60,
 
-        <ol class="comment-list">
+			) );
 
-            <?php
+			?>
 
-            wp_list_comments(array(
+		</ol><!-- .comment-list -->
 
-                'style' => 'ol',
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 
-                'short_ping' => true,
+			<nav id="comment-nav-below" class="navigation comment-navigation">
 
-                'avatar_size' => 60,
+				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'giottopress' ); ?></h2>
 
-            ));
+				<div class="nav-links">
 
-            ?>
+					<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'giottopress' ) ); ?></div>
 
-        </ol><!-- .comment-list -->
+					<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'giottopress' ) ); ?></div>
 
-        <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : // Are there comments to navigate through? ?>
+				</div><!-- .nav-links -->
 
-            <nav id="comment-nav-below" class="navigation comment-navigation">
+			</nav><!-- #comment-nav-below -->
 
-                <h2 class="screen-reader-text"><?php esc_html_e('Comment navigation', 'giottopress'); ?></h2>
+			<?php
 
-                <div class="nav-links">
+		endif; // Check for comment navigation.
 
-                    <div class="nav-previous"><?php previous_comments_link(esc_html__('Older Comments', 'giottopress')); ?></div>
+	endif; // Check for have_comments().
 
-                    <div class="nav-next"><?php next_comments_link(esc_html__('Newer Comments', 'giottopress')); ?></div>
+	// If comments are closed and there are comments, let's leave a little note, shall we?
+	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+		?>
 
-                </div><!-- .nav-links -->
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'giottopress' ); ?></p>
 
-            </nav><!-- #comment-nav-below -->
+		<?php
 
-            <?php
+	endif;
 
-        endif; // Check for comment navigation.
+	comment_form();
 
-    endif; // Check for have_comments().
-
-    // If comments are closed and there are comments, let's leave a little note, shall we?
-    if ( ! comments_open() && get_comments_number() && post_type_supports(get_post_type(), 'comments')) :
-        ?>
-
-        <p class="no-comments"><?php esc_html_e('Comments are closed.', 'giottopress'); ?></p>
-
-        <?php
-
-    endif;
-
-    comment_form();
-
-    ?>
+	?>
 
 </div><!-- #comments -->

@@ -7,15 +7,15 @@
  * @package Giotto
  */
 
-if ( ! is_active_sidebar('sidebar-1')) {
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
-    return;
+	return;
 }
 
 ?>
 
 <section id="secondary" <?php giotto_sidebar_class() ?>>
 
-    <?php dynamic_sidebar('sidebar-1'); ?>
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
 </section><!-- #secondary -->

@@ -9,46 +9,46 @@
 
 get_header(); ?>
 
-    <section id="primary" <?php giotto_primary_content_class(); ?>>
+	<section id="primary" <?php giotto_primary_content_class(); ?>>
 
-        <main id="main" <?php giotto_main_class() ?>>
+		<main id="main" <?php giotto_main_class() ?>>
 
-            <?php
+			<?php
 
-            giotto_get_inner_page_title();
+			giotto_get_inner_page_title();
 
-            if (have_posts()) : ?>
+			if ( have_posts() ) : ?>
 
-                <?php
+				<?php
 
-                /* Start the Loop */
+				/* Start the Loop */
 
-                while (have_posts()) : the_post();
+				while ( have_posts() ) : the_post();
 
-                    /*
-                     * Include the Post-Format-specific template for the content.
-                     * If you want to override this in a child theme, then include a file
-                     * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                     */
+					/*
+					 * Include the Post-Format-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
 
-                    get_template_part('templates/content', get_post_format());
+					get_template_part( 'templates/content', get_post_format() );
 
-                endwhile;
+				endwhile;
 
-                giotto_posts_navigation();
+				giotto_posts_navigation();
 
-            else :
+			else :
 
-                get_template_part('templates/content', 'none');
+				get_template_part( 'templates/content', 'none' );
 
-            endif; ?>
+			endif; ?>
 
-        </main><!-- #main -->
+		</main><!-- #main -->
 
-    </section><!-- #primary -->
+	</section><!-- #primary -->
 
 <?php
 
-do_action('giotto/sidebars');
+do_action( 'giotto/sidebars' );
 
 get_footer();

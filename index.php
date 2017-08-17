@@ -14,9 +14,9 @@
 
 get_header(); ?>
 
-    <section id="primary" <?php giotto_primary_content_class(); ?>>
+	<section id="primary" <?php giotto_primary_content_class(); ?>>
 
-        <main id="main" <?php giotto_main_class() ?>>
+		<main id="main" <?php giotto_main_class() ?>>
 
 			<?php
 
@@ -38,13 +38,13 @@ get_header(); ?>
 
 			else :
 
-                get_template_part('templates/content', 'none');
+				get_template_part( 'templates/content', 'none' );
 
 			endif; ?>
 
-        </main><!-- #main -->
+		</main><!-- #main -->
 
-    </section><!-- #primary -->
+	</section><!-- #primary -->
 
 <?php
 
