@@ -334,14 +334,14 @@ if ( ! function_exists( 'giottopress_get_sidebar_layout' ) ) :
 			 * set the meta option as the layout
 			 * The page meta option override all.
 			 */
-			if ( 'global' !== $layout_single_meta || ! empty( $layout_single_meta ) ) {
+			if ( 'global' !== $layout_single_meta && ! empty( $layout_single_meta ) ) {
 				$layout = $layout_single_meta;
 			}
 
 			/**
 			 * If the option is set to global
 			 */
-			if ( 'global' === $layout_single_meta && empty( $layout_single_meta ) ) {
+			if ( 'global' === $layout_single_meta || empty( $layout_single_meta ) ) {
 				$layout = $layout_page_global;
 			}
 		}

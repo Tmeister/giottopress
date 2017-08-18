@@ -6,7 +6,7 @@ Theme URI: https://giottopress.io
 Description: GiottoPress is a lightweight, faster, clean, super flexible and Bulma based responsive theme suitable for any kind of blog, personal, fashion, food, travel, photography, publishing or tutorial blog sites, you will be amazed by the real time customizer with lots of smart options that will help you build your website with ease.
 Version: 1.0.1
 Text Domain: giottopress
-Tags: left-sidebar, right-sidebar, footer-widgets, blog, custom-menu, custom-colors, custom-header, custom-logo, editor-style, featured-images, sticky-post, threaded-comments, translation-ready
+Tags: left-sidebar, right-sidebar, footer-widgets, blog, custom-menu, custom-colors, custom-header, custom-logo, featured-images, sticky-post, threaded-comments, translation-ready
 License: GNU General Public License v3.0 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,7 +16,6 @@ GiottoPress, Copyright 2017 Enrique Chavez
 
 DO NOT ADD YOUR CSS TO THIS FILE - IT WILL BE LOST
 To add your own CSS, use a child theme: https://giottopress.io/go/child-theme
-
 */
 /*--------------------------------------------------------------
 # Utilities

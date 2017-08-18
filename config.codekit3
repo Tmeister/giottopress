@@ -820,16 +820,6 @@
 		"oAP": "\/inc\/admin\/get-pro\/class-giottopress-up-sell.php",
 		"oF": 0
 		},
-	"\/inc\/admin\/get-pro\/customizer-pro-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/inc\/admin\/get-pro\/customizer-pro-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"\/inc\/admin\/get-pro\/customizer-pro.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1016,29 +1006,29 @@
 	"\/src\/js\/customizer-pro.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
-		"oAP": "\/src\/js\/customizer-pro-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
+		"oAP": "\/inc\/admin\/get-pro\/customizer-pro.js",
+		"oF": 2,
+		"sC": 3,
+		"tS": 1
 		},
 	"\/src\/js\/customizer.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
-		"oAP": "\/src\/js\/customizer-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
+		"oAP": "\/js\/customizer.js",
+		"oF": 2,
+		"sC": 3,
+		"tS": 1
 		},
 	"\/src\/js\/navigation.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "\/js\/navigation-min.js",
+		"oAP": "\/js\/navigation.js",
 		"oF": 3,
 		"sC": 3,
 		"tS": 1
@@ -1304,16 +1294,16 @@
 		"uL": 1
 		},
 	"\/src\/sass\/style.scss": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/src\/sass\/style.css",
-		"oF": 0,
-		"oS": 0,
+		"oAP": "\/style.css",
+		"oF": 2,
+		"oS": 1,
 		"uL": 1
 		},
 	"\/style.css": {
