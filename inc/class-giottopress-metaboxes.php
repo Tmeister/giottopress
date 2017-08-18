@@ -59,9 +59,13 @@ if ( ! class_exists( 'GiottoPress_Metaboxes' ) ) :
 		}
 
 		public function hooks() {
+			global $pagenow;
 			add_action( 'add_meta_boxes', array( $this, 'add_meta_box' ), $this->hook_priority );
 			add_action( 'save_post', array( $this, 'save_meta_fields' ), 1, 2 );
-			add_action( 'admin_head', array( $this, 'scripts' ) );
+			if ( 'post.php' === $pagenow || 'post-new.php' === $pagenow ) {
+				add_action( 'admin_head', array( $this, 'scripts' ) );
+			}
+
 		}
 
 		public function add_meta_box() {
@@ -137,7 +141,8 @@ if ( ! class_exists( 'GiottoPress_Metaboxes' ) ) :
 			$html = sprintf( '<fieldset class="giotto-row" id="giottopress_cmb_fieldset_%1$s">', $field['name'] );
 			$html .= sprintf( '<label class="giotto-label" for="giottopress_cmb_%1$s">%2$s</label>', $field['name'], $field['label'] );
 
-			$html .= sprintf( '<input type="%1$s" class="%2$s" id="giottopress_cmb_%3$s" name="%3$s" value="%5$s" %6$s %7$s/>', $field['type'], $class, $field['name'], $field['name'], $value, $readonly,
+			$html .= sprintf( '<input type="%1$s" class="%2$s" id="giottopress_cmb_%3$s" name="%3$s" value="%5$s" %6$s %7$s/>', $field['type'], $class, $field['name'], $field['name'], $value,
+				$readonly,
 				$disabled );
 
 			$html .= $this->field_description( $field );
@@ -262,27 +267,27 @@ if ( ! class_exists( 'GiottoPress_Metaboxes' ) ) :
 		function scripts() {
 			?>
 
-            <style type="text/css">
-                #giotto-post-layout label,
-                #giotto-post-sidebar label {
-                    display: block;
-                    vertical-align: top;
-                    width: 100%;
-                    padding: 5px 0;
-                }
+			<style type="text/css">
+				#giotto-post-layout label,
+				#giotto-post-sidebar label {
+					display: block;
+					vertical-align: top;
+					width: 100%;
+					padding: 5px 0;
+				}
 
-                .giotto-meta-field, .giotto-meta-field-text {
-                    width: 100%;
-                }
+				.giotto-meta-field, .giotto-meta-field-text {
+					width: 100%;
+				}
 
-                .regular-text-text.giotto-url {
-                    width: calc(100% - 67px);
-                }
+				.regular-text-text.giotto-url {
+					width: calc(100% - 67px);
+				}
 
-                #wpbody-content .metabox-holder {
-                    padding-top: 5px;
-                }
-            </style>
+				#wpbody-content .metabox-holder {
+					padding-top: 5px;
+				}
+			</style>
 			<?php
 		}
 	}
