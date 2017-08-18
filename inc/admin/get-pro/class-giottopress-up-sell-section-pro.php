@@ -14,7 +14,7 @@ class GiottoPress_Up_Sell_Section_Pro extends WP_Customize_Section {
 	 * @access public
 	 * @var    string
 	 */
-	public $type = 'giotto_up_sell';
+	public $type = 'giottopress_up_sell';
 	/**
 	 * Custom button text to output.
 	 *

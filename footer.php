@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Giotto
+ * @package GiottoPress
  */
 
 /* No direct access */
@@ -15,20 +15,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-</div><!-- #wrapper -->
-
-</div><!-- #content -->
-
+		</div><!-- #wrapper -->
+	</div><!-- #content -->
 </div><!-- #page -->
 
-<?php do_action( 'giotto/before_footer' ); ?>
-
-<?php do_action( 'giotto/footer' ) ?>
-
-<?php do_action( 'giotto/after_footer' ); ?>
-
+<?php do_action( 'giottopress_before_footer' ); ?>
+<?php do_action( 'giottopress_footer' ) ?>
+<?php do_action( 'giottopress_after_footer' ); ?>
 <?php wp_footer(); ?>
-
 </body><!-- body -->
-
 </html><!-- html -->

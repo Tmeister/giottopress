@@ -1,19 +1,19 @@
-=== giotto ===
+=== GiottoPress ===
 
-Contributors: automattic
-Tags:
+Contributors: tmeister
+Tags:left-sidebar, right-sidebar, footer-widgets, blog, custom-menu, custom-colors, custom-header, custom-logo, editor-style, featured-images, sticky-post, threaded-comments, translation-ready
 
 Requires at least: 4.0
-Tested up to: 4.8
-Stable tag: 1.0.0
+Tested up to: 4.8.1
+Stable tag: 1.0.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called giotto, or underscores.
+A starter theme called GiottoPress
 
 == Description ==
 
-Hi. I'm a starter theme called giotto, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+GiottoPress is a lightweight, faster, clean, super flexible and Bulma based responsive theme suitable for any kind of blog, personal, fashion, food, travel, photography, publishing or tutorial blog sites, you will be amazed by the real time customizer with lots of smart options that will help you build your website with ease.
 
 == Installation ==
 
@@ -21,16 +21,20 @@ Hi. I'm a starter theme called giotto, or underscores, if you like. I'm a theme 
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
-== Frequently Asked Questions ==
-
-= Does this theme support any plugins? =
-
-_s includes support for Infinite Scroll in Jetpack.
-
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0.0 - August 16 2017 =
 * Initial release
+
+= 1.0.1 - August 18 2017 =
+* Use `the_posts_pagination` instead of custom function
+* Change all prefixes to giottopress
+* Set Kirki as recommended and not required
+* Set TGM notice dismissible
+* Load un-minified CSS and JS scripts
+* Removing unused files `rtl.css`
+* Default WP customizer settings are not removed
+* Load admin scripts only on the welcome page
 
 == Credits ==
 

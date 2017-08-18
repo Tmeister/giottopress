@@ -1,0 +1,16 @@
+.navigation {
+  &.pagination {
+    text-align: center;
+    margin-bottom: 1em;
+    .page-numbers {
+      border: 1px solid #dbdbdb;
+      min-width: 2.25em;
+      border-radius: 3px;
+      line-height: 1.5;
+      padding: .5em 1em;
+      position: relative;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+}

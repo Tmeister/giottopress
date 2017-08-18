@@ -820,15 +820,15 @@
 		"oAP": "\/inc\/admin\/get-pro\/class-giottopress-up-sell.php",
 		"oF": 0
 		},
-	"\/inc\/admin\/get-pro\/customizer-pro-min.js": {
-		"ft": 64,
+	"\/inc\/admin\/get-pro\/customizer-pro-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
 		"ma": 0,
-		"mi": 1,
 		"oA": 0,
-		"oAP": "\/inc\/admin\/get-pro\/customizer-pro-min-min.js",
+		"oAP": "\/inc\/admin\/get-pro\/customizer-pro-min-min.css",
 		"oF": 0,
-		"sC": 1,
-		"tS": 0
+		"oS": 3
 		},
 	"\/inc\/admin\/get-pro\/customizer-pro.css": {
 		"aP": 1,
@@ -839,6 +839,16 @@
 		"oAP": "\/inc\/admin\/get-pro\/customizer-pro-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"\/inc\/admin\/get-pro\/customizer-pro.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/inc\/admin\/get-pro\/customizer-pro-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/inc\/class-giottopress-kirki.php": {
 		"ft": 8192,
@@ -900,22 +910,22 @@
 		"oAP": "\/index.php",
 		"oF": 0
 		},
-	"\/js\/customizer-min.js": {
+	"\/js\/customizer.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 1,
-		"oAP": "\/js\/customizer-min-min.js",
-		"oF": 1,
+		"oA": 0,
+		"oAP": "\/js\/customizer-min.js",
+		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/navigation-min.js": {
+	"\/js\/navigation.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 1,
-		"oAP": "\/js\/navigation-min-min.js",
+		"oA": 0,
+		"oAP": "\/js\/navigation-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -934,12 +944,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/giottopress.pot",
-		"oF": 0
-		},
-	"\/languages\/readme.txt": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/languages\/readme.txt",
 		"oF": 0
 		},
 	"\/LICENSE": {
@@ -973,16 +977,6 @@
 		"oA": 2,
 		"oAP": "\/readme.txt",
 		"oF": 0
-		},
-	"\/rtl.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/rtl-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"\/screenshot.png": {
 		"ft": 32768,
@@ -1024,20 +1018,20 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/get-pro\/customizer-pro-min.js",
-		"oF": 2,
-		"sC": 3,
-		"tS": 1
+		"oAP": "\/src\/js\/customizer-pro-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/src\/js\/customizer.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/customizer-min.js",
-		"oF": 2,
-		"sC": 3,
-		"tS": 1
+		"oAP": "\/src\/js\/customizer-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/src\/js\/navigation.js": {
 		"ft": 64,
@@ -1257,29 +1251,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/src\/sass\/customizer-pro.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/src\/sass\/customizer-pro-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/src\/sass\/customizer-pro.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/get-pro\/customizer-pro.css",
-		"oF": 2,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/src\/sass\/navigation\/_links.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1319,17 +1290,30 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/src\/sass\/navigation\/_pagination.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/src\/sass\/navigation\/_pagination.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/src\/sass\/style.scss": {
 		"aP": 0,
-		"bl": 1,
+		"bl": 0,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/style.css",
-		"oF": 2,
-		"oS": 2,
+		"oAP": "\/src\/sass\/style.css",
+		"oF": 0,
+		"oS": 0,
 		"uL": 1
 		},
 	"\/style.css": {
@@ -1337,7 +1321,7 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "\/style-min.css",
 		"oF": 0,
 		"oS": 3
