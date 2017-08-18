@@ -65,11 +65,11 @@ final class GiottoPress_Up_Sell {
 		$manager->add_section(
 			new GiottoPress_Up_Sell_Section_Pro(
 				$manager,
-				'giotto_up_sell',
+				'giottopress_up_sell',
 				array(
 					'title'    => esc_html__( 'Get GiottoPress Pro!', 'giottopress' ),
 					'pro_text' => esc_html__( 'Go Pro', 'giottopress' ),
-					'pro_url'  => 'https://giottopress.io/get-pro',
+					'pro_url'  => 'https://giottopress.io/go/get-pro',
 				)
 			)
 		);

@@ -47,7 +47,7 @@ if ( ! class_exists( 'GiottoPress_Metaboxes' ) ) :
 		public $label;
 
 		function __construct( $args = null ) {
-			$this->meta_box_id   = $args['meta_box_id'] ? $args['meta_box_id'] : 'giotto_meta_box';
+			$this->meta_box_id   = $args['meta_box_id'] ? $args['meta_box_id'] : 'giottopress_meta_box';
 			$this->label         = $args['label'] ? $args['label'] : 'MDC Metabox';
 			$this->post_type     = $args['post_type'] ? $args['post_type'] : 'post';
 			$this->context       = $args['context'] ? $args['context'] : 'normal';
@@ -79,7 +79,7 @@ if ( ! class_exists( 'GiottoPress_Metaboxes' ) ) :
 		public function meta_fields_callback() {
 			global $post;
 
-			echo '<input type="hidden" name="giotto_cmb_nonce" id="giotto_cmb_nonce" value="' . wp_create_nonce( plugin_basename( __FILE__ ) ) . '" />';
+			echo '<input type="hidden" name="giottopress_cmb_nonce" id="giottopress_cmb_nonce" value="' . wp_create_nonce( plugin_basename( __FILE__ ) ) . '" />';
 
 			foreach ( $this->fields as $field ) {
 
@@ -99,8 +99,8 @@ if ( ! class_exists( 'GiottoPress_Metaboxes' ) ) :
 
 		public function save_meta_fields( $post_id, $post ) {
 			if (
-				! isset( $_POST['giotto_cmb_nonce'] ) ||
-				! wp_verify_nonce( $_POST['giotto_cmb_nonce'], plugin_basename( __FILE__ ) ) ||
+				! isset( $_POST['giottopress_cmb_nonce'] ) ||
+				! wp_verify_nonce( $_POST['giottopress_cmb_nonce'], plugin_basename( __FILE__ ) ) ||
 				! current_user_can( 'edit_post', $post->ID ) ||
 				$post->post_type == 'revision'
 			) {
@@ -134,10 +134,10 @@ if ( ! class_exists( 'GiottoPress_Metaboxes' ) ) :
 			$readonly         = isset( $field['readonly'] ) && ( $field['readonly'] == true ) ? " readonly" : "";
 			$disabled         = isset( $field['disabled'] ) && ( $field['disabled'] == true ) ? " disabled" : "";
 
-			$html = sprintf( '<fieldset class="giotto-row" id="giotto_cmb_fieldset_%1$s">', $field['name'] );
-			$html .= sprintf( '<label class="giotto-label" for="giotto_cmb_%1$s">%2$s</label>', $field['name'], $field['label'] );
+			$html = sprintf( '<fieldset class="giotto-row" id="giottopress_cmb_fieldset_%1$s">', $field['name'] );
+			$html .= sprintf( '<label class="giotto-label" for="giottopress_cmb_%1$s">%2$s</label>', $field['name'], $field['label'] );
 
-			$html .= sprintf( '<input type="%1$s" class="%2$s" id="giotto_cmb_%3$s" name="%3$s" value="%5$s" %6$s %7$s/>', $field['type'], $class, $field['name'], $field['name'], $value, $readonly,
+			$html .= sprintf( '<input type="%1$s" class="%2$s" id="giottopress_cmb_%3$s" name="%3$s" value="%5$s" %6$s %7$s/>', $field['type'], $class, $field['name'], $field['name'], $value, $readonly,
 				$disabled );
 
 			$html .= $this->field_description( $field );
@@ -155,10 +155,10 @@ if ( ! class_exists( 'GiottoPress_Metaboxes' ) ) :
 			$readonly = isset( $field['readonly'] ) && ( $field['readonly'] == true ) ? " readonly" : "";
 			$disabled = isset( $field['disabled'] ) && ( $field['disabled'] == true ) ? " disabled" : "";
 
-			$html = sprintf( '<fieldset class="giotto-row" id="giotto_cmb_fieldset_%1$s">', $field['name'] );
-			$html .= sprintf( '<label class="giotto-label" for="giotto_cmb_%1$s">%2$s</label>', $field['name'], $field['label'] );
+			$html = sprintf( '<fieldset class="giotto-row" id="giottopress_cmb_fieldset_%1$s">', $field['name'] );
+			$html .= sprintf( '<label class="giotto-label" for="giottopress_cmb_%1$s">%2$s</label>', $field['name'], $field['label'] );
 
-			$html .= sprintf( '<textarea rows="' . $rows . '" cols="' . $cols . '" class="%1$s-text" id="giotto_cmb_%2$s" name="%3$s" %4$s %5$s >%6$s</textarea>', $class, $field['name'],
+			$html .= sprintf( '<textarea rows="' . $rows . '" cols="' . $cols . '" class="%1$s-text" id="giottopress_cmb_%2$s" name="%3$s" %4$s %5$s >%6$s</textarea>', $class, $field['name'],
 				$field['name'],
 				$readonly, $disabled, $value );
 
@@ -174,7 +174,7 @@ if ( ! class_exists( 'GiottoPress_Metaboxes' ) ) :
 			$class    = isset( $field['class'] ) && ! is_null( $field['class'] ) ? $field['class'] : 'regular-text';
 			$disabled = isset( $field['disabled'] ) && ( $field['disabled'] == true ) ? " disabled" : "";
 
-			$html = sprintf( '<fieldset class="giotto-row" id="giotto_cmb_fieldset_%1$s">', $field['name'] );
+			$html = sprintf( '<fieldset class="giotto-row" id="giottopress_cmb_fieldset_%1$s">', $field['name'] );
 			$html .= '<label class="giotto-label">' . $field['label'] . '</label>';
 			foreach ( $field['options'] as $key => $label ) {
 				$html .= sprintf( '<label for="%1$s[%2$s]">', $field['name'], $key );
@@ -198,10 +198,10 @@ if ( ! class_exists( 'GiottoPress_Metaboxes' ) ) :
 			$class            = isset( $field['class'] ) && ! is_null( $field['class'] ) ? $field['class'] : 'regular-text';
 			$disabled         = isset( $field['disabled'] ) && ( $field['disabled'] == true ) ? " disabled" : "";
 
-			$html = sprintf( '<fieldset class="giotto-row" id="giotto_cmb_fieldset_%1$s">', $field['name'] );
-			$html .= sprintf( '<label class="giotto-label" for="giotto_cmb_%1$s">%2$s</label>', $field['name'], $field['label'] );
+			$html = sprintf( '<fieldset class="giotto-row" id="giottopress_cmb_fieldset_%1$s">', $field['name'] );
+			$html .= sprintf( '<label class="giotto-label" for="giottopress_cmb_%1$s">%2$s</label>', $field['name'], $field['label'] );
 
-			$html .= sprintf( '<input type="checkbox" class="checkbox" id="giotto_cmb_%1$s" name="%1$s" value="on" %2$s %3$s />', $field['name'], checked( $value, 'on', false ), $disabled );
+			$html .= sprintf( '<input type="checkbox" class="checkbox" id="giottopress_cmb_%1$s" name="%1$s" value="on" %2$s %3$s />', $field['name'], checked( $value, 'on', false ), $disabled );
 
 			$html .= $this->field_description( $field, true ) . '';
 			$html .= '</fieldset>';
@@ -218,9 +218,9 @@ if ( ! class_exists( 'GiottoPress_Metaboxes' ) ) :
 			$multiple         = isset( $field['multiple'] ) && ( $field['multiple'] == true ) ? " multiple" : "";
 			$name             = isset( $field['multiple'] ) && ( $field['multiple'] == true ) ? $field['name'] . '[]' : $field['name'];
 
-			$html = sprintf( '<fieldset class="giotto-row" id="giotto_cmb_fieldset_%1$s">', $field['name'] );
-			$html .= sprintf( '<label class="giotto-label" for="giotto_cmb_%1$s">%2$s</label>', $field['name'], $field['label'] );
-			$html .= sprintf( '<select class="%1$s" name="%2$s" id="giotto_cmb_%2$s" %3$s %4$s>', $class, $name, $disabled, $multiple );
+			$html = sprintf( '<fieldset class="giotto-row" id="giottopress_cmb_fieldset_%1$s">', $field['name'] );
+			$html .= sprintf( '<label class="giotto-label" for="giottopress_cmb_%1$s">%2$s</label>', $field['name'], $field['label'] );
+			$html .= sprintf( '<select class="%1$s" name="%2$s" id="giottopress_cmb_%2$s" %3$s %4$s>', $class, $name, $disabled, $multiple );
 
 			if ( $multiple == '' ) :
 
@@ -290,8 +290,8 @@ endif; // End Metaboxes Class
 /**
  * Main function
  */
-if ( ! function_exists( 'giotto_meta_box' ) ) {
-	function giotto_meta_box( $args ) {
+if ( ! function_exists( 'giottopress_meta_box' ) ) {
+	function giottopress_meta_box( $args ) {
 		return new GiottoPress_Metaboxes( $args );
 	}
 }
@@ -313,7 +313,7 @@ $sidebar_args = array(
 	'hook_priority' => 10,
 	'fields'        => array(
 		array(
-			'name'    => 'giotto/post_sidebar',
+			'name'    => 'giottopress_post_sidebar',
 			'label'   => '',
 			'type'    => 'radio',
 			'class'   => 'giotto-meta-field',
@@ -328,7 +328,7 @@ $sidebar_args = array(
 	)
 );
 
-giotto_meta_box( $sidebar_args );
+giottopress_meta_box( $sidebar_args );
 
 /**
  * Layout metabox
@@ -342,7 +342,7 @@ $layout_args = array(
 	'hook_priority' => 10,
 	'fields'        => array(
 		array(
-			'name'    => 'giotto/post_layout',
+			'name'    => 'giottopress_post_layout',
 			'label'   => '',
 			'type'    => 'radio',
 			'class'   => 'giotto-meta-field',
@@ -357,4 +357,4 @@ $layout_args = array(
 	)
 );
 
-giotto_meta_box( $layout_args );
+giottopress_meta_box( $layout_args );

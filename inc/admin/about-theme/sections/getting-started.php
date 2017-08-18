@@ -13,7 +13,7 @@ $customizer_url = wp_customize_url();
 
 		<div class="intro-head">
 			<h1 class="giottopress-welcome-title">
-				<?php _e( 'Welcome to GiottoPress!', 'giottopress' ); ?>
+				<?php esc_html_e( 'Welcome to GiottoPress!', 'giottopress' ); ?>
 				<?php if ( ! empty( $giottopress_lite['Version'] ) ) : ?>
 					<sup id="giottopress-theme-version">
 						<?php echo esc_attr( $giottopress_lite['Version'] ); ?>
@@ -37,7 +37,7 @@ $customizer_url = wp_customize_url();
 				<h1><?php esc_html_e( 'Need more features?', 'giottopress' ); ?></h1>
 				<h4><?php esc_html_e( 'Check our premium version for this theme.', 'giottopress' ); ?></h4>
 				<p><?php esc_html_e( 'Check out the Premium version of this theme which comes with additional features and advanced customization.', 'giottopress' ); ?></p>
-				<p><a href="https://giottopress.io/get-pro" class="button button-primary"><?php esc_html_e( 'Get Premium Version', 'giottopress' ); ?></a></p>
+				<p><a href="https://giottopress.io/go/get-pro" class="button button-primary"><?php esc_html_e( 'Get Premium Version', 'giottopress' ); ?></a></p>
 			</div>
 		</div>
 
@@ -46,7 +46,7 @@ $customizer_url = wp_customize_url();
 				<h1><?php esc_html_e( 'Documentation', 'giottopress' ); ?></h1>
 				<h4><?php esc_html_e( 'How to install this theme in a few minutes.', 'giottopress' ); ?></h4>
 				<p><?php esc_html_e( 'Please read the online documentation page to setup this theme. It only takes a few minutes on a clean WordPress install.', 'giottopress' ); ?></p>
-				<p><a href="https://giottopress.io/docs/install" class="button button-primary"><?php esc_html_e( 'Read Documentation', 'giottopress' ); ?></a></p>
+				<p><a href="https://giottopress.io/go/install" class="button button-primary"><?php esc_html_e( 'Read Documentation', 'giottopress' ); ?></a></p>
 			</div>
 		</div>
 	</div>

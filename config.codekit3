@@ -15,7 +15,7 @@
 		"uuidString": "DFEAEAED-0C5E-4BCE-81C8-368B13D700CD"
 		}
 	],
-"creatorBuild": "25849",
+"creatorBuild": "25900",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -756,6 +756,7 @@
 		},
 	"\/Gruntfile.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 0,
 		"oA": 1,
 		"oAP": "\/Gruntfile-min.js",
@@ -769,10 +770,10 @@
 		"oAP": "\/header.php",
 		"oF": 0
 		},
-	"\/inc\/admin\/about-theme\/about-theme.php": {
+	"\/inc\/admin\/about-theme\/class-giottopress-about-theme.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/admin\/about-theme\/about-theme.php",
+		"oAP": "\/inc\/admin\/about-theme\/class-giottopress-about-theme.php",
 		"oF": 0
 		},
 	"\/inc\/admin\/about-theme\/css\/about.css": {
@@ -787,6 +788,7 @@
 		},
 	"\/inc\/admin\/about-theme\/js\/about.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/inc\/admin\/about-theme\/js\/about-min.js",
@@ -806,14 +808,27 @@
 		"oAP": "\/inc\/admin\/about-theme\/sections\/translate.php",
 		"oF": 0
 		},
-	"\/inc\/admin\/get-pro\/customizer-pro-min.js": {
-		"ft": 64,
-		"mi": 1,
+	"\/inc\/admin\/get-pro\/class-giottopress-up-sell-section-pro.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/admin\/get-pro\/class-giottopress-up-sell-section-pro.php",
+		"oF": 0
+		},
+	"\/inc\/admin\/get-pro\/class-giottopress-up-sell.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/admin\/get-pro\/class-giottopress-up-sell.php",
+		"oF": 0
+		},
+	"\/inc\/admin\/get-pro\/customizer-pro-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
 		"oA": 0,
-		"oAP": "\/inc\/admin\/get-pro\/customizer-pro-min-min.js",
+		"oAP": "\/inc\/admin\/get-pro\/customizer-pro-min-min.css",
 		"oF": 0,
-		"sC": 1,
-		"tS": 0
+		"oS": 3
 		},
 	"\/inc\/admin\/get-pro\/customizer-pro.css": {
 		"aP": 1,
@@ -825,16 +840,32 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"\/inc\/admin\/get-pro\/upsell-customizer.php": {
+	"\/inc\/admin\/get-pro\/customizer-pro.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/inc\/admin\/get-pro\/customizer-pro-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/inc\/class-giottopress-kirki.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/admin\/get-pro\/upsell-customizer.php",
+		"oAP": "\/inc\/class-giottopress-kirki.php",
 		"oF": 0
 		},
-	"\/inc\/admin\/get-pro\/upsell-section-pro.php": {
+	"\/inc\/class-giottopress-menu-walker.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/admin\/get-pro\/upsell-section-pro.php",
+		"oAP": "\/inc\/class-giottopress-menu-walker.php",
+		"oF": 0
+		},
+	"\/inc\/class-giottopress-metaboxes.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/class-giottopress-metaboxes.php",
 		"oF": 0
 		},
 	"\/inc\/class-tgm-plugin-activation.php": {
@@ -853,24 +884,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/jetpack.php",
-		"oF": 0
-		},
-	"\/inc\/kirki-fallback.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/kirki-fallback.php",
-		"oF": 0
-		},
-	"\/inc\/menu-walker.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/menu-walker.php",
-		"oF": 0
-		},
-	"\/inc\/metaboxes.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/metaboxes.php",
 		"oF": 0
 		},
 	"\/inc\/template-functions.php": {
@@ -897,26 +910,29 @@
 		"oAP": "\/index.php",
 		"oF": 0
 		},
-	"\/js\/customizer-min.js": {
+	"\/js\/customizer.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
-		"oA": 1,
-		"oAP": "\/js\/customizer-min-min.js",
-		"oF": 1,
+		"oA": 0,
+		"oAP": "\/js\/customizer-min.js",
+		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/navigation-min.js": {
+	"\/js\/navigation.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
-		"oA": 1,
-		"oAP": "\/js\/navigation-min-min.js",
+		"oA": 0,
+		"oAP": "\/js\/navigation-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
 	"\/js\/skip-link-focus-fix.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/skip-link-focus-fix-min.js",
@@ -928,12 +944,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/giottopress.pot",
-		"oF": 0
-		},
-	"\/languages\/readme.txt": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/languages\/readme.txt",
 		"oF": 0
 		},
 	"\/LICENSE": {
@@ -967,16 +977,6 @@
 		"oA": 2,
 		"oAP": "\/readme.txt",
 		"oF": 0
-		},
-	"\/rtl.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/rtl-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"\/screenshot.png": {
 		"ft": 32768,
@@ -1015,27 +1015,30 @@
 		},
 	"\/src\/js\/customizer-pro.js": {
 		"ft": 64,
-		"mi": 1,
+		"ma": 0,
+		"mi": 0,
 		"oA": 0,
-		"oAP": "\/get-pro\/customizer-pro-min.js",
+		"oAP": "\/inc\/admin\/get-pro\/customizer-pro.js",
 		"oF": 2,
 		"sC": 3,
 		"tS": 1
 		},
 	"\/src\/js\/customizer.js": {
 		"ft": 64,
-		"mi": 1,
+		"ma": 0,
+		"mi": 0,
 		"oA": 0,
-		"oAP": "\/js\/customizer-min.js",
+		"oAP": "\/js\/customizer.js",
 		"oF": 2,
 		"sC": 3,
 		"tS": 1
 		},
 	"\/src\/js\/navigation.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "\/js\/navigation-min.js",
+		"oAP": "\/js\/navigation.js",
 		"oF": 3,
 		"sC": 3,
 		"tS": 1
@@ -1248,29 +1251,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/src\/sass\/customizer-pro.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/src\/sass\/customizer-pro-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"\/src\/sass\/customizer-pro.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/get-pro\/customizer-pro.css",
-		"oF": 2,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/src\/sass\/navigation\/_links.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1310,8 +1290,21 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/src\/sass\/style.scss": {
+	"\/src\/sass\/navigation\/_pagination.scss": {
 		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/src\/sass\/navigation\/_pagination.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/src\/sass\/style.scss": {
+		"aP": 1,
 		"bl": 1,
 		"dP": 10,
 		"dS": 0,
@@ -1319,8 +1312,8 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "\/style.css",
-		"oF": 2,
-		"oS": 2,
+		"oF": 3,
+		"oS": 1,
 		"uL": 1
 		},
 	"\/style.css": {
@@ -1789,6 +1782,10 @@
 			"active": 0,
 			"optionString": "{'setWithoutGet': true, 'getWithoutSet': false}"
 			},
+		"array-bracket-newline": {
+			"active": 0,
+			"optionString": "{'multiline': true, 'minItems': null}"
+			},
 		"array-bracket-spacing": {
 			"active": 0,
 			"optionString": "'never', {'singleValue': false, 'objectsInArrays': false, 'arraysInArrays': false}"
@@ -1796,6 +1793,10 @@
 		"array-callback-return": {
 			"active": 0,
 			"optionString": ""
+			},
+		"array-element-newline": {
+			"active": 0,
+			"optionString": "'always'"
 			},
 		"arrow-body-style": {
 			"active": 0,
@@ -1893,6 +1894,10 @@
 			"active": 0,
 			"optionString": "'always', {'null': 'always'}"
 			},
+		"for-direction": {
+			"active": 0,
+			"optionString": ""
+			},
 		"func-call-spacing": {
 			"active": 0,
 			"optionString": "'never'"
@@ -1912,6 +1917,10 @@
 		"generator-star-spacing": {
 			"active": 0,
 			"optionString": "{'before': true, 'after': false}"
+			},
+		"getter-return": {
+			"active": 0,
+			"optionString": "{'allowImplicit': false}"
 			},
 		"global-require": {
 			"active": 0,
@@ -2040,6 +2049,10 @@
 		"no-bitwise": {
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
+			},
+		"no-buffer-constructor": {
+			"active": 0,
+			"optionString": ""
 			},
 		"no-caller": {
 			"active": 0,
@@ -2585,6 +2598,10 @@
 			"active": 0,
 			"optionString": "{'blocks': 'always', 'switches': 'always', 'classes': 'always'}"
 			},
+		"padding-line-between-statements": {
+			"active": 0,
+			"optionString": "{blankLine: 'always', prev:'*', next:'return'}"
+			},
 		"prefer-arrow-callback": {
 			"active": 0,
 			"optionString": ""
@@ -2653,6 +2670,10 @@
 			"active": 0,
 			"optionString": "{'before': false, 'after': true}"
 			},
+		"semi-style": {
+			"active": 0,
+			"optionString": "'last'"
+			},
 		"sort-imports": {
 			"active": 0,
 			"optionString": "{'ignoreCase': false, 'ignoreMemberSort': true, 'memberSyntaxSortOrder': ['none', 'all', 'multiple', 'single']}"
@@ -2692,6 +2713,10 @@
 		"strict": {
 			"active": 0,
 			"optionString": "'safe'"
+			},
+		"switch-colon-spacing": {
+			"active": 0,
+			"optionString": "{'after': true, 'before': false}"
 			},
 		"symbol-description": {
 			"active": 0,
@@ -3325,6 +3350,7 @@
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
+	"susyVersion": 3,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
 		"ascii-only": {
