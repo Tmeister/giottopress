@@ -622,7 +622,6 @@ GiottoPress_Kirki::add_field( 'giottopress_theme', array(
 	'output'          => array(
 		'element'  => 'body.header-minimal header#masthead',
 		'property' => 'background-color',
-//		'suffix'   => '!important',
 	),
 	'choices'         => array(
 		'alpha' => true,

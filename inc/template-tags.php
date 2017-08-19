@@ -27,7 +27,7 @@ if ( ! function_exists( 'giottopress_posted_on' ) ) :
 		);
 
 		$byline = sprintf(
-		/* translators: %s: post author. */
+			/* translators: %s: post author. */
 			esc_html_x( 'by %s', 'post author', 'giottopress' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
@@ -64,7 +64,7 @@ if ( ! function_exists( 'giottopress_entry_footer' ) ) :
 			comments_popup_link(
 				sprintf(
 					wp_kses(
-					/* translators: %s: post title */
+						/* translators: %s: post title */
 						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'giottopress' ),
 						array(
 							'span' => array(

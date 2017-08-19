@@ -48,10 +48,19 @@ class Giottopress_About_Theme {
 	public function giottopress_about_admin_notice() {
 		?>
 		<div class="updated notice is-dismissible">
-			<p><?php echo sprintf( esc_html__( 'Hi! Thank you for choosing GiottoPress! To fully take advantage of the theme please make sure you visit our %swelcome page%s.',
-					'giottopress' ), '<a href="' . esc_url( admin_url( 'themes.php?page=giottopress-about' ) ) . '">', '</a>' ); ?></p>
-			<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=giottopress-about' ) ); ?>" class="button" style="text-decoration: none;"><?php _e( 'Get started with GiottoPress',
-						'giottopress' ); ?></a></p>
+			<p>
+				<?php
+				echo sprintf(
+					/* translators: 1: open a tag 2: close a tag*/
+					esc_html__( 'Hi! Thank you for choosing GiottoPress! To fully take advantage of the theme please make sure you visit our %1$swelcome page%2$s.', 'giottopress' ),
+					'<a href="' . esc_url( admin_url( 'themes.php?page=giottopress-about' ) ) . '">', '</a>'
+				); ?>
+			</p>
+			<p>
+				<a href="<?php echo esc_url( admin_url( 'themes.php?page=giottopress-about' ) ); ?>" class="button" style="text-decoration: none;">
+					<?php esc_html_e( 'Get started with GiottoPress', 'giottopress' ); ?>
+				</a>
+			</p>
 		</div>
 		<?php
 	}

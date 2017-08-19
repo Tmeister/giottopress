@@ -91,7 +91,8 @@ if ( ! function_exists( 'giottopress_body_schema' ) ) :
 		$itemtype = 'WebPage';
 		$itemtype = ( giottopress_is_blog() ) ? 'Blog' : $itemtype;
 		$itemtype = ( is_search() ) ? 'SearchResultsPage' : $itemtype;
-		echo apply_filters( 'giottopress_body_schema', "itemtype='http://schema.org/$itemtype' itemscope='itemscope'", $itemtype );
+		$schema   = apply_filters( 'giottopress_body_schema', "itemtype='http://schema.org/$itemtype' itemscope='itemscope'", $itemtype );
+		echo $schema;
 	}
 
 endif;
@@ -147,7 +148,7 @@ if ( ! function_exists( 'giottopress_page_class' ) ) :
 		}
 
 		$classes = apply_filters( 'giottopress_content_page_class', array_merge( $default_classes, $settings_classes ) );
-		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
+		echo sprintf( 'class="%s"', esc_attr( implode( ' ', $classes ) ) );
 	}
 endif;
 
@@ -161,7 +162,7 @@ if ( ! function_exists( 'giottopress_content_class' ) ) :
 		$default_classes = array( 'site-content' );
 
 		$classes = apply_filters( 'giottopress_content_class', $default_classes );
-		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
+		echo sprintf( 'class="%s"', esc_attr( implode( ' ', $classes ) ) );
 	}
 endif;
 
@@ -198,14 +199,14 @@ if ( ! function_exists( 'giottopress_wrapper_class' ) ) :
 		 */
 		if ( false !== $container_single_meta & is_singular() ) {
 			if ( 'fullwidth' === $container_single_meta ) {
-				$settings_classes = array();
+				$settings_classes   = array();
 				$settings_classes[] = 'is-fluid';
 				$settings_classes[] = 'is-marginless';
 			}
 		}
 
 		$classes = apply_filters( 'giottopress_wrapper_class', array_merge( $default_classes, $settings_classes ) );
-		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
+		echo sprintf( 'class="%s"', esc_attr( implode( ' ', $classes ) ) );
 	}
 endif;
 
@@ -225,7 +226,7 @@ if ( ! function_exists( 'giottopress_primary_content_class' ) ) :
 		}
 
 		$classes = apply_filters( 'giottopress_primary_content_class', $default_classes );
-		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
+		echo sprintf( 'class="%s"', esc_attr( implode( ' ', $classes ) ) );
 	}
 endif;
 
@@ -239,7 +240,7 @@ if ( ! function_exists( 'giottopress_main_class' ) ) :
 		$default_classes = array();
 
 		$classes = apply_filters( 'giottopress_main_content_class', $default_classes );
-		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
+		echo sprintf( 'class="%s"', esc_attr( implode( ' ', $classes ) ) );
 	}
 endif;
 
@@ -258,7 +259,7 @@ if ( ! function_exists( 'giottopress_sidebar_class' ) ) :
 		}
 
 		$classes = apply_filters( 'giottopress_primary_content_class', $default_classes );
-		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
+		echo sprintf( 'class="%s"', esc_attr( implode( ' ', $classes ) ) );
 	}
 endif;
 
@@ -398,7 +399,7 @@ if ( ! function_exists( 'giottopress_header_class' ) ) :
 		}
 
 		$classes = apply_filters( 'giottopress_header_class', $default_classes );
-		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
+		echo sprintf( 'class="%s"', esc_attr( implode( ' ', $classes ) ) );
 	}
 endif;
 
@@ -413,7 +414,7 @@ if ( ! function_exists( 'giottopress_inner_header_class' ) ) :
 		}
 
 		$classes = apply_filters( 'giottopress_header_inner_class', $default_classes );
-		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
+		echo sprintf( 'class="%s"', esc_attr( implode( ' ', $classes ) ) );
 	}
 endif;
 
@@ -449,7 +450,7 @@ if ( ! function_exists( 'giottopress_site_branding' ) ) :
 		) );
 
 		if ( false == $title_disable || false == $tagline_disable ) {
-			echo apply_filters( 'giottopress_site_branding_output', sprintf(
+			$branding = apply_filters( 'giottopress_site_branding_output', sprintf(
 				'<div %1$s>
 				%2$s
 				%3$s
@@ -458,6 +459,7 @@ if ( ! function_exists( 'giottopress_site_branding' ) ) :
 				( ! $title_disable ) ? $site_title : '',
 				( ! $tagline_disable ) ? $site_tagline : ''
 			) );
+			echo $branding;
 		}
 	}
 endif;
@@ -487,7 +489,7 @@ if ( ! function_exists( 'giottopress_site_logo' ) ) :
 
 		do_action( 'giottopress_before_logo' );
 
-		echo apply_filters( 'giottopress_logo_output', sprintf(
+		$logo_markup = apply_filters( 'giottopress_logo_output', sprintf(
 			'<a href="%2$s" title="%3$s" rel="home" %1$s>
 				<img class="header-image" src="%4$s" alt="%3$s" title="%3$s" />
 			</a>',
@@ -496,6 +498,8 @@ if ( ! function_exists( 'giottopress_site_logo' ) ) :
 			esc_attr( apply_filters( 'giottopress_logo_title', get_bloginfo( 'name', 'display' ) ) ),
 			esc_url( apply_filters( 'giottopress_logo', $logo ) )
 		), $logo );
+
+		echo $logo_markup;
 
 		do_action( 'giottopress_after_logo' );
 	}
@@ -524,7 +528,7 @@ if ( ! function_exists( 'giottopress_main_navigation_class' ) ) :
 	function giottopress_main_navigation_class() {
 		$default_classes = array( 'navbar is-marginless' );
 		$classes         = apply_filters( 'giottopress_main_navigation_class', $default_classes );
-		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
+		echo sprintf( 'class="%s"', esc_attr( implode( ' ', $classes ) ) );
 	}
 endif;
 
@@ -558,7 +562,7 @@ if ( ! function_exists( 'giottopress_page_title_class' ) ) :
 		}
 
 		$classes = apply_filters( 'giottopress_page_title_class', $default_classes );
-		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
+		echo sprintf( 'class="%s"', esc_attr( implode( ' ', $classes ) ) );
 	}
 endif;
 
@@ -572,7 +576,7 @@ if ( ! function_exists( 'giottopress_page_title_inner_class' ) ) :
 		}
 
 		$classes = apply_filters( 'giottopress_page_title_inner_class', $default_classes );
-		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
+		echo sprintf( 'class="%s"', esc_attr( implode( ' ', $classes ) ) );
 	}
 endif;
 
@@ -602,7 +606,8 @@ if ( ! function_exists( 'giottopress_pagination_class' ) ) :
 	function giottopress_pagination_class() {
 		$default_classes = array( 'posts-pagination', 'is-boxed' );
 		$classes         = apply_filters( 'giottopress_pagination_class', $default_classes );
-		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
+
+		echo sprintf( 'class="%s"', esc_attr( implode( ' ', $classes ) ) );
 	}
 endif;
 
@@ -655,7 +660,7 @@ if ( ! function_exists( 'giottopress_footer_class' ) ) :
 		}
 
 		$classes = apply_filters( 'giottopress_footer_class', $default_classes );
-		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
+		echo sprintf( 'class="%s"', esc_attr( implode( ' ', $classes ) ) );
 	}
 endif;
 
@@ -669,7 +674,7 @@ if ( ! function_exists( 'giottopress_inner_footer_class' ) ) :
 		}
 
 		$classes = apply_filters( 'giottopress_footer_inner_class', $default_classes );
-		echo sprintf( 'class="%s"', implode( ' ', $classes ) );
+		echo sprintf( 'class="%s"', esc_attr( implode( ' ', $classes ) ) );
 	}
 endif;
 
@@ -696,9 +701,8 @@ if ( ! function_exists( 'giottopress_footer_bootstrap' ) ) :
 						$column_width = get_theme_mod( sprintf( 'footer-column-width-%s', $i ), '3' );
 						$custom_class = get_theme_mod( sprintf( 'footer-custom-class-%s', $i ), '' );
 						$column_class = sprintf( 'column is-%s', $column_width );
-						$classes      = sprintf( 'class="%1$s %2$s"', $custom_class, $column_class );
 						?>
-						<div <?php echo $classes ?>>
+						<div <?php echo sprintf( 'class="%1$s %2$s"', esc_attr( $custom_class ), esc_attr( $column_class ) ) ?>>
 							<?php dynamic_sidebar( sprintf( 'footer-%1$s', $i ) ); ?>
 						</div>
 					<?php endfor; ?>
