@@ -9,7 +9,7 @@
 <form class="searchform" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<div class="field has-addons">
 		<div class="control is-expanded">
-			<input class="input" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'giottopress' ); ?>">
+			<input class="input" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'giottopress' ); ?>" value="<?php the_search_query(); ?>">
 		</div>
 		<div class="control">
 			<a class="button is-primary">

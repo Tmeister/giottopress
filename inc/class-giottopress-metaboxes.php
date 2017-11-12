@@ -311,7 +311,7 @@ $posts_types = get_post_types( array( 'public' => true ) );
  */
 $sidebar_args = array(
 	'meta_box_id'   => 'giotto-post-sidebar',
-	'label'         => 'Sidebar position',
+	'label'         => esc_attr__('Sidebar position', 'giottopress'),
 	'post_type'     => $posts_types,
 	'context'       => 'side',
 	'priority'      => 'low',
@@ -340,7 +340,7 @@ giottopress_meta_box( $sidebar_args );
  */
 $layout_args = array(
 	'meta_box_id'   => 'giotto-post-layout',
-	'label'         => 'Layout',
+	'label'         => esc_attr__('Layout', 'giottopress'),
 	'post_type'     => $posts_types,
 	'context'       => 'side',
 	'priority'      => 'low',

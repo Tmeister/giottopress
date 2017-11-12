@@ -15,21 +15,24 @@
 		"uuidString": "DFEAEAED-0C5E-4BCE-81C8-368B13D700CD"
 		}
 	],
-"creatorBuild": "25900",
+"creatorBuild": "26097",
 "files": {
 	"\/.gitignore": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
 	"\/404.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/404.php",
 		"oF": 0
 		},
 	"\/archive.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/archive.php",
@@ -73,10 +76,10 @@
 		"uL": 1
 		},
 	"\/bower_components\/bulma\/CHANGELOG.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 1,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
@@ -101,12 +104,14 @@
 		"oS": 3
 		},
 	"\/bower_components\/bulma\/css\/bulma.css.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/bulma\/css\/bulma.css.map",
 		"oF": 0
 		},
 	"\/bower_components\/bulma\/LICENSE": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/bower_components\/bulma\/LICENSE",
@@ -121,10 +126,10 @@
 		"oS": 1
 		},
 	"\/bower_components\/bulma\/README.md": {
+		"cB": 0,
 		"cS": 0,
 		"eF": 1,
 		"eL": 1,
-		"eLB": 0,
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
@@ -737,18 +742,21 @@
 		"uL": 1
 		},
 	"\/comments.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/comments.php",
 		"oF": 0
 		},
 	"\/footer.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/footer.php",
 		"oF": 0
 		},
 	"\/functions.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/functions.php",
@@ -765,12 +773,14 @@
 		"tS": 0
 		},
 	"\/header.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/header.php",
 		"oF": 0
 		},
 	"\/inc\/admin\/about-theme\/class-giottopress-about-theme.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/admin\/about-theme\/class-giottopress-about-theme.php",
@@ -797,24 +807,28 @@
 		"tS": 0
 		},
 	"\/inc\/admin\/about-theme\/sections\/getting-started.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/admin\/about-theme\/sections\/getting-started.php",
 		"oF": 0
 		},
 	"\/inc\/admin\/about-theme\/sections\/translate.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/admin\/about-theme\/sections\/translate.php",
 		"oF": 0
 		},
 	"\/inc\/admin\/get-pro\/class-giottopress-up-sell-section-pro.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/admin\/get-pro\/class-giottopress-up-sell-section-pro.php",
 		"oF": 0
 		},
 	"\/inc\/admin\/get-pro\/class-giottopress-up-sell.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/admin\/get-pro\/class-giottopress-up-sell.php",
@@ -841,60 +855,70 @@
 		"tS": 0
 		},
 	"\/inc\/class-giottopress-kirki.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/class-giottopress-kirki.php",
 		"oF": 0
 		},
 	"\/inc\/class-giottopress-menu-walker.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/class-giottopress-menu-walker.php",
 		"oF": 0
 		},
 	"\/inc\/class-giottopress-metaboxes.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/class-giottopress-metaboxes.php",
 		"oF": 0
 		},
 	"\/inc\/class-tgm-plugin-activation.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/class-tgm-plugin-activation.php",
 		"oF": 0
 		},
 	"\/inc\/customizer.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/customizer.php",
 		"oF": 0
 		},
 	"\/inc\/jetpack.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/jetpack.php",
 		"oF": 0
 		},
 	"\/inc\/template-functions.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/template-functions.php",
 		"oF": 0
 		},
 	"\/inc\/template-tags.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/template-tags.php",
 		"oF": 0
 		},
 	"\/inc\/tgmpa-loader.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/tgmpa-loader.php",
 		"oF": 0
 		},
 	"\/index.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/index.php",
@@ -931,12 +955,14 @@
 		"tS": 0
 		},
 	"\/languages\/giottopress.pot": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/giottopress.pot",
 		"oF": 0
 		},
 	"\/LICENSE": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/LICENSE",
@@ -957,12 +983,14 @@
 		"oS": 1
 		},
 	"\/page.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page.php",
 		"oF": 0
 		},
 	"\/readme.txt": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/readme.txt",
@@ -980,24 +1008,28 @@
 		"q": 100
 		},
 	"\/search.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/search.php",
 		"oF": 0
 		},
 	"\/searchform.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/searchform.php",
 		"oF": 0
 		},
 	"\/sidebar.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sidebar.php",
 		"oF": 0
 		},
 	"\/single.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/single.php",
@@ -1317,42 +1349,49 @@
 		"oS": 3
 		},
 	"\/style.css.map": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
 		"oAP": "\/style.css.map",
 		"oF": 0
 		},
 	"\/templates\/content-none.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/content-none.php",
 		"oF": 0
 		},
 	"\/templates\/content-page.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/content-page.php",
 		"oF": 0
 		},
 	"\/templates\/content-search.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/content-search.php",
 		"oF": 0
 		},
 	"\/templates\/content.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/content.php",
 		"oF": 0
 		},
 	"\/templates\/menu-center.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/menu-center.php",
 		"oF": 0
 		},
 	"\/templates\/menu-left.php": {
+		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/menu-left.php",
@@ -1904,6 +1943,10 @@
 			"active": 0,
 			"optionString": "'expression'"
 			},
+		"function-paren-newline": {
+			"active": 0,
+			"optionString": "'multiline'"
+			},
 		"generator-star-spacing": {
 			"active": 0,
 			"optionString": "{'before': true, 'after': false}"
@@ -1968,9 +2011,9 @@
 			"active": 0,
 			"optionString": "{'beforeBlockComment': true}"
 			},
-		"lines-around-directive": {
+		"lines-between-class-members": {
 			"active": 0,
-			"optionString": "{'before': 'always', 'after': 'always'}"
+			"optionString": "'always', {exceptAfterSingleLine: false}"
 			},
 		"max-depth": {
 			"active": 0,
@@ -2000,6 +2043,10 @@
 			"active": 0,
 			"optionString": "{'max': 1}"
 			},
+		"multiline-comment-style": {
+			"active": 0,
+			"optionString": "'starred-block'"
+			},
 		"multiline-ternary": {
 			"active": 0,
 			"optionString": "'always'"
@@ -2009,14 +2056,6 @@
 			"optionString": "{'newIsCap': true, 'capIsNew': true, 'newIsCapExceptions': [], 'capIsNewExceptions': ['Array', 'Boolean', 'Date', 'Error', 'Function', 'Number', 'Object', 'RegExp', 'String', 'Symbol'], 'properties': true}"
 			},
 		"new-parens": {
-			"active": 0,
-			"optionString": ""
-			},
-		"newline-after-var": {
-			"active": 0,
-			"optionString": "'always'"
-			},
-		"newline-before-return": {
 			"active": 0,
 			"optionString": ""
 			},
@@ -3120,7 +3159,8 @@
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"outputStyle": 0,
-		"syntaxCheckerStyle": 1
+		"syntaxCheckerStyle": 1,
+		"transpilerStyle": 1
 		},
 	"languageDefaultsCSS": {
 		"autoOutputAction": 0,
@@ -3153,6 +3193,7 @@
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
 		"outputStyle": 0,
+		"shouldRunCacheBuster": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -3194,7 +3235,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "kit",
 		"autoOutputPathReplace2": "html",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
@@ -3226,13 +3268,13 @@
 		"enableFootnotes": 1,
 		"enableLabels": 1,
 		"enableSmartQuotes": 1,
-		"escapeLineBreaks": 0,
 		"maskEmailAddresses": 1,
 		"outputFormat": 0,
 		"outputStyle": 0,
 		"parseMetadata": 1,
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
+		"shouldRunCacheBuster": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -3241,7 +3283,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -3261,7 +3304,8 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
-		"outputStyle": 0
+		"outputStyle": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
@@ -3289,7 +3333,8 @@
 		"logicless": 0,
 		"outputFormat": 0,
 		"outputStyle": 1,
-		"railsCompatible": 0
+		"railsCompatible": 0,
+		"shouldRunCacheBuster": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,

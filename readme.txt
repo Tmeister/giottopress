@@ -4,10 +4,12 @@ Contributors: tmeister
 Tags:left-sidebar, right-sidebar, footer-widgets, blog, custom-menu, custom-colors, custom-header, custom-logo, editor-style, featured-images, sticky-post, threaded-comments, translation-ready
 
 Requires at least: 4.0
-Tested up to: 4.8.1
-Stable tag: 1.0.1
+Tested up to: 4.8.3
+Stable tag: 1.0.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
+GiottoPress WordPress Theme, Copyright 2017 Enrique Chavez
+GiottoPress is distributed under the terms of the GNU GPL
 
 A starter theme called GiottoPress
 
@@ -36,6 +38,15 @@ GiottoPress is a lightweight, faster, clean, super flexible and Bulma based resp
 * Default WP customizer settings are not removed
 * Load admin scripts only on the welcome page
 
-== Credits ==
+= 1.0.2 - November 11 2017 =
+* Remove Theme URL
+* Remove search-form from add_theme_support( 'html5' )
+* Add value to search text field
+* Add Escaping on template-tags.php
+* Fix Footer credits just one link
+* Fix Copyright on readme.txt
+* Fix prefix on enqueue files
+* Fix translation label on metaboxes
 
+== Credits ==
 * Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

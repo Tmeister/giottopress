@@ -27,7 +27,7 @@ if ( ! function_exists( 'giottopress_posted_on' ) ) :
 		);
 
 		$byline = sprintf(
-			/* translators: %s: post author. */
+		/* translators: %s: post author. */
 			esc_html_x( 'by %s', 'post author', 'giottopress' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
@@ -64,7 +64,7 @@ if ( ! function_exists( 'giottopress_entry_footer' ) ) :
 			comments_popup_link(
 				sprintf(
 					wp_kses(
-						/* translators: %s: post title */
+					/* translators: %s: post title */
 						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'giottopress' ),
 						array(
 							'span' => array(
@@ -189,7 +189,7 @@ if ( ! function_exists( 'giottopress_read_more' ) ) :
 		global $post;
 		$output = '<div class="entry-read-more"><a class="more-tag button" href="%s">%s</a></div>';
 
-		echo sprintf( $output, get_permalink( $post->ID ), __( 'Continue Reading', 'giottopress' ) );
+		echo sprintf( $output, esc_url( get_permalink( $post->ID ) ), esc_attr( __( 'Continue Reading', 'giottopress' ) ) );
 	}
 endif;
 
@@ -229,7 +229,7 @@ if ( ! function_exists( 'giottopress_get_page_title' ) ) :
 	function giottopress_get_page_title() {
 		if ( is_home() ) {
 			$output = '<h2 class="page-title">%s</h2>';
-			echo sprintf( $output, get_theme_mod( 'giottopress_page_title_front_page', esc_html__( 'Latest Posts', 'giottopress' ) ) );
+			echo sprintf( $output, esc_html__( get_theme_mod( 'giottopress_page_title_front_page' ) ) );
 
 			return;
 		}
@@ -296,8 +296,7 @@ if ( ! function_exists( 'giottopress_site_credits' ) ) :
 		$credits = apply_filters(
 			'giottopress_site_credits',
 			sprintf(
-				'<strong><a href="%1$s">%2$s</a></strong> %3$s <a href="%4$s">%5$s</a>.',
-				'https://giottopress.io',
+				'%1$s %2$s <a href="%3$s">%4$s</a>',
 				'GiottoPress',
 				__( 'by', 'giottopress' ),
 				'https://enriquechavez.co',

@@ -695,7 +695,7 @@ if ( ! function_exists( 'giottopress_footer_bootstrap' ) ) :
 		?>
 		<div id="site-footer" <?php giottopress_footer_class(); ?>>
 			<div <?php giottopress_inner_footer_class(); ?>>
-				<div class="columns">
+				<div class="columns is-marginless">
 					<?php for ( $i = 1; $i < $footer_sidebars + 1; $i ++ ) : ?>
 						<?php
 						$column_width = get_theme_mod( sprintf( 'footer-column-width-%s', $i ), '3' );
